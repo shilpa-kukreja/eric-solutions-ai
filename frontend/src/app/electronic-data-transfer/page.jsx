@@ -98,8 +98,16 @@ export default function HeroSection() {
   return (
     <>
     <Navbar/>
-    <section className="w-full bg-gray-100 py-20 mt-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-20 mt-20">
+
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+  <img
+    src="/worldmap/blob.svg"
+    alt="footer background"
+    className="w-[700px] md:w-[600px]"
+  />
+</div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
 
         {/* Top Heading */}
         <h1 className="text-center text-3xl md:text-4xl font-semibold">

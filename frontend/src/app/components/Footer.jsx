@@ -68,7 +68,7 @@ export default function Footer() {
   <img
     src="/worldmap/blob.svg"
     alt="footer background"
-    className="w-[400px] md:w-[600px] opacity-20 "
+    className="w-[400px] md:w-[600px]"
   />
 </div>
    
@@ -256,7 +256,7 @@ export default function Footer() {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="border-t border-gray-700 py-6 text-center text-gray-400 text-sm">
+      <div className=" relative z-10 border-t border-gray-700 py-6 text-center text-gray-400 text-sm">
         © {new Date().getFullYear()} Eric Solutions. All Rights Reserved.
       </div>
 
