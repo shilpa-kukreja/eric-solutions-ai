@@ -167,9 +167,13 @@ export default function Navbar() {
 <div className="border-b pb-3">
   <button
     onClick={() => setCompanyOpen(!companyOpen)}
-    className="flex justify-between w-full"
+    className="flex justify-between items-center w-full"
   >
-    Company
+    <span>Company</span>
+
+    <span className="text-xl font-bold">
+      {companyOpen ? "−" : "+"}
+    </span>
   </button>
 
   {companyOpen && (
@@ -187,9 +191,13 @@ export default function Navbar() {
 <div className="border-b pb-3">
   <button
     onClick={() => setInsightsOpen(!insightsOpen)}
-    className="flex justify-between w-full"
+    className="flex justify-between items-center w-full"
   >
-    Insights
+    <span>Insights</span>
+
+    <span className="text-xl font-bold">
+      {insightsOpen ? "−" : "+"}
+    </span>
   </button>
 
   {insightsOpen && (
@@ -208,9 +216,13 @@ export default function Navbar() {
 <div className="border-b pb-3">
   <button
     onClick={() => setAgentsOpen(!agentsOpen)}
-    className="flex justify-between w-full"
+    className="flex justify-between items-center w-full"
   >
-    Agents
+    <span>Agents</span>
+
+    <span className="text-xl font-bold">
+      {agentsOpen ? "−" : "+"}
+    </span>
   </button>
 
   {agentsOpen && (
