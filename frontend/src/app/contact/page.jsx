@@ -6,9 +6,13 @@ import { toast } from "react-toastify";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
+import {useRouter} from "next/navigation";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function ContactPage() {
+
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,22 +68,23 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-[#FEF0E1]">
-        <div className="max-w-7xl mx-auto px-6 pt-14 mt-25">
-          <div className="text-center mb-14">
-            <h1 className="text-4xl font-bold text-[#c2905c]">
-              Connect With Us
-            </h1>
+      <div className="bg-white mt-25">
+  <div className="max-w-7xl mx-auto px-4 py-14">
 
-            <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
-              We’re always happy to hear from you.
-            </p>
-          </div>
+    <div className="text-center mb-14">
+      <h1 className="text-4xl font-bold text-blue-900">
+        Connect With Us
+      </h1>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            
-            {/* FORM */}
-            <div className="bg-white p-10 rounded-xl shadow-lg">
+      <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
+        We’re always happy to hear from you.
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 items-start">
+      
+      {/* FORM */}
+      <div className="bg-white p-10 rounded-xl shadow-lg">
               <p className="text-sm text-gray-400 mb-2">Sign In</p>
 
               <h2 className="text-3xl font-bold mb-6">
@@ -140,11 +145,13 @@ export default function ContactPage() {
                   />
                   <p>
                     I agree to{" "}
-                    <span className="text-blue-600 cursor-pointer">
+                    <span onClick={() => {router.push("/privacy-policy");
+                    }} className="text-blue-600 cursor-pointer">
                       Privacy Policy
                     </span>{" "}
                     and{" "}
-                    <span className="text-blue-600 cursor-pointer">
+                    <span onClick={() => {router.push("/terms-conditions");
+                    }} className="text-blue-600 cursor-pointer">
                       Terms of Use
                     </span>
                   </p>

@@ -110,7 +110,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Top Heading */}
-        <h1 className="text-center text-3xl md:text-4xl font-semibold mb-16">
+        <h1 className="text-center text-3xl md:text-4xl font-semibold mt-20">
           Eric Clinical Trial Management Software (CTMS)
         </h1>
 

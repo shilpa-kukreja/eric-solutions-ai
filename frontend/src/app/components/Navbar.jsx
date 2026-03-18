@@ -9,13 +9,15 @@ const companyLinks = [
 ]
 
 const insightsLinks = [
-  { name: "blog", slug: "blogpage" },
-  { name: "case studies", slug: "case-studies" },
+  { name: "Blog", slug: "blogpage" },
+  { name: "Case Studies", slug: "case-studies" },
 ]
 
 const agentsLinks = [
   { name: "Clinical Trial Management Software", slug: "clinical-trial-management-software" },
-  { name: "case studies", slug: "case-studies" },
+  { name: "Electronic Data Transfer", slug: "electronic-data-transfer" },
+  { name: "eTMF Technology", slug: "etmf-technology" },
+  { name: "Interactive Response Technology", slug: "interactive-response-technology" },
 ]
 
 // const technologyCategories = [
@@ -57,7 +59,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-sm hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
       >
         {item.name}
       </Link>
@@ -79,7 +81,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-sm hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
       >
         {item.name}
       </Link>
@@ -101,7 +103,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-sm hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
       >
         {item.name}
       </Link>

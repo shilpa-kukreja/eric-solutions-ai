@@ -1,116 +1,117 @@
-"use client";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-export default function PrivacyPolicy() {
+const PrivacyPolicy = () => {
   return (
-    <main className="bg-gray-50 min-h-screen pt-28 pb-20 px-6">
+    <>
+    <Navbar/>
+    <div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-20">
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
 
-      {/* Hero Section */}
-      <section className="max-w-5xl mx-auto text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        {/* Heading */}
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3 text-center">
           Privacy Policy
         </h1>
 
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Your privacy is important to us. This Privacy Policy explains how we
-          collect, use, and safeguard your information when you visit our
-          website.
+        <p className="text-sm text-gray-500 text-center mb-8">
+          Last Updated on: 12 May 2025 at 12:54
         </p>
-      </section>
 
-      {/* Policy Content */}
-      <section className="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl p-10 space-y-10">
+        {/* Content */}
+        <div className="space-y-5 text-gray-700 leading-relaxed text-[15px]">
 
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <p>
+            This Privacy Policy describes how <strong>Eric Solutions</strong> ("we," "us," or "our")
+            collects, uses, and discloses your personal information when you use our services.
+          </p>
+
+          <p>
+            By accessing or using our services, you agree to this Privacy Policy. If you do not agree,
+            please do not use our services.
+          </p>
+
+          {/* Section */}
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
+            Changes to This Privacy Policy
+          </h2>
+          <p>
+            We may update this Privacy Policy from time to time. Changes will be posted on this page.
+          </p>
+
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
             Information We Collect
           </h2>
-
-          <p className="text-gray-600 leading-relaxed">
-            We may collect personal information such as your name, email
-            address, phone number, and other details when you interact with our
-            website, submit forms, or contact us directly.
+          <p>
+            We collect personal information such as your name, email, phone number, and address
+            when you interact with our services.
           </p>
-        </div>
 
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Contact details (name, email, phone)</li>
+            <li>Order & transaction details</li>
+            <li>Account information</li>
+            <li>Customer support messages</li>
+          </ul>
+
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
+            Cookies & Tracking
+          </h2>
+          <p>
+            We use cookies to improve your experience, analyze traffic, and personalize content.
+          </p>
+
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
             How We Use Your Information
           </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>To provide and manage services</li>
+            <li>To process payments and orders</li>
+            <li>For marketing and communication</li>
+            <li>To enhance security and prevent fraud</li>
+          </ul>
 
-          <p className="text-gray-600 leading-relaxed">
-            The information we collect may be used to improve our services,
-            respond to inquiries, personalize user experience, and provide
-            updates related to our services and offerings.
-          </p>
-        </div>
-
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Cookies and Tracking Technologies
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
+            Sharing of Information
           </h2>
-
-          <p className="text-gray-600 leading-relaxed">
-            Our website may use cookies and similar technologies to enhance your
-            browsing experience and gather analytics about website usage. You
-            can disable cookies in your browser settings if you prefer.
+          <p>
+            We may share your data with trusted third-party services like payment processors and analytics providers.
           </p>
-        </div>
 
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Data Security
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
+            Your Rights
           </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Access your data</li>
+            <li>Request deletion</li>
+            <li>Correct inaccurate data</li>
+            <li>Opt-out of marketing</li>
+          </ul>
 
-          <p className="text-gray-600 leading-relaxed">
-            We implement industry-standard security measures to protect your
-            personal information from unauthorized access, disclosure, or
-            misuse.
-          </p>
-        </div>
-
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Third-Party Services
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
+            Security
           </h2>
-
-          <p className="text-gray-600 leading-relaxed">
-            Our website may contain links to third-party websites. We are not
-            responsible for the privacy practices of those websites and
-            encourage you to review their privacy policies.
+          <p>
+            We take reasonable measures to protect your data, but no method is 100% secure.
           </p>
-        </div>
 
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Updates to This Policy
-          </h2>
-
-          <p className="text-gray-600 leading-relaxed">
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page with an updated revision date.
-          </p>
-        </div>
-
-        {/* Section */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-xl font-semibold text-blue-900 mt-6">
             Contact Us
           </h2>
-
-          <p className="text-gray-600 leading-relaxed">
-            If you have any questions about this Privacy Policy or how your
-            information is handled, please contact us through our website.
+          <p>
+            If you have any questions, contact us at:
+            <br />
+            📧 Info@ericsolutions.com
+            <br />
+            📞 (+1) 786-636-5556
           </p>
+
         </div>
-
-      </section>
-
-    </main>
+      </div>
+    </div>
+    <Footer/>
+    </>
   );
-}
+};
+
+export default PrivacyPolicy;

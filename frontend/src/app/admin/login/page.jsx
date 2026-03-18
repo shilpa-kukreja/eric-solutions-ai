@@ -55,7 +55,7 @@ export default function AdminLogin() {
   <div className="absolute inset-0 bg-gradient-to-b to-transparent z-10"></div>
 
   {/* Top Content */}
-  <div className="absolute top-4 left-8 right-8 z-20 text-orange-600">
+  <div className="absolute top-4 left-8 right-8 z-20 text-blue-900">
     <h2 className="text-3xl font-bold mb-2 tracking-wide">
       Welcome to Admin Portal
     </h2>

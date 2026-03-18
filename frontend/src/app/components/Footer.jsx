@@ -62,7 +62,7 @@ export default function Footer() {
   };
 
   return (
-      <footer className="relative">
+      <footer className="relative border border-gray-200">
 
   <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
   <img
@@ -177,19 +177,19 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/about" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/privacy-policy" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
                 Privacy Policy
               </Link>
             </li>
 
             <li>
-              <Link href="/blogpage" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/terms-conditions" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
                Terms & Conditions
               </Link>
             </li>
 
             <li>
-              <Link href="/contact" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/cookie-policy" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
                 Cookie Policy
               </Link>
             </li>
@@ -223,7 +223,7 @@ export default function Footer() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#0a16be] hover:bg-[#0f2777] text-white px-1 py-2 rounded-lg transition"
+              className="bg-blue-900 hover:bg-[#0f2777] text-white px-1 py-2 rounded-lg transition"
             >
               {loading ? "Submitting..." : "Subscribe"}
             </button>

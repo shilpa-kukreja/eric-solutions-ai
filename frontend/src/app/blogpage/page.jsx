@@ -44,7 +44,7 @@ export default function BlogsPage() {
         {/* Heading */}
         <div className="text-center mb-16">
 
-          <h1 className="text-4xl md:text-5xl font-bold text-[#e07409]">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-900">
             Latest Blogs
           </h1>
 
@@ -97,7 +97,7 @@ export default function BlogsPage() {
 
                 <Link
                   href={`/blog/${blog.slug}`}
-                  className="text-white font-medium hover:underline bg-orange-400 rounded-3xl p-3"
+                  className="text-white font-medium hover:underline bg-blue-900 rounded-3xl p-3"
                 >
                   Read More →
                 </Link>

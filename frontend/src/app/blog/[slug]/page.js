@@ -31,7 +31,7 @@ export default async function BlogDetail({ params }) {
   return (
     <>
     <Navbar />
-    <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="max-w-7xl mx-auto px-6 py-16 mt-10">
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-15">
 
@@ -41,7 +41,7 @@ export default async function BlogDetail({ params }) {
           
 
           <div className="bg-white rounded-xl shadow p-6">
-            <Link href="/" className="text-gray-900 text-lg flex items-center gap-2 mb-6 font-medium">
+            <Link href="/" className="text-blue-900 text-lg flex items-center gap-2 mb-6 font-medium ">
             ← Back to Blogs
           </Link>
 
@@ -51,7 +51,7 @@ export default async function BlogDetail({ params }) {
               className="w-full h-[350px] object-contain mb-6 rounded border border-gray-200"
             />
 
-            <h1 className="text-4xl font-bold text-[#0f172a] mb-4">
+            <h1 className="text-4xl font-bold text-blue-900 mb-4">
               {blog.blogName}
             </h1>
 
@@ -75,7 +75,7 @@ export default async function BlogDetail({ params }) {
 
           <div className="bg-white rounded-xl shadow p-6 ">
 
-            <h2 className="text-xl font-semibold mb-6">
+            <h2 className="text-xl font-semibold mb-6 text-blue-900">
               Latest Posts
             </h2>
 

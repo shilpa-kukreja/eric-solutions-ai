@@ -48,7 +48,7 @@ export default function NewsletterSection() {
   <button
     type="submit"
     onClick={() => router.push("/contact")}
-    className="bg-[#0a16be] hover:bg-[#0f2777] text-white px-6 py-3 rounded-lg transition w-full sm:w-auto flex items-center justify-center gap-2"
+    className="bg-blue-900 hover:bg-[#0f2777] text-white px-6 py-3 rounded-lg transition w-full sm:w-auto flex items-center justify-center gap-2"
   >
     <UserRound />
     Register Now

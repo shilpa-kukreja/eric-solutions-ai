@@ -3,6 +3,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
 
 export default function HeroSection() {
 
@@ -12,14 +15,11 @@ export default function HeroSection() {
 
       const features = [
     {
-      title: "Portfolio Management",
+      title: "Build Advance eCRF quickly",
       points: [
-        "Provides consolidated views across studies with data import support for investigators, sites, and contacts.",
-        "Offers calendar visibility for events scheduled within each study and by team members.",
-        "Dashboards display portfolio and summary data points with visualizations by study, region, country, and monitor.",
-        "Defines critical information at the study level including subject visit schedules and study milestones.",
-        "The outsourcing tab offers a straightforward yet comprehensive overview of study components, identifying external vendors by task, country, and primary point of contact.",
-        "Milestone management allows complete customization of key dates for study progress and events."
+        "Begin with one of our pre-built eCRF templates.",
+        "Customize your form with 21 different field types.",
+        "Clone and reuse forms as you develop additional studies",
       ]
     },
     {
@@ -58,48 +58,37 @@ export default function HeroSection() {
 
    const services = [
     {
-      title: "Portfolio Management",
+      title: "Deploy Studies Faster",
       points: [
-        "Provides consolidated views across studies with data import support for investigators, sites, and contacts.",
-        "Offers calendar visibility for events scheduled within each study and by team members.",
-        "Dashboards display portfolio and summary data points with visualizations by study, region, country, and monitor.",
-        "Defines critical information at the study level including subject visit schedules and study milestones.",
-        "The outsourcing tab offers a straightforward yet comprehensive overview of study components, identifying external vendors by task, country, and primary point of contact.",
-        "Milestone management allows complete customization of key dates for study progress and events."
+        "Create advanced eCRFs in minutes.",
+        "Deploy your study in as little as 3 weeks.",
+        "Manage study complexities with best-in-class support.",
       ]
     },
     {
-      title: "Countries Planning and Management",
+      title: "Decentralized Data Integration",
       points: [
-        "Track country level study approvals.",
-        "Manage regional compliance requirements.",
-        "Centralized overview of country participation."
+        "Integrate data from EHR, eCRF, ePRO/eCOA, laboratory, wearables, and other devices.",
+        "Integrate with any software or database in your clinical trial ecosystem using ERIC’s open API.",
       ]
     },
     {
-      title: "Site and Investigator Management",
+      title: "Real-Time Visibility",
       points: [
-        "Maintain investigator database.",
-        "Track investigator credentials and experience.",
-        "Manage site contracts and documentation."
+        "Get an overview of study statistics as your studies are ongoing..",
+        "Track data entry progress and outstanding queries.",
+        "View verification status (SDV) for steps.",
+        "ERIC introduces enhanced analytical dashboards."
       ]
     },
     {
-      title: "Subject Management",
+      title: "Acheive Global Compliance Easily",
       points: [
-        "Track patient enrollment.",
-        "Monitor subject visits and study schedules.",
-        "Maintain subject data securely."
+        "Comply with global standards such as FDA CFR Part 11, GDPR (EU), ICH GCP, HIPAA (US), ISO 27001, and ISO 9001.",
+        "Align with GCP, HL7 FHIR, and other regulatory guidelines.",
+        "Adhere to GCP, HL7 FHIR, and other regulatory guidelines."
       ]
     },
-    {
-      title: "Study Team Management",
-      points: [
-        "Manage study team roles.",
-        "Assign tasks and responsibilities.",
-        "Track communication and collaboration."
-      ]
-    }
   ];
 
   const toggleFeature = (index) => {
@@ -108,12 +97,13 @@ export default function HeroSection() {
 
   return (
     <>
-    <section className="w-full bg-gray-100 py-20">
+    <Navbar/>
+    <section className="w-full bg-gray-100 py-20 mt-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Top Heading */}
-        <h1 className="text-center text-3xl md:text-4xl font-semibold mb-16">
-          Eric Clinical Trial Management Software (CTMS)
+        <h1 className="text-center text-3xl md:text-4xl font-semibold">
+          Eric Electronic Data Capture(EDC)
         </h1>
 
         {/* Two Column Layout */}
@@ -121,22 +111,18 @@ export default function HeroSection() {
 
           {/* Left Content */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">
-              Scalable and Cost Effective
-              <span className="text-blue-600"> Clinical Study Solutions</span>
+            <h2 className="text-2xl font-bold mb-4">
+             Capture and Re-use Research Data 
+              <span className="text-blue-600"> from anywhere and anytime</span>
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              ERIC CTMS is designed to provide the benefits of a Clinical Trial
-              Management System (CTMS) without the substantial upfront financial
-              and resource commitments typical of traditional enterprise systems
-              or the inefficiencies inherent in spreadsheet trackers.
+             ERIC’s Electronic Data Capture (EDC) simplifies the process of capturing your trial data and integrating it seamlessly with other data in your clinical trial ecosystem. ERIC EDC offers one of the shortest build times, with more than 90% of our studies deployed within the first three weeks.
             </p>
 
             <p className="text-gray-600 mb-6 leading-relaxed">
-              ERIC CTMS offers drug developers a scalable and cost-effective
-              solution to enhance management, performance, and reduce study
-              startup costs in clinical trials.
+              Explore ERIC EDC, our most robust module, to see how it can help you capture and manage all your study data in one centralized hub. If your needs extend further, easily incorporate ERIC eConsent and ePRO to build a comprehensive ecosystem of research tools.
+
             </p>
 
             <button className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
@@ -160,12 +146,12 @@ export default function HeroSection() {
     </section>
 
     {/* Capture and Re-use Research Data from anywhere and anytime */}
-    <section className="bg-blue-800 text-white py-20">
+    <section className="bg-[#0059B2] text-white py-20 ">
 
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Section Heading */}
-        <h2 className="text-center text-2xl font-semibold mb-12 tracking-wide">
+        <h2 className="text-center text-2xl font-bold mb-12 tracking-wide">
           Capture and Re-use Research Data from anywhere and anytime
         </h2>
 
@@ -214,7 +200,7 @@ export default function HeroSection() {
 
 
 {/* Features */}
-    <section className="bg-blue-800 text-white py-20">
+    <section className="bg-[#0059B2] text-white py-20">
 
       <div className="max-w-4xl mx-auto px-6">
 
@@ -260,6 +246,9 @@ export default function HeroSection() {
       </div>
 
     </section>
+
+    <Newsletter/>
+    <Footer/>
     </>
   );
 }
