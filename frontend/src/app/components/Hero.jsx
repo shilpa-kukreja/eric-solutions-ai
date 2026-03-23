@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -14,7 +14,7 @@ export default function Hero() {
 
   const router = useRouter();
 
-  
+
   const API = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/sliders`;
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[80vh] md:h-screen">
+    <section className="relative w-full h-[80vh] md:h-screen bg-[#2167ad]">
 
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -41,48 +41,78 @@ export default function Hero() {
         className="w-full h-full"
       >
 
-   
+
         {slides.map((slide) => (
-         <SwiperSlide key={slide._id}>
-  <div className="relative w-full h-[80vh] md:h-screen">
+          <SwiperSlide key={slide._id}>
+            <div className="relative w-full h-[80vh] md:h-screen">
 
-    {/* Background Image */}
-    <img
-      src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slide.image.url}`}
-      className="absolute inset-0 w-full h-full object-cover"
-      alt="Hero Slide"
-    />
+              {/* Background Image */}
+              {/* <img
+                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slide.image.url}`}
+                className="absolute inset-0 w-full h-full object-cover"
+                alt="Hero Slide"
+              /> */}
 
-    {/* Overlay (optional but recommended for readability) */}
-    <div className="absolute inset-0 bg-black/40 z-10"></div>
+              {/* Overlay (optional but recommended for readability) */}
+              <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-    {/* Content */}
-    <div className="absolute inset-0 ml-10 md:ml-60 flex items-center z-20">
-      <div className="max-w-2xl ml-6 md:ml-20 text-white">
+              {/* Content */}
+              <div className="absolute inset-0 z-20 flex items-center">
+                <div className="max-w-7xl mx-auto px-6 w-full">
 
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-          Clinical Trial <br /> Management Solutions
-        </h1>
+                  <div className="grid md:grid-cols-2 gap-10 items-center">
 
-        <p className="mt-4 text-sm md:text-lg text-gray-200">
-          We are <span className="font-semibold text-white">Eric Solutions</span>, The Clinical trial Expert- helping you optimize operations through digitization.
-        </p>
+                    {/* LEFT CONTENT */}
+                    <div className="text-white">
 
-        <div className="mt-6 flex gap-4">
-          <button onClick={() => router.push("/contact")} className="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-900 transition" >
-            Register Now
-          </button>
+                      <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                        AI Agents Accelerating Clinical Trials - Responsibly
+                      </h1>
 
-          <button onClick={()=> router.push("/why_eric")} className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition">
-            Why Eric?
-          </button>
-        </div>
+                      <p className="mt-4 text-sm md:text-lg text-gray-200">
+                        From protocol design to analysis-ready data,
+                        <span className="font-semibold text-white"> Eric AI</span> applies Artificial Intelligence deliberately to remove operational bottlenecks in clinical trials — with humans firmly in control.
+                      </p>
 
-      </div>
-    </div>
+                      <div className="mt-6 flex flex-wrap gap-4">
+                        <button
+                          onClick={() => router.push("/contact")}
+                          className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition"
+                        >
+                          Request Demo
+                        </button>
 
-  </div>
-</SwiperSlide>
+                        <button
+                          onClick={() => router.push("/why_eric")}
+                          className="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition"
+                        >
+                          View AI Agents
+                        </button>
+
+                        <button
+                          onClick={() => router.push("/pricing")}
+                          className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition"
+                        >
+                          See Pricing
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* RIGHT IMAGE */}
+                    <div className="hidden md:flex justify-center">
+                      <img
+                        src="/chakara.png" // 👈 put your image in /public
+                        alt="AI Illustration"
+                        className="w-full max-w-md object-contain drop-shadow-2xl"
+                      />
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </SwiperSlide>
         ))}
       </Swiper>
 

@@ -15,12 +15,12 @@ export default function NewsletterSection() {
   
 
   return (
-    <section className="relative py-30 px-10 bg-orange-400">
+    <section className="relative py-12 px-10 bg-orange-400">
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Animated Heading */}
         <motion.div
-            className="text-center mb-12"
+            className="text-center mb-5"
             initial={{opacity:0, y:80}}
             whileInView={{opacity:1, y:0}}
             transition={{duration:0.8, ease:"easeOut"}}
@@ -28,7 +28,8 @@ export default function NewsletterSection() {
       
                 
                    <h1 className="text-5xl font-bold text-[#1b3163]">
-                        Register for <span className="font-medium text-white">Free Demo</span>
+                        Clinical innovation deserves <span className="font-medium text-white">modern infrastructure.
+                        </span>
                    </h1>
                    
                 
@@ -38,7 +39,8 @@ export default function NewsletterSection() {
       
   {/* Description */}
         <p className="text-gray-200 mb-8 text-sm md:text-base max-w-xl mx-auto text-gray-800">
-          Subscribe to our newsletter to receive the latest updates, insights, and news directly in your inbox.
+          Eric AI is built to deliver it.
+
         </p>
 
         
@@ -50,8 +52,8 @@ export default function NewsletterSection() {
     onClick={() => router.push("/contact")}
     className="bg-blue-900 hover:bg-[#0f2777] text-white px-6 py-3 rounded-lg transition w-full sm:w-auto flex items-center justify-center gap-2"
   >
-    <UserRound />
-    Register Now
+    {/* <UserRound /> */}
+    <span className="text-2xl pb-2">👉 </span>Request a Demo
   </button>
 </div>
 

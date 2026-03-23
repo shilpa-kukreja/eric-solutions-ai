@@ -14,10 +14,16 @@ const insightsLinks = [
 ]
 
 const agentsLinks = [
-  { name: "Clinical Trial Management Software", slug: "clinical-trial-management-software" },
-  { name: "Electronic Data Transfer", slug: "electronic-data-transfer" },
-  { name: "eTMF Technology", slug: "etmf-technology" },
-  { name: "Interactive Response Technology", slug: "interactive-response-technology" },
+  { name: "Eric AI DB Designer", slug: "clinical-trial-management-software" },
+  { name: "Eric AI Data Entry", slug: "electronic-data-transfer" },
+  { name: "Eric AI CRA", slug: "etmf-technology" },
+  { name: "Eric AI Statistics", slug: "interactive-response-technology" },
+    { name: "Eric AI Medical Writer", slug: "interactive-response-technology" },
+
+      { name: "Eric AI Document Manager", slug: "interactive-response-technology" },
+
+        { name: "Eric AI Project Manager", slug: "interactive-response-technology" },
+
 ]
 
 // const technologyCategories = [
@@ -44,6 +50,8 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-12  px-8 py-3 rounded-full text-white text-sm shadow-lg font-semibold">
 
           <Link href="/" className="hover:text-orange-400 transition">Home</Link>
+                    <Link href="/about">About</Link>
+
 
           {/* Agents */}
         <div className="relative group">
@@ -59,7 +67,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
       >
         {item.name}
       </Link>
@@ -81,7 +89,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
       >
         {item.name}
       </Link>
@@ -103,7 +111,7 @@ export default function Navbar() {
       <Link
         key={item.slug}
         href={`/${item.slug}`}
-        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600"
+        className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
       >
         {item.name}
       </Link>
@@ -162,7 +170,29 @@ export default function Navbar() {
               </div>
             )}
           </div> */}
+{/* agents */}
+<div className="border-b pb-3">
+  <button
+    onClick={() => setAgentsOpen(!agentsOpen)}
+    className="flex justify-between items-center w-full"
+  >
+    <span>Agents</span>
 
+    <span className="text-xl font-bold">
+      {agentsOpen ? "−" : "+"}
+    </span>
+  </button>
+
+  {agentsOpen && (
+    <div className="mt-3 pl-4 space-y-2 text-gray-300">
+      {agentsLinks.map((item) => (
+        <Link key={item.slug} href={`/${item.slug}`} className="block text-sm">
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
           {/* Company */}
 <div className="border-b pb-3">
   <button
@@ -212,29 +242,7 @@ export default function Navbar() {
 </div>
  
 
- {/* agents */}
-<div className="border-b pb-3">
-  <button
-    onClick={() => setAgentsOpen(!agentsOpen)}
-    className="flex justify-between items-center w-full"
-  >
-    <span>Agents</span>
-
-    <span className="text-xl font-bold">
-      {agentsOpen ? "−" : "+"}
-    </span>
-  </button>
-
-  {agentsOpen && (
-    <div className="mt-3 pl-4 space-y-2 text-gray-300">
-      {agentsLinks.map((item) => (
-        <Link key={item.slug} href={`/${item.slug}`} className="block text-sm">
-          {item.name}
-        </Link>
-      ))}
-    </div>
-  )}
-</div>
+ 
         
           <Link href="/contact" className="block border-b pb-3">Contact</Link>
 

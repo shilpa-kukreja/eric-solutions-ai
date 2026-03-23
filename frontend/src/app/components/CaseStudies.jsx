@@ -7,10 +7,10 @@ export default function CaseStudies() {
   return (
     <section className="py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 relative overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-3xl opacity-20"></div>
-      </div>
+      </div> */}
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         {/* HEADING */}
@@ -42,11 +42,11 @@ export default function CaseStudies() {
           className="group relative"
         >
           {/* Premium gradient border on hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8] rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
           
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
             {/* Top gradient bar */}
-            <div className="h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
+            <div className="h-1.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8]"></div>
             
             <div className="p-8 md:p-12">
               {/* Header */}
@@ -65,15 +65,13 @@ export default function CaseStudies() {
                     <span>60 Subjects</span>
                   </div>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100">
-                  <span className="text-indigo-600 text-sm font-medium">Oncology • Phase II</span>
-                </div>
+               
               </div>
 
               {/* Metrics Grid */}
               <div className="grid md:grid-cols-2 gap-6 mb-10">
                 {/* Database Design - Hero Metric */}
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden group/metric">
+                <div className="bg-gradient-to-br from-[#0B5EA8] to-[#0B5EA8] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden group/metric">
                   <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/metric:opacity-100 transition-opacity"></div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 mb-4">
@@ -127,15 +125,15 @@ export default function CaseStudies() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-full blur-2xl opacity-50"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-5 h-5 text-indigo-600" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
+                    <Sparkles className="w-5 h-5 text-[#0B5EA8]" />
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#0B5EA8]">
                       Outcome
                     </p>
                   </div>
                   <p className="text-xl md:text-2xl font-medium text-slate-800 leading-relaxed">
                     Compressed startup timelines without compromising data quality or compliance.
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-indigo-600">
+                  <div className="mt-4 flex items-center gap-2 text-sm text-[#0B5EA8]">
                     <ArrowUpRight className="w-4 h-4" />
                     <span className="font-medium">Read full case study</span>
                   </div>

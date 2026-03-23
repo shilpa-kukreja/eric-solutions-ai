@@ -1,7 +1,30 @@
 "use client"
 
 import Image from "next/image"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
+
+const pillars = [
+  {
+    icon: "⚡",
+    title: "Speed",
+    desc: "Go from protocol to live EDC in hours, not months.",
+  },
+  {
+    icon: "💰",
+    title: "Cost",
+    desc: "Reduce data collection and monitoring costs by up to 80–90%.",
+  },
+  {
+    icon: "🛡️",
+    title: "Trust",
+    desc: "AI-assisted, human-verified outputs with full auditability.",
+  },
+  {
+    icon: "🔗",
+    title: "Modularity",
+    desc: "Activate only the AI agents you need. Scale as your trial grows.",
+  },
+];
 
 export default function AboutSection() {
   return (
@@ -27,58 +50,47 @@ export default function AboutSection() {
           {/* animated text */}
           <motion.div
             className="mb-12"
-            initial={{opacity:0, y:80}}
-            whileInView={{opacity:1, y:0}}
-            transition={{duration:0.8, ease:"easeOut"}}
-            viewport={{once:false}}>
-      
-                
-                   <h1 className="text-5xl font-light">
-                        About Eric <span className="font-medium text-[#0B4A8B]">Solutions</span>
-                   </h1>
-                   
-                
-            </motion.div>
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
 
-          <h2 className="text-4xl font-bold mt-4 leading-snug">
-            Crafting Enduring <span className="text-[#0B4A8B]">Excellence</span> Since 2006
-          </h2>
 
+            <h1 className="text-5xl font-bold">
+              Why <span className="font-medium text-[#0B4A8B]">Eric AI</span>
+            </h1>
+
+
+          </motion.div>
+
+
+
+          <p className="mt-6 text-gray-600 leading-relaxed font-bold">
+            Clinical trials don't slow down everywhere.
+          </p>
           <p className="mt-6 text-gray-600 leading-relaxed">
-           At Eric Solutions, we deliver user-focused solutions that ensure rapid results. Experience the ease and intuitiveness of our systems, designed to eliminate heavy customizations and steep learning curves. With just 90 minutes of guided onboarding, your team will be proficient and productive within hours, not weeks or months.
+            They slow down at <span className="font-bold">specific operational points</span> — study startup, data entry, monitoring, analytics, and documentation.
+
+          </p>
+          <p className="mt-6 text-gray-600 leading-relaxed font-bold">
+            Eric AI takes a different approach.
+
+
           </p>
 
           <p className="mt-4 text-gray-600 leading-relaxed">
-            More than just software—our lab-trained experts provide training and guidance to maximize the value of your investment every step of the way.
+            We built <span className="font-bold"> specialized AI agents</span> each designed to solve one problem exceptionally well — all operating within a governed, compliant platform.
+
           </p>
 
           {/* Button */}
-         <button className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg">
+          <button className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg">
             <span className="relative z-10">Learn More</span>
             {/* Permanent Shine */}
             <span className="absolute inset-0 animate-[shine_3s_linear_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></span>
           </button>
 
-          {/* Stats */}
-          <div className="flex gap-10 mt-12">
-
-            <div>
-              <h3 className="text-2xl font-bold text-[#e07409]">99%</h3>
-              <p className="text-sm text-gray-600">Timely Possession</p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-[#e07409]">99%</h3>
-              <p className="text-sm text-gray-600">Client Satisfaction</p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-[#e07409]">20+</h3>
-              <p className="text-sm text-gray-600">Years Experience</p>
-            </div>
-
-          </div>
-
+         
         </div>
 
 
@@ -114,5 +126,6 @@ export default function AboutSection() {
       </div>
 
     </section>
+    
   )
 }

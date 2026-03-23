@@ -35,8 +35,8 @@ export default function BlogSection() {
             viewport={{once:false}}>
       
                 
-                   <h1 className="text-5xl font-light">
-                        Recent Blog from <span className="font-medium text-white">Eric Solutions</span>
+                   <h1 className="text-5xl font-bold">
+                        Recent Blog from Eric Solutions
                    </h1>
                    
                 
@@ -50,7 +50,7 @@ export default function BlogSection() {
 
           <Link key={blog._id} href={`/blog/${blog.slug}`}>
 
-            <div className="flex items-start gap-4 bg-white rounded-xl shadow-md p-4 md:p-6 hover:shadow-xl transition">
+            <div className="flex items-start gap-4 bg-white rounded-md shadow-md p-4 md:p-6 hover:shadow-xl transition">
 
               {/* Image */}
               <img

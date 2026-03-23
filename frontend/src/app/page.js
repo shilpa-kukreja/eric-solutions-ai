@@ -2,12 +2,17 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
-import WhyChooseUs from "./components/WhyChooseUs";
+import Pricing from "./components/Pricing";
 import AwardsMarquee from "./components/AwardsMarquee";
 import BlogSection from "./components/BlogSection";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import SolutionsSection from "./components/SolutionSelection";
+import ValuePillars from "./components/ValuePillars";
+import HowEricAIWorks from "./components/HowEricAIWorks";
+import EricAIAgents from "./components/EricAIAgents";
+import TrustGovernance from "./components/TrustGovernance";
+import CaseStudies from "./components/CaseStudies";
 
 export default function Home() {
   return (
@@ -15,9 +20,14 @@ export default function Home() {
    <Navbar/>
    <Hero/>
    <AboutSection/>
-   <WhyChooseUs/>
-   <SolutionsSection/>
+   {/* <ValuePillars/> */}
+   {/* <HowEricAIWorks/> */}
+   <EricAIAgents/>
+   <Pricing/>
+   <TrustGovernance/>
+   {/* <SolutionsSection/> */}
    {/* <AwardsMarquee/> */}
+   <CaseStudies/>
    <BlogSection/>
    <Newsletter/>
    <Footer/>
