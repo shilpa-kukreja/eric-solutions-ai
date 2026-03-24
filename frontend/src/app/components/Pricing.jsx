@@ -50,13 +50,13 @@ export default function Pricing() {
 
       {/* HEADING */}
       <motion.div
-        className="text-center mb-16"
+        className="text-center mb-5"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-5xl md:text-5xl font-bold mb-4">
-           Simple, Transparent Pricing
+           Simple, Transparent <span className="text-orange-700">Pricing</span>
         </h2>
         <p className="text-white/80">
           Choose the plan that fits your workflow
@@ -72,7 +72,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 "
         >
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="text-2xl font-semibold mb-2">
             Monthly Plan
           </h3>
 
@@ -89,12 +89,12 @@ export default function Pricing() {
             {features.map((f, i) => (
               <div key={i} className="flex items-center gap-3">
                 <FaCheckCircle className="text-[#0B5EA8]" />
-                <span>{f}</span>
+                <span className="text-lg">{f}</span>
               </div>
             ))}
           </div>
 
-          <button className="mt-8 w-full bg-[#0B5EA8] text-white py-3 rounded-xl hover:bg-[#053c6b]  transition">
+          <button className="mt-8 w-full bg-orange-700 text-white py-3 rounded-xl hover:bg-orange-800  transition">
             Get Started
           </button>
         </motion.div>
@@ -104,7 +104,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 "
         >
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="text-2xl font-semibold mb-2">
             Monthly Plan
           </h3>
 
@@ -121,12 +121,12 @@ export default function Pricing() {
             {features.map((f, i) => (
               <div key={i} className="flex items-center gap-3">
                 <FaCheckCircle className="text-[#0B5EA8]" />
-                <span>{f}</span>
+                <span className="text-lg">{f}</span>
               </div>
             ))}
           </div>
 
-          <button className="mt-8 w-full bg-[#0B5EA8] text-white py-3 rounded-xl hover:bg-[#053c6b] transition">
+          <button className="mt-8 w-full bg-orange-700 text-white py-3 rounded-xl hover:bg-orange-800 transition">
             Get Started
           </button>
         </motion.div>

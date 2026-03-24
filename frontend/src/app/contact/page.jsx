@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import {motion} from "framer-motion";
 
 export default function ContactPage() {
 
@@ -68,18 +69,23 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-white mt-25">
-  <div className="max-w-7xl mx-auto px-4 py-14">
+      <div className="bg-white mt-25 py-14">
+  <div className="max-w-7xl mx-auto px-4">
 
-    <div className="text-center mb-14">
-      <h1 className="text-4xl font-bold text-blue-900">
-        Connect With Us
-      </h1>
+     <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-5xl md:text-5xl font-bold mb-4">
+           Connect With <span className="text-orange-700">Us</span>
+        </h2>
+        <p className="text-gray-700 text-lg">
+            We’re always happy to hear from you.
+        </p>
+      </motion.div>
 
-      <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
-        We’re always happy to hear from you.
-      </p>
-    </div>
 
     <div className="grid lg:grid-cols-2 gap-10 items-start">
       
@@ -176,11 +182,11 @@ export default function ContactPage() {
             {/* IMAGE */}
             <div className="flex justify-center">
               <Image
-                src="/footer/final_black.gif"
+                src="/contact/image.png"
                 alt="doctor"
                 width={400}
                 height={400}
-                className="w-full max-w-md"
+                className="w-full max-w-md rounded-2xl"
               />
             </div>
 

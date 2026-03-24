@@ -5,7 +5,7 @@ import { ArrowUpRight, Clock, Layers, CheckCircle2, Sparkles } from "lucide-reac
 
 export default function CaseStudies() {
   return (
-    <section className="py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 relative overflow-hidden">
       {/* Animated background elements */}
       {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
@@ -25,10 +25,10 @@ export default function CaseStudies() {
             <Sparkles className="w-4 h-4 text-indigo-600" />
             <span className="text-indigo-600 text-sm font-medium">Featured Case Study</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-            Case Studies
+          <h2 className="text-5xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-5">
+            Case <span className="text-orange-700">Studies</span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-2xl max-w-2xl mx-auto">
             Real-world outcomes powered by Eric AI
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ export default function CaseStudies() {
                 {/* First Site Initiation */}
                 <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-indigo-200 transition-colors">
                   <div className="flex items-center gap-2 mb-3">
-                    <Layers className="w-5 h-5 text-indigo-500" />
+                    <Layers className="w-5 h-5 text-[#0B5EA8]" />
                     <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
                       First Site Initiation
                     </p>
@@ -121,7 +121,7 @@ export default function CaseStudies() {
               </div> */}
 
               {/* Outcome Section */}
-              <div className="relative bg-gradient-to-r from-indigo-50 via-purple-50 to-indigo-50 rounded-2xl p-8 overflow-hidden border border-indigo-100">
+              <div className="relative bg-gradient-to-r from-gray-50 via-gray-50 to-gray-50 rounded-2xl p-8 overflow-hidden border border-indigo-100">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-full blur-2xl opacity-50"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-3">
@@ -133,10 +133,10 @@ export default function CaseStudies() {
                   <p className="text-xl md:text-2xl font-medium text-slate-800 leading-relaxed">
                     Compressed startup timelines without compromising data quality or compliance.
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-[#0B5EA8]">
+                  {/* <div className="mt-4 flex items-center gap-2 text-sm text-[#0B5EA8]">
                     <ArrowUpRight className="w-4 h-4" />
                     <span className="font-medium">Read full case study</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

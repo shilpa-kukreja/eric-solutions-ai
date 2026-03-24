@@ -57,10 +57,10 @@ export default function AboutPage() {
 
       <Navbar />
 
-    <section className="w-full bg-gray-100  relative overflow-hidden mt-30">
+    <section className="w-full bg-white  relative overflow-hidden mt-30 p-12">
       
       {/* Background Map (optional) */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-200">
         <Image
           src="/worldmap/blob.svg" // add your map image in public folder
           alt="map"
@@ -72,27 +72,27 @@ export default function AboutPage() {
       <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT IMAGE */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center md:justify-start ">
           <Image
-            src="/aboutuspage/about.png" // your uploaded image
+            src="/aboutsection/image.png" // your uploaded image
             alt="About"
             width={450}
             height={450}
-            className="w-full max-w-md"
+            className="w-full max-w-md rounded-2xl"
           />
         </div>
 
         {/* RIGHT CONTENT */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            About Eric Solutions
+          <h2 className="text-5xl  font-bold text-gray-800 mb-4">
+            About <span className="text-orange-700">Eric Solutions</span>
           </h2>
 
-          <p className="text-gray-600 text-lg mb-3">
+          <p className="text-gray-600 text-2xl mb-3">
             Custom Solutions for Thought Leadership and Research Development
           </p>
 
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-gray-500 text-xl mb-6">
             www.ericsolutions.com
           </p>
         </div>
@@ -102,13 +102,13 @@ export default function AboutPage() {
 
 
       {/* MISSION SECTION */}
-      <section className="py-12 md:py-16 text-center px-6">
+      <section className="py-12 md:py-16 text-center px-6 bg-gray-100">
        <div className="bg-white rounded-lg shadow-md max-w-7xl mx-auto py-5">
-         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-         Our Mission
+         <h2 className="text-5xl font-bold mb-4">
+         Our <spanc className="text-orange-700">Mission</spanc>
         </h2>
 
-        <p className="max-w-2xl mx-auto text-gray-600 text-sm md:text-base">
+        <p className="max-w-2xl mx-auto text-gray-600 text-lg md:text-base">
           We are dedicated to delivering comprehensive, end-to-end services and solutions to support our clients' <span className="text-blue-500">clinical development programs,</span> and ensuring the highest quality and efficiency throughout the process.
         </p>
        </div>
@@ -162,9 +162,9 @@ export default function AboutPage() {
       </section>
 
 
- <section className="relative py-12">
+ {/* <section className="relative py-12">
 
-      {/* Background GIF
+      Background GIF
       <div className="absolute inset-0 -z-10">
         <Image
           src="/aboutsection/about.jpg"
@@ -173,27 +173,27 @@ export default function AboutPage() {
           fill
           className="object-cover opacity-30"
         />
-      </div> */}
+      </div>
 
-      {/* Container */}
+      Container
       
 
-    </section>
-      <section className="py-16 bg-[#0B5EA8]">
+    </section> */}
+      <section className="py-12 bg-white">
            <div className="max-w-6xl mx-auto px-4 text-center">
              
              <motion.div
-             className="text-center pb-10"
+             className="text-center mb-5"
              initial={{ opacity: 0, y: 80 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
              viewport={{ once: false }}
            >
-             <h2 className="text-4xl md:text-5xl font-semibold text-white">
-               Value Pillars
+             <h2 className="text-5xl md:text-5xl font-bold text-black">
+               Value <span className="text-orange-700">Pillars</span> 
              </h2>
            </motion.div>
-             <p className="text-gray-600 mb-12 text-white">
+             <p className="text-gray-600 mb-12 text-xl text-gray-100">
                Built for speed, efficiency, and scalability
              </p>
      
@@ -209,10 +209,10 @@ export default function AboutPage() {
                    className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300"
                  >
                    <div className="text-4xl mb-4">{item.icon}</div>
-                   <h3 className="text-xl font-semibold mb-2">
+                   <h3 className="text-xl font-bold mb-2">
                      {item.title}
                    </h3>
-                   <p className="text-gray-600 text-sm">
+                   <p className="text-gray-600 text-m">
                      {item.desc}
                    </p>
                  </motion.div>
@@ -222,10 +222,10 @@ export default function AboutPage() {
          </section>
 
 
-           <div className="bg-white text-gray-800">
+           <div className="bg-gray-100 text-gray-800">
          
                {/* HERO SECTION */}
-               <section className="py-20 bg-gradient-to-br from-indigo-50 to-white text-center">
+               <section className="py-10 text-center">
                  <div className="max-w-4xl mx-auto px-4">
                  <motion.div
                  className="text-center pb-10"
@@ -234,8 +234,8 @@ export default function AboutPage() {
                  transition={{ duration: 0.8 }}
                  viewport={{ once: false }}
                >
-                 <h2 className="text-4xl md:text-5xl font-semibold text-black">
-                   How Eric AI Works
+                 <h2 className="text-5xl font-bold text-black">
+                   How Eric AI <span className="text-orange-700">Works</span>
                  </h2>
                </motion.div>
                    <p className="text-gray-600 text-lg">
@@ -246,7 +246,7 @@ export default function AboutPage() {
                </section>
          
                {/* STEPS SECTION */}
-               <section className="py-20">
+               <section className="py-12">
                  <div className="max-w-5xl mx-auto px-4 relative">
          
                    {/* Vertical Line */}
@@ -279,7 +279,7 @@ export default function AboutPage() {
          
                          {/* Circle */}
                          <div className="relative flex items-center justify-center">
-                           <div className="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold shadow-md">
+                           <div className="w-10 h-10 bg-[#0B5EA8] text-white rounded-full flex items-center justify-center font-bold shadow-md">
                              {index + 1}
                            </div>
                          </div>

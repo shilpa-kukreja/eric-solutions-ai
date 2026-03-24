@@ -15,7 +15,7 @@ export default function NewsletterSection() {
   
 
   return (
-    <section className="relative py-12 px-10 bg-orange-400">
+    <section className="relative py-12 px-10 bg-white">
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Animated Heading */}
@@ -27,8 +27,8 @@ export default function NewsletterSection() {
             viewport={{once:false}}>
       
                 
-                   <h1 className="text-5xl font-bold text-[#1b3163]">
-                        Clinical innovation deserves <span className="font-medium text-white">modern infrastructure.
+                   <h1 className="text-5xl font-bold text-black">
+                        Clinical innovation deserves <span className=" text-orange-700">modern infrastructure.
                         </span>
                    </h1>
                    
@@ -38,7 +38,7 @@ export default function NewsletterSection() {
 
       
   {/* Description */}
-        <p className="text-gray-200 mb-8 text-sm md:text-base max-w-xl mx-auto text-gray-800">
+        <p className="text-gray-200 mb-8 text-lg md:text-base max-w-xl mx-auto text-gray-800">
           Eric AI is built to deliver it.
 
         </p>

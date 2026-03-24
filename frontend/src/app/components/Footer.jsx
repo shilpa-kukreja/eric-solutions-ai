@@ -62,13 +62,13 @@ export default function Footer() {
   };
 
   return (
-      <footer className="relative border border-gray-200">
+      <footer className="relative border border-gray-200 bg-gray-50">
 
-  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+  <div className="absolute inset-0 flex opacity-1000  items-center justify-center pointer-events-none z-0">
   <img
     src="/worldmap/blob.svg"
     alt="footer background"
-    className="w-[400px] md:w-[600px]"
+    className="w-[400px] md:w-[600px] "
   />
 </div>
    

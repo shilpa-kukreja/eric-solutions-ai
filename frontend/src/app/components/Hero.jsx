@@ -65,11 +65,11 @@ export default function Hero() {
                     {/* LEFT CONTENT */}
                     <div className="text-white">
 
-                      <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                      <h1 className="text-4xl md:text-4xl font-bold leading-tight">
                         AI Agents Accelerating Clinical Trials - Responsibly
                       </h1>
 
-                      <p className="mt-4 text-sm md:text-lg text-gray-200">
+                      <p className="mt-4 text-lg md:text-lg text-gray-200">
                         From protocol design to analysis-ready data,
                         <span className="font-semibold text-white"> Eric AI</span> applies Artificial Intelligence deliberately to remove operational bottlenecks in clinical trials — with humans firmly in control.
                       </p>
@@ -83,7 +83,7 @@ export default function Hero() {
                         </button>
 
                         <button
-                          onClick={() => router.push("/why_eric")}
+                          onClick={() => router.push("/about")}
                           className="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition"
                         >
                           View AI Agents

@@ -28,93 +28,93 @@ export default function BlogsPage() {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
 
-    <div className="relative w-full pt-20">
+      <div className="relative w-full pt-20">
         <img
-          src={"/commercial.jpeg"}
+          src={"/blog/banner.png"}
           alt="image"
-          className="w-full h-[55vh] md:h-[65vh] object-cover"
+          className="w-full h-full object-cover"
         />
-    </div>
-    <section className="py-20 px-6  bg-gray-50 min-h-screen">
-
-      <div className="max-w-7xl mx-auto">
-
-        {/* Heading */}
-        <div className="text-center mb-16">
-
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900">
-            Latest Blogs
-          </h1>
-
-          <p className="text-gray-600 mt-4 max-w-xl mx-auto">
-            Explore insights, trends, and expert knowledge from our latest articles.
-          </p>
-
-        </div>
-
-        {/* Blog Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-          {blogs.map((blog, index) => (
-
-            <motion.div
-              key={blog._id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
-            >
-
-              {/* Blog Image */}
-           <div className="w-full h-60 bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg border border-gray-200">
-
-  <img
-    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg.url}`}
-    alt={blog.blogName}
-    className="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500"
-  />
-
-</div>
-
-              {/* Blog Content */}
-              <div className="p-6">
-
-                <p className="text-sm text-gray-500 mb-2">
-                  {new Date(blog.blogDate).toLocaleDateString()}
-                </p>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                  {blog.blogName}
-                </h3>
-
-                <p className="text-gray-600 text-sm line-clamp-3 mb-5" dangerouslySetInnerHTML={{
-                 __html: blog.blogDetail,
-                   }}>
-                </p>
-
-                <Link
-                  href={`/blog/${blog.slug}`}
-                  className="text-white font-medium hover:underline bg-blue-900 rounded-3xl p-3"
-                >
-                  Read More →
-                </Link>
-
-              </div>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
       </div>
+      <section className="py-12 px-6  bg-white ">
 
-    </section>
-    <Footer/>
+        <div className="max-w-7xl mx-auto">
+
+          {/* Heading */}
+          <div className="text-center mb-16">
+
+            <h1 className="text-4xl md:text-5xl font-bold text-black">
+              Latest <span className="text-orange-700">Blogs</span>
+            </h1>
+
+            <p className="text-gray-600 mt-4 max-w-xl mx-auto">
+              Explore insights, trends, and expert knowledge from our latest articles.
+            </p>
+
+          </div>
+
+          {/* Blog Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            {blogs.map((blog, index) => (
+
+              <motion.div
+                key={blog._id}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+              >
+
+                {/* Blog Image */}
+                <div className="w-full h-60 bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg border border-gray-200">
+
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg.url}`}
+                    alt={blog.blogName}
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500"
+                  />
+
+                </div>
+
+                {/* Blog Content */}
+                <div className="p-6">
+
+                  <p className="text-sm text-gray-500 mb-2">
+                    {new Date(blog.blogDate).toLocaleDateString()}
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                    {blog.blogName}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm line-clamp-3 mb-5" dangerouslySetInnerHTML={{
+                    __html: blog.blogDetail,
+                  }}>
+                  </p>
+
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="text-white font-medium hover:underline bg-orange-700 rounded-xl p-3 "
+                  >
+                    Read More →
+                  </Link>
+
+                </div>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+      <Footer />
     </>
-    
+
   );
 }

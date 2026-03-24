@@ -15,16 +15,16 @@ export default function AboutPage() {
 
  
 
-       <section className="py-12 md:py-16 text-center px-6 mt-30">
+       <section className="py-12 md:py-16 text-center px-6 mt-30 bg-white">
 
          <span className="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold ">
               Our Team Leader
             </span>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-4">
-        Meet The <span className="text-blue-500"> Brains</span>
+        <h2 className="text-5xl font-bold mb-4 mt-4">
+        Meet The <span className="text-orange-700"> Brains</span>
         </h2>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-       Behind The <span className="text-blue-500"> Eric Solutions</span>
+        <h2 className="text-5xl font-bold mb-4">
+       Behind The <span className="text-orange-700"> Eric Solutions</span>
         </h2>
       </section>
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
 
 {/* TEAM LEADERS */}
-<section className="max-w-7xl mx-auto px-6 pb-20">
+<section className="max-w-7xl mx-auto px-6  py-12">
   <div className="grid md:grid-cols-2 gap-8">
 
     {/* CARD 1 */}

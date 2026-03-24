@@ -57,7 +57,7 @@ export default function AboutSection() {
 
 
             <h1 className="text-5xl font-bold">
-              Why <span className="font-medium text-[#0B4A8B]">Eric AI</span>
+              Why <span className="font-bold text-orange-700">Eric AI</span>
             </h1>
 
 
@@ -65,26 +65,26 @@ export default function AboutSection() {
 
 
 
-          <p className="mt-6 text-gray-600 leading-relaxed font-bold">
+          <p className="text-2xl mt-6 text-gray-600 leading-relaxed font-bold">
             Clinical trials don't slow down everywhere.
           </p>
-          <p className="mt-6 text-gray-600 leading-relaxed">
+          <p className="mt-6 text-gray-600 leading-relaxed text-lg">
             They slow down at <span className="font-bold">specific operational points</span> — study startup, data entry, monitoring, analytics, and documentation.
 
           </p>
-          <p className="mt-6 text-gray-600 leading-relaxed font-bold">
+          <p className="text-2xl mt-6 text-gray-600 leading-relaxed font-bold">
             Eric AI takes a different approach.
 
 
           </p>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 text-gray-600 leading-relaxed text-lg">
             We built <span className="font-bold"> specialized AI agents</span> each designed to solve one problem exceptionally well — all operating within a governed, compliant platform.
 
           </p>
 
           {/* Button */}
-          <button className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg">
+          <button className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg text-lg">
             <span className="relative z-10">Learn More</span>
             {/* Permanent Shine */}
             <span className="absolute inset-0 animate-[shine_3s_linear_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></span>
@@ -98,10 +98,10 @@ export default function AboutSection() {
         <div className="relative">
 
           <Image
-            src="/herosection/herosection.jpeg"
+            src="/aboutsection/image.png"
             alt="Company Building"
-            width={500}
-            height={900}
+            height={600}
+            width={600}
             className="rounded-2xl shadow-xl"
           />
 

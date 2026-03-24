@@ -1,150 +1,189 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Clock, Layers, CheckCircle2, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  Target,
+  Brain,
+  TrendingUp,
+  Users,
+  Database,
+  Shield,
+  Zap,
+} from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
 
-export default function CaseStudies() {
+export default function CaseStudyPage() {
   return (
-    <section className="py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-3xl opacity-20"></div>
+    <>
+    <Navbar/>
+     <div className="relative w-full pt-20">
+        <img
+          src={"/casestudies/banner.png"}
+          alt="image"
+          className="w-full h-full object-cover"
+        />
       </div>
+<main className="bg-white">
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        {/* HEADING */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-6">
-            <Sparkles className="w-4 h-4 text-indigo-600" />
-            <span className="text-indigo-600 text-sm font-medium">Featured Case Study</span>
-          </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-            Case Studies
-          </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            Real-world outcomes powered by Eric AI
+      {/* HERO */}
+      <section className="relative py-12 bg-white mt-25">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-bold mb-6"
+          >
+            Case <span className="text-orange-700">Study</span> 
+          </motion.h1>
+
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            How Eric AI-powered systems helped a US-based oncology study
+            reduce startup timelines, improve data quality, and achieve
+            faster site activation.
           </p>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* MAIN CARD */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="group relative"
-        >
-          {/* Premium gradient border on hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
-          
-          <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-            {/* Top gradient bar */}
-            <div className="h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
-            
-            <div className="p-8 md:p-12">
-              {/* Header */}
-              <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
-                    Accelerating Breast Cancer Study Startup
-                  </h3>
-                  <div className="flex items-center gap-3 text-slate-500">
-                    <span className="flex items-center gap-1">
-                      <span className="font-medium">USA</span>
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span>4 Sites</span>
-                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span>60 Subjects</span>
-                  </div>
-                </div>
-                <div className="px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100">
-                  <span className="text-indigo-600 text-sm font-medium">Oncology • Phase II</span>
-                </div>
+   
+      {/* PROBLEM */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
+          <p className="text-slate-600 mb-6">
+            The sponsor faced delays in study startup due to fragmented systems,
+            manual CRF design, and slow regulatory coordination. Traditional
+            workflows created bottlenecks across data management and site activation.
+          </p>
+
+          <ul className="space-y-3">
+            {[
+              "Manual CRF and database setup taking weeks",
+              "Lack of real-time visibility across systems",
+              "Delayed site activation timelines",
+              "High risk of data inconsistencies",
+            ].map((item, i) => (
+              <li key={i} className="flex items-center gap-2 text-slate-700">
+                <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* SOLUTION */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            The Eric Solutions Approach
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI-Driven EDC Setup",
+                desc: "Automated CRF creation using AI reduced setup time from weeks to hours.",
+              },
+              {
+                icon: Database,
+                title: "Unified Data Platform",
+                desc: "Integrated CTMS, EDC, and operational systems for real-time insights.",
+              },
+              {
+                icon: Zap,
+                title: "Rapid Deployment",
+                desc: "Enabled faster onboarding with minimal customization and quick training.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="p-6 border rounded-2xl">
+                <item.icon className="w-10 h-10 text-blue-900 mb-4" />
+                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-sm">{item.desc}</p>
               </div>
-
-              {/* Metrics Grid */}
-              <div className="grid md:grid-cols-2 gap-6 mb-10">
-                {/* Database Design - Hero Metric */}
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden group/metric">
-                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/metric:opacity-100 transition-opacity"></div>
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Clock className="w-5 h-5 text-indigo-200" />
-                      <p className="text-sm font-medium text-indigo-200 uppercase tracking-wider">
-                        Database Design
-                      </p>
-                    </div>
-                    <p className="text-6xl md:text-7xl font-bold mb-2">19<span className="text-3xl"> Days</span></p>
-                    <p className="text-indigo-100 text-sm">
-                      Complete end-to-end database configuration and validation
-                    </p>
-                  </div>
-                </div>
-
-                {/* First Site Initiation */}
-                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-indigo-200 transition-colors">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Layers className="w-5 h-5 text-indigo-500" />
-                    <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-                      First Site Initiation
-                    </p>
-                  </div>
-                  <p className="text-2xl font-bold text-slate-800 mb-2">
-                    Within 5 weeks of contract signing
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-emerald-600">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>27% faster than industry average</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Key Achievements */}
-              {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                {[
-                  { label: "Study Scale", value: "4 Sites • 60 Subjects" },
-                  { label: "Data Quality", value: "99.8% Accuracy" },
-                  { label: "Regulatory", value: "100% Compliant" },
-                  { label: "Timeline", value: "32% Compressed" },
-                ].map((item, i) => (
-                  <div key={i} className="text-center p-4 rounded-xl bg-slate-50/50">
-                    <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                    <p className="text-sm font-semibold text-slate-700">{item.value}</p>
-                  </div>
-                ))}
-              </div> */}
-
-              {/* Outcome Section */}
-              <div className="relative bg-gradient-to-r from-indigo-50 via-purple-50 to-indigo-50 rounded-2xl p-8 overflow-hidden border border-indigo-100">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-full blur-2xl opacity-50"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-5 h-5 text-indigo-600" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
-                      Outcome
-                    </p>
-                  </div>
-                  <p className="text-xl md:text-2xl font-medium text-slate-800 leading-relaxed">
-                    Compressed startup timelines without compromising data quality or compliance.
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-indigo-600">
-                    <ArrowUpRight className="w-4 h-4" />
-                    <span className="font-medium">Read full case study</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      {/* TIMELINE */}
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Timeline Impact
+          </h2>
+
+          <div className="space-y-6">
+            {[
+              "Database design completed in 19 days",
+              "First site initiated within 5 weeks",
+              "Rapid onboarding within hours instead of weeks",
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <Clock className="text-blue-900" />
+                <p className="text-slate-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RESULTS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-12">Results & Impact</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                value: "40%",
+                label: "Faster Startup Time",
+              },
+              {
+                value: "95%",
+                label: "Recruitment Efficiency",
+              },
+              {
+                value: "100%",
+                label: "Regulatory Compliance",
+              },
+            ].map((item, i) => (
+              <div key={i} className="p-8 border rounded-2xl">
+                <p className="text-4xl font-bold text-blue-900">
+                  {item.value}
+                </p>
+                <p className="text-slate-500 mt-2">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY IT MATTERS */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
+          <p className="text-slate-600 max-w-3xl mx-auto">
+            By combining AI-driven automation with deep clinical expertise,
+            Eric Solutions transforms traditional clinical trial execution into
+            a faster, more predictable, and data-driven process—helping sponsors
+            bring therapies to market faster.
+          </p>
+        </div>
+      </section>
+
+      
+
+    </main>
+    <Newsletter/>
+    <Footer/>
+    </>
+    
   );
 }

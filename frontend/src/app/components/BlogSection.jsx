@@ -36,7 +36,7 @@ export default function BlogSection() {
       
                 
                    <h1 className="text-5xl font-bold">
-                        Recent Blog from Eric Solutions
+                        Recent Blog from <span className="text-orange-700">Eric Solutions</span>
                    </h1>
                    
                 
@@ -50,13 +50,13 @@ export default function BlogSection() {
 
           <Link key={blog._id} href={`/blog/${blog.slug}`}>
 
-            <div className="flex items-start gap-4 bg-white rounded-md shadow-md p-4 md:p-6 hover:shadow-xl transition">
+            <div className="flex items-start gap-4 bg-white rounded-md shadow-md p-4 md:p-6 hover:shadow-xl transition ">
 
               {/* Image */}
               <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg.url}`}
                 alt={blog.blogName}
-                className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg border border-gray-200 flex-shrink-0"
+                className="w-24 h-24 md:w-32 md:h-32 object-cover  rounded-lg border border-gray-200 "
               />
 
               {/* Content */}

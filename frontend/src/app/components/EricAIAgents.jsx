@@ -8,43 +8,43 @@ const agents = [
   {
     name: "Eric AI DB Designer",
     desc: "Rapid protocol-to-CRF design with edit checks and SDTM-ready structures.",
-    img: "/logo.gif",
+    img: "/aiagents/dbdesigner.png",
     link: "/agents/db-designer",
   },
   {
     name: "Eric AI Data Entry",
     desc: "AI-assisted ingestion of scanned source documents with PHI de-identification.",
-    img: "/logo.gif",
+    img: "/aiagents/dataentry.png",
     link: "/agents/data-entry",
   },
   {
     name: "Eric AI CRA",
     desc: "Remote, risk-based monitoring using de-identified source data.",
-    img: "/logo.gif",
+    img: "/aiagents/cra.png",
     link: "/agents/cra",
   },
   {
     name: "Eric AI Statistics",
     desc: "Real-time analytics and analysis-ready datasets.",
-    img: "/logo.gif",
+    img: "/aiagents/statistics.png",
     link: "/agents/statistics",
   },
   {
     name: "Eric AI Medical Writer",
     desc: "AI-assisted drafting of clinical documents with human review.",
-    img: "/logo.gif",
+    img: "/aiagents/medicalwriter.png",
     link: "/agents/medical-writer",
   },
   {
     name: "Eric AI Document Manager",
     desc: "Continuous eTMF completeness and inspection readiness.",
-    img: "/logo.gif",
+    img: "/aiagents/documentmanager.png",
     link: "/agents/document-manager",
   },
   {
     name: "Eric AI Project Manager",
     desc: "Predictive insights into timelines, risks, and execution.",
-    img: "/logo.gif",
+    img: "/aiagents/projectmanager.png",
     link: "/agents/project-manager",
   },
 ];
@@ -56,7 +56,7 @@ export default function EricAIAgents() {
     <div className="bg-[#0B5EA8]">
 
       <section className="py-12">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
 
           {/* Heading */}
           <motion.div
@@ -64,13 +64,13 @@ export default function EricAIAgents() {
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <h2 className="text-4xl md:text-5xl font-semibold text-white">
-              Eric AI Agents
+            <h2 className="text-5xl md:text-5xl font-bold text-white">
+              Eric AI <span className="text-orange-700">Agents</span>
             </h2>
           </motion.div>
 
           {/* Grid */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {agents.map((agent, index) => (
               <motion.div
                 key={index}
@@ -87,23 +87,22 @@ export default function EricAIAgents() {
                     src={agent.img}
                     alt={agent.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition duration-500"
-                  />
+                    className="object-cover transition duration-500 will-change-transform" />
                 </div>
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-[#0B5EA8] transition">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-orange-700 transition">
                     {agent.name}
                   </h3>
 
-                  <p className="text-sm text-gray-600 flex-1">
+                  <p className="text-m text-gray-600 flex-1">
                     {agent.desc}
                   </p>
 
                   {/* Learn More (Bottom Right) */}
                   <div className="mt-4 flex justify-end">
-                    <span className="text-sm font-medium text-[#0B5EA8] opacity-0 group-hover:opacity-100 transition duration-300">
+                    <span className="text-sm font-medium text-black transition-transform duration-300 hover:translate-x-1 group-hover:text-orange-700">
                       Learn More →
                     </span>
                   </div>

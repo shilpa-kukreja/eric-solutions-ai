@@ -24,6 +24,10 @@ const principles = [
     icon: <FaEye />,
     title: "Transparent AI behavior",
   },
+   {
+    icon: <FaCheckCircle />,
+    title: "AI-assisted, human-verified workflows",
+  },
 ];
 
 export default function TrustGovernance() {
@@ -34,23 +38,21 @@ export default function TrustGovernance() {
       {/* PRINCIPLES */}
       <section className="">
           <motion.div
-          className="max-w-4xl mx-auto px-6 text-center"
+          className="max-w-4xl mx-auto px-6 text-center mb-5"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-5xl font-bold mb-4">
-            🛡️ Trust & Governance
+          
+          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white">
+             Trust  <span className="text-orange-700">&</span> Governance
           </h1>
-          <p className="text-lg text-white/80">
+          <p className="text-2xl text-white/80">
             Responsible AI for Regulated Clinical Environments
           </p>
         </motion.div>
-        <div className="max-w-6xl mx-auto px-6 pt-5">
+        <div className="max-w-6xl mx-auto px-6 pt-5 ">
 
-            
-
-          
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
             {principles.map((item, index) => (
@@ -59,13 +61,13 @@ export default function TrustGovernance() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08 }}
-                className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-md p-6 hover:bg-white/20 transition duration-300"
+                className="group bg-white backdrop-blur-lg border border-white/20 rounded-md p-6 transition duration-300"
               >
-                <div className="text-3xl mb-4 text-indigo-300 group-hover:scale-110 transition">
+                <div className="text-3xl mb-4 text-blue-900  transition">
                   {item.icon}
                 </div>
 
-                <h3 className="text-lg font-medium">
+                <h3 className="text-lg font-medium text-black">
                   {item.title}
                 </h3>
               </motion.div>
