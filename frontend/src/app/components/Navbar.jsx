@@ -64,7 +64,7 @@ export default function Navbar() {
               {agentsLinks.map((item) => (
                 <Link
                   key={item.slug}
-                  href={`/${item.slug}`}
+                  href={`/agents/${item.slug}`}
                   className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
                 >
                   {item.name}
@@ -86,7 +86,7 @@ export default function Navbar() {
               {companyLinks.map((item) => (
                 <Link
                   key={item.slug}
-                  href={`/${item.slug}`}
+                  href={`/company/${item.slug}`}
                   className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
                 >
                   {item.name}
@@ -108,7 +108,7 @@ export default function Navbar() {
               {insightsLinks.map((item) => (
                 <Link
                   key={item.slug}
-                  href={`/${item.slug}`}
+                  href={`/insights/${item.slug}`}
                   className="block px-6 py-3 text-xs hover:bg-blue-50 hover:text-blue-600 hover:rounded-xl"
                 >
                   {item.name}
@@ -184,7 +184,7 @@ export default function Navbar() {
             {agentsOpen && (
               <div className="mt-3 pl-4 space-y-2 text-gray-300">
                 {agentsLinks.map((item) => (
-                  <Link key={item.slug} href={`/${item.slug}`} className="block text-sm">
+                  <Link key={item.slug} href={`/agents/${item.slug}`} className="block text-sm">
                     {item.name}
                   </Link>
                 ))}
@@ -207,7 +207,7 @@ export default function Navbar() {
             {companyOpen && (
               <div className="mt-3 pl-4 space-y-2 text-gray-300">
                 {companyLinks.map((item) => (
-                  <Link key={item.slug} href={`/${item.slug}`} className="block text-sm">
+                  <Link key={item.slug} href={`/company/${item.slug}`} className="block text-sm">
                     {item.name}
                   </Link>
                 ))}
@@ -231,7 +231,7 @@ export default function Navbar() {
             {insightsOpen && (
               <div className="mt-3 pl-4 space-y-2 text-gray-300">
                 {insightsLinks.map((item) => (
-                  <Link key={item.slug} href={`/${item.slug}`} className="block text-sm">
+                  <Link key={item.slug} href={`/insights/${item.slug}`} className="block text-sm">
                     {item.name}
                   </Link>
                 ))}

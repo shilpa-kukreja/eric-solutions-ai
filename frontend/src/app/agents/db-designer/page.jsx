@@ -2,26 +2,22 @@
 
 import { motion } from "framer-motion";
 import {
-  FileText,
-  PenTool,
-  CheckCircle2,
   Brain,
-  Users,
-  Clock,
-  FileCheck,
-  Shield,
-  Zap,
-  TrendingUp,
   Database,
-  Layers,
   Rocket,
+  Shield,
+  CheckCircle2,
+  Zap,
+  Users,
+  Target,
+  ArrowRight,
 } from "lucide-react";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Newsletter from "../components/Newsletter";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Newsletter from "../../components/Newsletter";
 
-export default function EricAIMedicalWriter() {
+export default function EricAIDBDesigner() {
   return (
     <>
       <Navbar />
@@ -32,57 +28,65 @@ export default function EricAIMedicalWriter() {
         <section className="w-full mt-32">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/medicalwriter.png"
-              alt="Eric AI Medical Writer"
+              src="/aiagentspages/dbdesigner.png"
+              alt="Eric AI DB Designer"
               className="w-full h-full object-cover"
             />
+
+            {/* Optional premium overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
           </div>
         </section>
 
         {/* ================= HERO CONTENT ================= */}
-        <section className="bg-white py-12">
+        <section className="bg-gray-100 py-12 md:py-12">
           <div className="max-w-6xl mx-auto px-6 text-center">
 
+            {/* Heading */}
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold text-black">
-                Eric AI <span className="text-orange-700">Medical Writer</span>
+              <h2 className="text-5xl md:text-5xl font-bold text-black ">
+                Eric AI <span className="text-orange-700">DB Designer</span>
+
               </h2>
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto"
+              className="mt-6 text-xl md:text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Accelerate Drafting Without Compromising Science
-
+              EDC Design Shouldn't Delay Patient Enrollment
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="mt-4 text-gray-500 max-w-2xl mx-auto"
+              className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg"
             >
-              Eric AI Medical Writer assists medical writers by reducing manual assembly.
+              Eric AI DB Designer accelerates study startup by transforming protocols into structured, standards-aligned EDC designs.
 
             </motion.p>
+
+
+
           </div>
         </section>
 
-        {/* ================= FEATURES ================= */}
-        <section className="py-12 bg-gray-100">
-          <div className="max-w-7xl mx-auto px-6">
 
+
+        {/* ================= FEATURES ================= */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
             <motion.div
               className="text-center py-8"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-5xl md:text-5xl font-bold text-black ">
                 What This <span className="text-orange-700">AI Does</span>
               </h2>
             </motion.div>
@@ -90,35 +94,31 @@ export default function EricAIMedicalWriter() {
             <div className="grid md:grid-cols-3 gap-10">
               {[
                 {
-                  icon: FileText,
-                  title: "Auto Drafting",
-                  desc: "Generates structured clinical documents instantly",
+                  icon: Brain,
+                  title: "Analyzes the study protocol",
+                  desc: "Understands complex study designs instantly",
                 },
                 {
                   icon: Database,
-                  title: "Data Integration",
-                  desc: "Pulls directly from trial data",
-                },
-                {
-                  icon: Layers,
-                  title: "Consistency Engine",
-                  desc: "Maintains terminology across documents",
+                  title: "Designs CRFs in hours",
+                  desc: "Builds structured CRFs within hours",
                 },
                 {
                   icon: CheckCircle2,
-                  title: "Regulatory Ready",
-                  desc: "Aligned with submission standards",
+                  title: "Generates edit checks",
+                  desc: "Auto-generates validation logic",
                 },
                 {
                   icon: Zap,
-                  title: "Faster Turnaround",
-                  desc: "Reduces weeks of manual effort",
+                  title: "Prepares SDTM-ready structures",
+                  desc: "Reduces developer dependency",
                 },
                 {
                   icon: Shield,
-                  title: "Quality Control",
-                  desc: "Ensures accuracy and compliance",
+                  title: "Eliminates heavy programming dependency",
+                  desc: "SDTM aligned from day one",
                 },
+                
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -135,48 +135,48 @@ export default function EricAIMedicalWriter() {
         </section>
 
         {/* ================= CASE STUDY ================= */}
-        <section className="py-12 bg-white text-black">
+        <section className="py-12 bg-gray-100 text-black">
           <div className="max-w-5xl mx-auto text-center px-6">
 
             <motion.div
+              className="text-center "
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-5xl font-bold text-black mb-5">
                 Real Impact. <span className="text-orange-700">Not Just Claims.</span>
               </h2>
+              <p className="text-xl text-gray-800">
+                Breast Cancer Study (USA)
+              </p>
             </motion.div>
 
-            <div className="bg-white rounded-3xl p-10 border border-gray-200 mt-8 shadow-sm">
-              <p className="text-lg text-gray-800">
-                Oncology Study Documentation
-              </p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-5 border border-white/10">
+              
 
               <div className="grid grid-cols-3 gap-6 mt-8">
                 <div>
-              
-                  <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Faster document timelines</p>
+               
+                  <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Faster site initiation</p>
                 </div>
                 <div>
-                
-                  <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Reduced rework</p>
+                 
+                  <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Fewer design iterations</p>
                 </div>
                 <div>
-                
-                  <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Improved quality</p>
+                 
+                  <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Earlier data visibility
+                  </p>
                 </div>
               </div>
 
-              <p className="mt-6 text-gray-600">
-                Delivered submission-ready documents in hours with full
-                regulatory alignment.
-              </p>
+              
             </div>
           </div>
         </section>
 
         {/* ================= WORKFLOW ================= */}
-        <section className="py-12 bg-gray-100">
+        <section className="py-12  bg-white">
           <div className="max-w-6xl mx-auto px-6">
 
             <motion.div
@@ -184,30 +184,32 @@ export default function EricAIMedicalWriter() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-4xl md:text-5xl font-bold text-black ">
                 How It <span className="text-orange-700">Works</span>
               </h2>
             </motion.div>
+
+
 
             <div className="grid md:grid-cols-3 gap-10 text-center">
               {[
                 {
                   icon: Brain,
-                  title: "AI Drafts",
-                  desc: "Creates structured documents instantly",
+                  title: "AI Generates",
+                  desc: "Initial CRF & structure instantly",
                 },
                 {
                   icon: Users,
-                  title: "Experts Review",
-                  desc: "Medical writers validate & refine",
+                  title: "Experts Validate",
+                  desc: "Clinical experts refine & review",
                 },
                 {
                   icon: Rocket,
-                  title: "Deliver Fast",
-                  desc: "Submission-ready output",
+                  title: "Deploy Fast",
+                  desc: "Production-ready in record time",
                 },
               ].map((step, i) => (
-                <div key={i}>
+                <div key={i} className="relative">
                   <div className="w-20 h-20 mx-auto bg-[#0B5EA8] text-white flex items-center justify-center rounded-2xl mb-4">
                     <step.icon />
                   </div>
@@ -220,22 +222,28 @@ export default function EricAIMedicalWriter() {
         </section>
 
         {/* ================= PRINCIPLE ================= */}
-        {/* <section className="py-12 bg-white text-center">
+        <section className="py-12 bg-gray-100 text-black text-center">
+
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-black ">
+              <Shield className="mx-auto w-16 h-16 mb-6" />
+              <h2 className="text-4xl font-bold mb-4">
+                Speed with <span className="text-orange-700">Accountability</span>
+              </h2>
+            </h2>
+          </motion.div>
+
           <div className="max-w-4xl mx-auto px-6">
 
-            <Shield className="mx-auto w-16 h-16 text-[#0B5EA8] mb-6" />
-
-            <h2 className="text-4xl font-bold mb-4">
-              Speed with Accountability
-            </h2>
-
-            <p className="text-lg text-gray-600">
-              AI accelerates document creation. Experts ensure quality,
-              compliance, and trust.
+            <p className="text-xl text-gray-800">
+              AI drives speed. Experts ensure quality, compliance, and trust.
             </p>
-
           </div>
-        </section> */}
+        </section>
 
       </main>
 

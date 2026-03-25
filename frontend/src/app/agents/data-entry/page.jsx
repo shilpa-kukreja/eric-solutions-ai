@@ -14,9 +14,9 @@ import {
     Shield
 } from "lucide-react";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Newsletter from "../components/Newsletter";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Newsletter from "../../components/Newsletter";
 
 export default function EricAIDataEntry() {
     return (

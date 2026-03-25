@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import { FaFacebook, FaInstagram} from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import Newsletter from "../components/Newsletter";
+import Newsletter from "../../components/Newsletter";
 
 export default function AboutPage() {
   return (
