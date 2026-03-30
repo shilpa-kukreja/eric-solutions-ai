@@ -12,7 +12,7 @@ export default function CaseStudies() {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-3xl opacity-20"></div>
       </div> */}
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         {/* HEADING */}
         <motion.div
           className="text-center mb-16"
