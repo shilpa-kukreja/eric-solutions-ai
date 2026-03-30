@@ -142,7 +142,7 @@ export default function EricAIStatistics() {
             </motion.h2>
 
             <div className="mt-10 bg-white rounded-2xl p-10 border border-gray-200 shadow-sm">
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
                   
                   <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Faster Decisions</p>
