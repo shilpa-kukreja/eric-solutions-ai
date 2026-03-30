@@ -44,7 +44,7 @@ export default function TrustGovernance() {
           transition={{ duration: 0.8 }}
         >
           
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
              Trust  <span className="text-orange-700">&</span> Governance
           </h1>
           <p className="text-2xl text-white/80">
