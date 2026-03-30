@@ -56,7 +56,7 @@ export default function AboutSection() {
             viewport={{ once: false }}>
 
 
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-bold">
               Why <span className="font-bold text-orange-700">Eric AI</span>
             </h1>
 
