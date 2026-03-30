@@ -45,7 +45,7 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl font-bold text-black"
+              className="text-4xl sm:text-5xl font-bold text-black"
             >
               Eric AI  <span className="text-orange-700">CRA</span>
             </motion.h2>
@@ -164,7 +164,7 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-center text-5xl font-bold mb-10"
+              className="text-center text-4xl sm:text-5xl font-bold mb-10"
             >
               How It <span className="text-orange-700">Works</span>
             </motion.h2>
