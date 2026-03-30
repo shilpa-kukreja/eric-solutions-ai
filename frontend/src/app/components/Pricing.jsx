@@ -55,7 +55,7 @@ export default function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
            Simple, Transparent <span className="text-orange-700">Pricing</span>
         </h2>
         <p className="text-white/80">
