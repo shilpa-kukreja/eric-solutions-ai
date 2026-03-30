@@ -27,7 +27,7 @@ export default function NewsletterSection() {
             viewport={{once:false}}>
       
                 
-                   <h1 className="text-5xl font-bold text-black">
+                   <h1 className="text-4xl sm:text-5xl font-bold text-black">
                         Clinical innovation deserves <span className=" text-orange-700">modern infrastructure.
                         </span>
                    </h1>
