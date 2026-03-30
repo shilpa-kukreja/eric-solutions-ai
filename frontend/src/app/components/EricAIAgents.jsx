@@ -64,7 +64,7 @@ export default function EricAIAgents() {
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <h2 className="text-5xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Eric AI <span className="text-orange-700">Agents</span>
             </h2>
           </motion.div>
