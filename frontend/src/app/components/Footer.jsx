@@ -79,7 +79,7 @@ export default function Footer() {
 
     {/* LOGO + CONTACT INFO */}
 <div>
-  <Image src="/erciailogo.gif" alt="Logo" width={150} height={200} />
+  <img src="/erciailogo.gif" alt="Logo" width={150} height={200} />
 
   
 
