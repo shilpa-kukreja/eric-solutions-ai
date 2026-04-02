@@ -53,9 +53,9 @@ export default function EricAIAgents() {
   const router = useRouter();
 
   return (
-    <div className="bg-[#0B5EA8]">
+    <div className="bg-[#0B5EA8]" id="ai-agents">
 
-      <section className="py-12 id="ai-agents"">
+      <section className="py-12 ">
         <div className="max-w-7xl mx-auto px-4">
 
           {/* Heading */}
