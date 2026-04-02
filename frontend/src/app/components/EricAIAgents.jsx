@@ -55,7 +55,7 @@ export default function EricAIAgents() {
   return (
     <div className="bg-[#0B5EA8]">
 
-      <section className="py-12">
+      <section className="py-12 id="ai-agents"">
         <div className="max-w-7xl mx-auto px-4">
 
           {/* Heading */}
