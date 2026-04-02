@@ -131,13 +131,13 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/about" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/company/about" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link href="/blogpage" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/insights/blogpage" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
                 Blogs
               </Link>
             </li>
