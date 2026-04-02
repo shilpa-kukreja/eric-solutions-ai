@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useRouter } from "next/navigation"; // 1. Import useRouter
 
 const pillars = [
   {
@@ -27,6 +28,8 @@ const pillars = [
 ];
 
 export default function AboutSection() {
+
+  const router = useRouter(); // 2. Initialize router
   return (
     <section className="relative py-12">
 
@@ -84,7 +87,9 @@ export default function AboutSection() {
           </p>
 
           {/* Button */}
-          <button className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg text-lg">
+          <button 
+            onClick={() => router.push("/company/about")}
+            className="mt-6 relative overflow-hidden bg-[#e07409] text-white px-6 py-3 rounded-lg text-lg">
             <span className="relative z-10">Learn More</span>
             {/* Permanent Shine */}
             <span className="absolute inset-0 animate-[shine_3s_linear_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></span>
