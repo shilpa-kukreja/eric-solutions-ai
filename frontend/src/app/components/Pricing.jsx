@@ -46,7 +46,7 @@ const features = [
 
 export default function Pricing() {
   return (
-    <section className="py-12 bg-white text-black">
+    <section className="py-12 bg-white text-black" id="pricing">
 
       {/* HEADING */}
       <motion.div
