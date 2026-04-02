@@ -41,7 +41,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <img src="/logo.gif" alt="logo" width={200} height={100} />
+          <img src="/ericailogo.gif" alt="logo" width={200} height={100} />
         </Link>
 
         {/* DESKTOP MENU */}
