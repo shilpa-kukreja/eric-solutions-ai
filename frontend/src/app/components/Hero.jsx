@@ -126,14 +126,14 @@ export default function Hero() {
                 </button>
 
                 <button
-                  onClick={() => router.push("/about")}
+                  onClick={() => router.push("#ai-agents")}
                   className="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition"
                 >
                   View AI Agents
                 </button>
 
                 <button
-                  onClick={() => router.push("/pricing")}
+                  onClick={() => router.push("#pricing")}
                   className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition"
                 >
                   See Pricing
