@@ -84,11 +84,11 @@ export default function AboutPage() {
 
         {/* RIGHT CONTENT */}
         <div className="text-center md:text-left">
-          <h2 className="text-5xl  font-bold text-gray-800 mb-4">
-            About <span className="text-orange-700">Eric Solutions</span>
+          <h2 className="text-3xl md:text-4xl  font-bold text-gray-800 mb-4">
+            About <span className="">Eric Solutions</span>
           </h2>
 
-          <p className="text-gray-600 text-2xl mb-3">
+          <p className="text-gray-600 text-xl mb-3">
             Custom Solutions for Thought Leadership and Research Development
           </p>
 
@@ -104,8 +104,8 @@ export default function AboutPage() {
       {/* MISSION SECTION */}
       <section className="py-12 md:py-16 text-center px-6 bg-gray-100">
        <div className="bg-white rounded-lg shadow-md max-w-7xl mx-auto py-5">
-         <h2 className="text-5xl font-bold mb-4">
-         Our <spanc className="text-orange-700">Mission</spanc>
+         <h2 className="text-3xl md:text-4xl font-bold mb-4">
+         Our <spanc className="text-[#0B5EA8]">Mission</spanc>
         </h2>
 
         <p className="max-w-2xl mx-auto text-gray-600 text-lg md:text-base">
@@ -189,8 +189,8 @@ export default function AboutPage() {
              transition={{ duration: 0.8 }}
              viewport={{ once: false }}
            >
-             <h2 className="text-5xl md:text-5xl font-bold text-black">
-               Value <span className="text-orange-700">Pillars</span> 
+             <h2 className="text-3xl md:text-4xl font-bold text-black">
+               Value <span className="text-[#0B5EA8]">Pillars</span> 
              </h2>
            </motion.div>
              <p className="text-gray-600 mb-12 text-xl text-gray-100">
@@ -234,8 +234,8 @@ export default function AboutPage() {
                  transition={{ duration: 0.8 }}
                  viewport={{ once: false }}
                >
-                 <h2 className="text-5xl font-bold text-black">
-                   How Eric AI <span className="text-orange-700">Works</span>
+                 <h2 className="text-3xl md:text-4xl font-bold text-black">
+                   How Eric AI <span className="text-[#0B5EA8]">Works</span>
                  </h2>
                </motion.div>
                    <p className="text-gray-600 text-lg">

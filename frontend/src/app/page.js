@@ -19,13 +19,14 @@ export default function Home() {
    <>
    <Navbar/>
    <Hero/>
-   <AboutSection/>
+  <SolutionsSection/>
+
+   {/* <AboutSection/> */}
    {/* <ValuePillars/> */}
    {/* <HowEricAIWorks/> */}
    <EricAIAgents/>
    <Pricing/>
    <TrustGovernance/>
-   {/* <SolutionsSection/> */}
    {/* <AwardsMarquee/> */}
    <CaseStudies/>
    <BlogSection/>

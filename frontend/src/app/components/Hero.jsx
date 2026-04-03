@@ -30,12 +30,11 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-[80vh] md:h-screen bg-[#2167ad] overflow-hidden">
-      {/* Optional overlay */}
-      <div className="absolute inset-0 bg-black/40 z-10 "></div>
+    <section className="relative w-full min-h-[70vh] md:h-[85vh] bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+      
 
       {/* Content */}
-      <div className="relative z-20 flex items-center h-full mt-30 sm:mt-20">
+      <div className="relative z-20 flex items-center h-full mt-35 sm:mt-20">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* VIDEO (First on mobile, second on desktop) */}
@@ -89,52 +88,46 @@ export default function Hero() {
                   className="absolute top-[12%] left-[53%] w-[100px] h-[90px] cursor-pointer"
                 />
 
-               
-
-               
-
-                
-
-               
-
-                
-
-                
               </div>
             </div>
 
             {/* TEXT (Second on mobile, first on desktop) */}
             <div className="order-2 md:order-1 text-white">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                AI Agents Accelerating Clinical Trials - Responsibly
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                AI Agents Accelerating
+              </h1>
+               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                Clinical Trials - Responsibly
               </h1>
 
-              <p className="mt-4 text-m md:text-lg text-gray-200">
+              <p className="mt-5 text-sm md:text-[15px] text-gray-400">
                 From protocol design to analysis-ready data,
-                <span className="font-semibold text-white"> Eric AI</span>{" "}
-                applies Artificial Intelligence deliberately to remove
-                operational bottlenecks in clinical trials — with humans firmly
-                in control.
+                <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
+                <br/><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
+                 <br/><span>     trials — with humans firmly
+                in control. </span>
+                
+               
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-3 mb-6">
+              <div className="mt-7 flex flex-wrap gap-3 mb-6">
                 <button
                   onClick={() => router.push("/contact")}
-                  className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition"
+                  className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
                 >
                   Request Demo
                 </button>
 
                 <button
                   onClick={() => router.push("#ai-agents")}
-                  className="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition"
+                  className="bg-blue-800 px-6 py-3 rounded-sm font-medium hover:bg-[#1D4ED8] transition"
                 >
                   View AI Agents
                 </button>
 
                 <button
                   onClick={() => router.push("#pricing")}
-                  className="bg-gray-200 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition"
+                  className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
                 >
                   See Pricing
                 </button>

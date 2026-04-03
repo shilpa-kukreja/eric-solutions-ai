@@ -62,56 +62,59 @@ export default function Footer() {
   };
 
   return (
-      <footer className="relative border border-gray-200 bg-gray-50">
+    <footer className="relative border border-gray-200 py-12">
 
-  <div className="absolute inset-0 flex opacity-1000  items-center justify-center pointer-events-none z-0">
-  <img
-    src="/worldmap/blob.svg"
-    alt="footer background"
-    className="w-[400px] md:w-[600px] "
-  />
-</div>
-   
+      <div className="absolute inset-0 flex opacity-1000  items-center justify-center pointer-events-none z-0">
+        <img
+          src="/worldmap/blob.svg"
+          alt="footer background"
+          className="w-[400px] md:w-[600px] "
+        />
+      </div>
+
 
       {/* MAIN GRID */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10 items-start">
-   
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-4 gap-10 items-start">
 
-    {/* LOGO + CONTACT INFO */}
-<div>
-  <img src="/ericailogo.gif" alt="Logo" width={150} height={200} />
 
-  
+        {/* LOGO + CONTACT INFO */}
+        <div>
+          <div className="pl-12">
+            <img src="/footer/final-black.gif" alt="Logo" width={150} height={200} />
 
-  {/* CONTACT DETAILS */}
-  <div className="space-y-2 text-gray-400 text-sm">
+          </div>
 
-    <div className="flex items-start gap-2">
-      <FaMapMarkerAlt className="mt-1 text-black" />
-      <p>621 E Tropical Way Plantation, FLorida 33317</p> {/* Change to your actual address */}
-    </div>
 
-    <div className="flex items-center gap-2">
-      <FaPhoneAlt className="text-black" />
-      <p>(+1) 786-636-5556</p> {/* Change phone */}
-    </div>
 
-    <div className="flex items-center gap-2">
-      <FaEnvelope className="text-black" />
-      <p> Info@ericsolutions.com</p> {/* Change email */}
-    </div>
+          {/* CONTACT DETAILS */}
+          <div className="space-y-2 text-gray-400 text-[15px]">
 
-  </div>
-</div>
+            <div className="flex items-start gap-2">
+              <FaMapMarkerAlt className="mt-1 text-black" />
+              <p>621 E Tropical Way Plantation, FLorida 33317</p> {/* Change to your actual address */}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <FaPhoneAlt className="text-black" />
+              <p>(+1) 786-636-5556</p> {/* Change phone */}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-black" />
+              <p> Info@ericsolutions.com</p> {/* Change email */}
+            </div>
+
+          </div>
+        </div>
 
         {/* QUICK LINKS */}
-        <div>
+        <div className="sm:ml-25">
 
           <button
             onClick={() => toggleSection("quick")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-[20px] font-bold mb-4">
               Company
             </h3>
 
@@ -121,7 +124,7 @@ export default function Footer() {
           </button>
 
           <ul
-            className={`space-y-2 text-gray-400 text-sm text-left
+            className={`space-y-1 text-gray-400 text-sm text-left
             ${openSection === "quick" ? "block" : "hidden"} md:block`}
           >
             {/* <li>
@@ -131,33 +134,41 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/company/about" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/company/about" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link href="/insights/blogpage" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/insights/blogpage" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
                 Blogs
               </Link>
             </li>
 
             <li>
-              <Link href="/contact" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/insights/case-studies" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
+                Case Studies
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/contact" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
                 Contact
               </Link>
             </li>
+
+
           </ul>
 
         </div>
 
-         <div>
+        <div className=" sm:ml-8">
 
           <button
             onClick={() => toggleSection("quick")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-[20px] font-bold mb-4">
               Legal
             </h3>
 
@@ -167,7 +178,7 @@ export default function Footer() {
           </button>
 
           <ul
-            className={`space-y-2 text-gray-400 text-sm text-left
+            className={`space-y-1 text-gray-400 text-sm text-left
             ${openSection === "quick" ? "block" : "hidden"} md:block`}
           >
             {/* <li>
@@ -177,19 +188,19 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/privacy-policy" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/privacy-policy" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
                 Privacy Policy
               </Link>
             </li>
 
             <li>
-              <Link href="/terms-conditions" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
-               Terms & Conditions
+              <Link href="/terms-conditions" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
+                Terms & Conditions
               </Link>
             </li>
 
             <li>
-              <Link href="/cookie-policy" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
+              <Link href="/cookie-policy" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
                 Cookie Policy
               </Link>
             </li>
@@ -197,17 +208,17 @@ export default function Footer() {
 
         </div>
 
-        
+
 
         {/* NEWSLETTER */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">
+          <h3 className="text-[20px] font-bold mb-4">
             Subscribe Newsletter
           </h3>
 
           <form
             onSubmit={handleSubmit}
-            className="flex items-center bg-gray-200 rounded-lg p-2 shadow-md"
+            className="flex items-center bg-gray-200 rounded-md p-2 shadow-md"
           >
 
             <input
@@ -216,14 +227,14 @@ export default function Footer() {
               value={statusMessage || formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="flex-1 bg-transparent outline-none px-1 py-2 text-gray-700"
+              className="flex-1 bg-transparent outline-none px-1 py-2 text-gray-700 "
               disabled={statusMessage !== ""}
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-blue-900 hover:bg-[#0f2777] text-white px-1 py-2 rounded-lg transition"
+              className="bg-blue-900 hover:bg-[#0f2777] text-white px-1 py-2 rounded-md transition"
             >
               {loading ? "Submitting..." : "Subscribe"}
             </button>
@@ -256,7 +267,7 @@ export default function Footer() {
       </div>
 
       {/* COPYRIGHT */}
-      <div className=" relative z-10 border-t border-gray-700 py-6 text-center text-gray-400 text-sm">
+      <div className=" relative z-10 border-t border-gray-200 pt-6 text-center text-gray-400 text-sm">
         © {new Date().getFullYear()} Eric Solutions. All Rights Reserved.
       </div>
 

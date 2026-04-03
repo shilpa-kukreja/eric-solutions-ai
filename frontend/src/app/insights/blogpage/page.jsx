@@ -30,7 +30,7 @@ export default function BlogsPage() {
     <>
       <Navbar />
 
-      <div className="relative w-full pt-20">
+      <div className="relative w-full pt-20 mt-19">
         <img
           src={"/blog/banner.png"}
           alt="image"
@@ -44,8 +44,8 @@ export default function BlogsPage() {
           {/* Heading */}
           <div className="text-center mb-16">
 
-            <h1 className="text-4xl md:text-5xl font-bold text-black">
-              Latest <span className="text-orange-700">Blogs</span>
+            <h1 className="text-3xl md:text-4xl font-bold text-black">
+              Latest <span className="">Blogs</span>
             </h1>
 
             <p className="text-gray-600 mt-4 max-w-xl mx-auto">
@@ -97,7 +97,7 @@ export default function BlogsPage() {
 
                   <Link
                     href={`/blog/${blog.slug}`}
-                    className="text-white font-medium hover:underline bg-orange-700 rounded-xl p-3 "
+                    className="text-white font-medium hover:underline bg-blue-900 hover:bg-[#0f2777] rounded-md p-3 "
                   >
                     Read More →
                   </Link>

@@ -36,24 +36,26 @@ export default function Navbar() {
   const [insightsOpen, setInsightsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-[100] bg-[#0a0736] shadow-lg bg-blur">
+    <header className="fixed top-0 left-0 w-full z-[100] bg-[#08052b] shadow-lg bg-blur">
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <img src="/ericailogo.gif" alt="logo" width={200} height={100} />
+          <img src="/ericailogo.gif" alt="logo" width={250} height={100} />
         </Link>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden lg:flex items-center gap-12  px-8 py-3 rounded-full text-white text-sm shadow-lg font-semibold">
+        <nav className="hidden lg:flex items-center gap-18  px-10 py-3 rounded-full text-white text-sm shadow-lg font-semibold">
 
-          <Link href="/" className="hover:text-orange-400 transition">Home</Link>
+          {/* <Link href="/" className="hover:text-orange-400 transition">Home</Link> */}
+          <Link href="/" className="text-[15px] font-semibold text-white hover:text-gray-500">Home</Link>
+
           {/* <Link href="/about">About</Link> */}
 
 
           {/* Agents */}
           <div className="relative group">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-orange-400 transition">
+            <span className="flex items-center gap-1 cursor-pointer text-[15px] font-semibold text-white hover:text-gray-500">
               Agents
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -75,7 +77,7 @@ export default function Navbar() {
 
           {/* Company */}
           <div className="relative group">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-orange-400 transition">
+            <span className="flex items-center gap-1 cursor-pointer text-[15px] font-semibold text-white hover:text-gray-500">
               Company
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -97,7 +99,7 @@ export default function Navbar() {
 
           {/* Inisghts*/}
           <div className="relative group">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-orange-400 transition">
+            <span className="flex items-center gap-1 cursor-pointer text-[15px] font-semibold text-white hover:text-gray-500">
               Insights
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -118,7 +120,7 @@ export default function Navbar() {
           </div>
 
 
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact" className="flex items-center gap-1 cursor-pointer text-[15px] font-semibold text-white hover:text-gray-500">Contact</Link>
         </nav>
 
         {/* RIGHT SIDE (only hamburger now) */}

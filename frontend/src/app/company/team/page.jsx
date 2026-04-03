@@ -20,11 +20,11 @@ export default function AboutPage() {
          <span className="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold ">
               Our Team Leader
             </span>
-        <h2 className="text-5xl font-bold mb-4 mt-4">
-        Meet The <span className="text-orange-700"> Brains</span>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-4">
+        Meet The <span className="text-[#0B5EA8]"> Brains</span>
         </h2>
-        <h2 className="text-5xl font-bold mb-4">
-       Behind The <span className="text-orange-700"> Eric Solutions</span>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+       Behind The <span className="text-[#0B5EA8]"> Eric Solutions</span>
         </h2>
       </section>
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
     <div className="bg-white rounded-xl shadow-md p-8 flex gap-5 hover:shadow-xl transition duration-300">
 
       <img
-        src="/team/sachin.jpg"
+        src="/team/sachin.jpeg"
         className="w-16 h-16 rounded-full object-cover"
         alt="Sachin Bidani"
       />
@@ -154,7 +154,7 @@ export default function AboutPage() {
     <div className="bg-white rounded-xl shadow-md p-8 flex gap-5 hover:shadow-xl transition duration-300">
 
       <img
-        src="/team/yes.png"
+        src="/team/yes.jpeg"
         className="w-16 h-16 rounded-full object-cover"
         alt="Sachin Bidani"
       />

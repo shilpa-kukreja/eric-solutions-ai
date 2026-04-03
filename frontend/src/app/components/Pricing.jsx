@@ -55,8 +55,8 @@ export default function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-           Simple, Transparent <span className="text-orange-700">Pricing</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0B5EA8]">
+           Simple, Transparent Pricing
         </h2>
         <p className="text-white/80">
           Choose the plan that fits your workflow
@@ -68,16 +68,33 @@ export default function Pricing() {
 
         {/* MONTHLY */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 "
+           transition={{ delay:0.2 }}
+          className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition duration-300"
         >
+
+   {/* <motion.div
+                key={index}
+                onClick={() => router.push(agent.link)}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                className="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col"
+              >
+
+
+
+              </motion.div> */}
+
+
+
           <h3 className="text-2xl font-semibold mb-2">
             Monthly Plan
           </h3>
 
           <div className="mt-4 mb-6">
-            <p className="text-4xl font-bold text-[#0B5EA8]">
+            <p className="text-3xl font-bold text-[#0B5EA8]">
               $<Counter end={399} />
               <span className="text-lg text-gray-500"> / month</span>
             </p>
@@ -89,27 +106,28 @@ export default function Pricing() {
             {features.map((f, i) => (
               <div key={i} className="flex items-center gap-3">
                 <FaCheckCircle className="text-[#0B5EA8]" />
-                <span className="text-lg">{f}</span>
+                <span className="text-md">{f}</span>
               </div>
             ))}
           </div>
 
-          <button className="mt-8 w-full bg-orange-700 text-white py-3 rounded-xl hover:bg-orange-800  transition">
+          <button className="mt-8 w-full bg-blue-800 text-white py-3 rounded-xl hover:bg-[#1D4ED8]  transition">
             Get Started
           </button>
         </motion.div>
 
          <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 "
+           transition={{ delay:0.2 }}
+          className="bg-white text-gray-800 rounded-md border border-gray-200 shadow-xl p-8 cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition duration-300"
         >
           <h3 className="text-2xl font-semibold mb-2">
-            Monthly Plan
+            Annual Plan
           </h3>
 
           <div className="mt-4 mb-6">
-            <p className="text-4xl font-bold text-[#0B5EA8]">
+            <p className="text-3xl font-bold text-[#0B5EA8]">
               $<Counter end={349} />
               <span className="text-lg text-gray-500"> / month</span>
             </p>
@@ -121,12 +139,12 @@ export default function Pricing() {
             {features.map((f, i) => (
               <div key={i} className="flex items-center gap-3">
                 <FaCheckCircle className="text-[#0B5EA8]" />
-                <span className="text-lg">{f}</span>
+                <span className="text-md">{f}</span>
               </div>
             ))}
           </div>
 
-          <button className="mt-8 w-full bg-orange-700 text-white py-3 rounded-xl hover:bg-orange-800 transition">
+          <button className="mt-8 w-full bg-blue-800 text-white py-3 rounded-xl hover:bg-[#1D4ED8] transition">
             Get Started
           </button>
         </motion.div>

@@ -69,7 +69,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-white mt-25 py-14">
+      <div className="bg-white mt-35 py-14">
   <div className="max-w-7xl mx-auto px-4">
 
      <motion.div
@@ -78,10 +78,10 @@ export default function ContactPage() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl md:text-5xl font-bold mb-4">
-           Connect With <span className="text-orange-700">Us</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+           Connect With <span className="text-[#0B5EA8]">Us</span>
         </h2>
-        <p className="text-gray-700 text-lg">
+        <p className="text-gray-700 text-md">
             We’re always happy to hear from you.
         </p>
       </motion.div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
       <div className="bg-white p-10 rounded-xl shadow-lg">
               <p className="text-sm text-gray-400 mb-2">Sign In</p>
 
-              <h2 className="text-3xl font-bold mb-6">
+              <h2 className="text-3xl mb-6">
                 Book a Demo for Free!
               </h2>
 

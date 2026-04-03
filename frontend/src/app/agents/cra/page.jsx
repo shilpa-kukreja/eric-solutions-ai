@@ -27,7 +27,7 @@ export default function EricAICRA() {
       <main className="bg-white">
 
         {/* ================= HERO IMAGE ================= */}
-        <section className="w-full mt-32">
+        <section className="w-full mt-39">
           <div className="relative w-full">
             <img
               src="/aiagentspages/cra.png"
@@ -45,9 +45,9 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl sm:text-5xl font-bold text-black"
+              className="text-3xl sm:text-4xl font-bold text-black"
             >
-              Eric AI  <span className="text-orange-700">CRA</span>
+              Eric AI  <span className="">CRA</span>
             </motion.h2>
 
             <motion.p
@@ -77,9 +77,9 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-center text-4xl md:text-5xl font-bold mb-10"
+              className="text-center text-3xl md:text-4xl font-bold mb-10"
             >
-              What This <span className="text-orange-700">AI Does</span>
+              What This <span className="text-[#0B5EA8]">AI Does</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-10">
@@ -131,9 +131,9 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold"
+              className="text-3xl md:text-4xl font-bold"
             >
-              Real Impact. <span className="text-orange-700">Not Just Claims</span>
+              Real Impact. <span className="text-[#0B5EA8]">Not Just Claims</span>
             </motion.h2>
 
             <div className="mt-10 bg-white rounded-2xl p-10 border border-gray-200 shadow-sm">
@@ -164,9 +164,9 @@ export default function EricAICRA() {
             <motion.h2
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-center text-4xl sm:text-5xl font-bold mb-10"
+              className="text-center text-3xl sm:text-4xl font-bold mb-10"
             >
-              How It <span className="text-orange-700">Works</span>
+              How It <span className="text-[#0B5EA8]">Works</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-10 text-center">

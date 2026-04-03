@@ -22,15 +22,11 @@ export default function SolutionsSection() {
               SOLUTIONS
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mt-4">
-              Effortless Solutions for Rapid Productivity
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0B5EA8] mt-4">
+              Clinical trials don't slow down everywhere. </h2>
 
-            <p className="text-gray-500 mt-4 leading-relaxed">
-              At Eric Solutions, we deliver user-focused solutions that ensure rapid results.
-              Experience the ease and intuitiveness of our systems, designed to eliminate heavy
-              customizations and steep learning curves. With just 90 minutes of guided onboarding,
-              your team will be proficient and productive within hours, not weeks or months.
+            <p className="text-gray-500 mt-4 leading-relaxed text-[17px]">
+              They slow down at <span className="font-bold">specific operational points</span> — study startup, data entry, monitoring, analytics, and documentation.
             </p>
           </motion.div>
 
@@ -42,14 +38,14 @@ export default function SolutionsSection() {
             viewport={{ once: false }}
             className="relative"
           >
-            <div className="absolute -bottom-4 -right-4 w-full h-full bg-orange-400 z-0 rounded-lg"></div>
+            <div className="absolute -bottom-4 -right-4 -top-4 w-[230px] h-[315px] sm:w-[350px] sm:h-[450px] bg-orange-400 z-0 "></div>
 
             <Image
               src="/solution/solutions.jpg" // replace with your image
               alt="solutions"
               width={600}
               height={400}
-              className="relative z-10 rounded-lg object-cover"
+              className="relative z-10 object-cover"
             />
           </motion.div>
         </div>
@@ -65,14 +61,14 @@ export default function SolutionsSection() {
             viewport={{ once: false }}
             className="relative"
           >
-            <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#0a0736] z-0 rounded-lg"></div>
+            <div className="absolute -bottom-4 -left-4 -top-4 w-[230px] h-[300px] sm:w-[350px] sm:h-[430px] bg-[#0a0736] z-0 "></div>
 
             <Image
               src="/solution/support.jpg" // replace with your image
               alt="support"
               width={600}
               height={400}
-              className="relative z-10 rounded-lg object-cover"
+              className="relative z-10  object-cover"
             />
           </motion.div>
 
@@ -87,13 +83,12 @@ export default function SolutionsSection() {
               SUPPORT
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mt-4">
-              Exceptional Support for Your Success
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0B5EA8] mt-4">
+            Eric AI takes a different approach.
             </h2>
 
-            <p className="text-gray-500 mt-4 leading-relaxed">
-              More than just software—our lab-trained experts provide training and guidance
-              to maximize the value of your investment every step of the way.
+            <p className="text-gray-500 mt-4 leading-relaxed text-[17px]">
+              We built <span className="font-bold"> specialized AI agents</span> each designed to solve one problem exceptionally well — all operating within a governed, compliant platform.
             </p>
           </motion.div>
         </div>

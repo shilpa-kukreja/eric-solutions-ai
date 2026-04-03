@@ -53,7 +53,7 @@ export default function EricAIAgents() {
   const router = useRouter();
 
   return (
-    <div className="bg-[#0B5EA8]" id="ai-agents">
+    <div className="bg-[#0059B2]" id="ai-agents">
 
       <section className="py-12 ">
         <div className="max-w-7xl mx-auto px-4">
@@ -64,8 +64,8 @@ export default function EricAIAgents() {
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Eric AI <span className="text-orange-700">Agents</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Eric AI Agents
             </h2>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function EricAIAgents() {
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-orange-700 transition">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-[#0B5EA8] transition">
                     {agent.name}
                   </h3>
 
@@ -102,7 +102,7 @@ export default function EricAIAgents() {
 
                   {/* Learn More (Bottom Right) */}
                   <div className="mt-4 flex justify-end">
-                    <span className="text-sm font-medium text-black transition-transform duration-300 hover:translate-x-1 group-hover:text-orange-700">
+                    <span className="text-sm font-medium text-black transition-transform duration-300 hover:translate-x-1 group-hover:text-[#0B5EA8]">
                       Learn More →
                     </span>
                   </div>

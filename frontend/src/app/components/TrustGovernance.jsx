@@ -44,10 +44,10 @@ export default function TrustGovernance() {
           transition={{ duration: 0.8 }}
         >
           
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-             Trust  <span className="text-orange-700">&</span> Governance
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+             Trust  &  Governance
           </h1>
-          <p className="text-2xl text-white/80">
+          <p className="text-xl text-white/80">
             Responsible AI for Regulated Clinical Environments
           </p>
         </motion.div>
@@ -58,11 +58,25 @@ export default function TrustGovernance() {
             {principles.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08 }}
-                className="group bg-white backdrop-blur-lg border border-white/20 rounded-md p-6 transition duration-300"
+                className="group cursor-pointer bg-white backdrop-blur-lg border border-white/20 rounded-md p-6 hover:shadow-2xl hover:-translate-y-2 transition duration-300"
               >
+
+
+                 <motion.div
+                key={index}
+                onClick={() => router.push(agent.link)}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                className="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col"
+              >
+
+
+
+              </motion.div>
                 <div className="text-3xl mb-4 text-blue-900  transition">
                   {item.icon}
                 </div>

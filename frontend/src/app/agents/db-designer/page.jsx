@@ -25,7 +25,7 @@ export default function EricAIDBDesigner() {
       <main className="bg-white">
 
         {/* ================= HERO IMAGE ================= */}
-        <section className="w-full mt-32">
+        <section className="w-full mt-39">
           <div className="relative w-full">
             <img
               src="/aiagentspages/dbdesigner.png"
@@ -48,8 +48,8 @@ export default function EricAIDBDesigner() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl md:text-5xl font-bold text-black ">
-                Eric AI <span className="text-orange-700">DB Designer</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-black ">
+                Eric AI DB Designer
 
               </h2>
             </motion.div>
@@ -57,7 +57,7 @@ export default function EricAIDBDesigner() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="mt-6 text-xl md:text-xl text-gray-600 max-w-3xl mx-auto"
+              className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
             >
               EDC Design Shouldn't Delay Patient Enrollment
             </motion.p>
@@ -86,8 +86,8 @@ export default function EricAIDBDesigner() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl md:text-5xl font-bold text-black ">
-                What This <span className="text-orange-700">AI Does</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-black ">
+                What This <span className="text-[#0B5EA8]">AI Does</span>
               </h2>
             </motion.div>
 
@@ -143,8 +143,8 @@ export default function EricAIDBDesigner() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold text-black mb-5">
-                Real Impact. <span className="text-orange-700">Not Just Claims.</span>
+              <h2 className=" text-3xl sm:text-4xl font-bold text-black mb-5">
+                Real Impact. <span className="text-[#0B5EA8]">Not Just Claims.</span>
               </h2>
               <p className="text-xl text-gray-800">
                 Breast Cancer Study (USA)
@@ -184,8 +184,8 @@ export default function EricAIDBDesigner() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-black ">
-                How It <span className="text-orange-700">Works</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-black ">
+                How It <span className="text-[#0B5EA8]">Works</span>
               </h2>
             </motion.div>
 
@@ -232,7 +232,7 @@ export default function EricAIDBDesigner() {
             <h2 className="text-4xl md:text-5xl font-bold text-black ">
               <Shield className="mx-auto w-16 h-16 mb-6" />
               <h2 className="text-4xl font-bold mb-4">
-                Speed with <span className="text-orange-700">Accountability</span>
+                Speed with <span className="text-[#0B5EA8]">Accountability</span>
               </h2>
             </h2>
           </motion.div>

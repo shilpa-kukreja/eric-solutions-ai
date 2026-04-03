@@ -29,7 +29,7 @@ export default function EricAIMedicalWriter() {
       <main className="bg-white">
 
         {/* ================= HERO IMAGE ================= */}
-        <section className="w-full mt-32">
+        <section className="w-full mt-39">
           <div className="relative w-full">
             <img
               src="/aiagentspages/medicalwriter.png"
@@ -48,8 +48,8 @@ export default function EricAIMedicalWriter() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold text-black">
-                Eric AI <span className="text-orange-700">Medical Writer</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-black">
+                Eric AI <span className="">Medical Writer</span>
               </h2>
             </motion.div>
 
@@ -82,8 +82,8 @@ export default function EricAIMedicalWriter() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
-                What This <span className="text-orange-700">AI Does</span>
+              <h2 className="text-3xl sm:text-4xl font-bold">
+                What This <span className="text-[#0B5EA8]">AI Does</span>
               </h2>
             </motion.div>
 
@@ -142,8 +142,8 @@ export default function EricAIMedicalWriter() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
-                Real Impact. <span className="text-orange-700">Not Just Claims.</span>
+              <h2 className="text-3xl sm:text-4xl font-bold">
+                Real Impact. <span className="text-[#0B5EA8]">Not Just Claims.</span>
               </h2>
             </motion.div>
 
@@ -184,8 +184,8 @@ export default function EricAIMedicalWriter() {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-5xl font-bold">
-                How It <span className="text-orange-700">Works</span>
+              <h2 className="text-3xl sm:text-4xl font-bold">
+                How It <span className="text-[#0B5EA8]">Works</span>
               </h2>
             </motion.div>
 

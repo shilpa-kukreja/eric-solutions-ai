@@ -26,7 +26,7 @@ export default function EricAIProjectManager() {
       <main className="bg-gray-100">
 
         {/* ================= HERO IMAGE ================= */}
-        <section className="w-full mt-32">
+        <section className="w-full mt-39">
           <div className="relative w-full">
             <img
               src="/aiagentspages/projectmanager.png"
@@ -44,9 +44,9 @@ export default function EricAIProjectManager() {
             <motion.h2
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl font-bold text-black"
+              className="text-3xl sm:text-4xl font-bold text-black"
             >
-              Eric AI <span className="text-orange-700">Project Manager</span>
+              Eric AI <span className="">Project Manager</span>
             </motion.h2>
 
             <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
@@ -67,11 +67,11 @@ export default function EricAIProjectManager() {
           <div className="max-w-7xl mx-auto px-6">
 
             <motion.h2
-              className="text-center text-5xl font-bold py-8"
+              className="text-center text-3xl sm:text-4xl font-bold py-8"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              What This <span className="text-orange-700">AI Does</span>
+              What This <span className="text-[#0B5EA8]">AI Does</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-10">
@@ -126,11 +126,11 @@ export default function EricAIProjectManager() {
           <div className="max-w-5xl mx-auto px-6">
 
             <motion.h2
-              className="text-5xl font-bold"
+              className="text-3xl sm:text-4xl font-bold"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              Real Impact. <span className="text-orange-700">Not Just Claims.</span>
+              Real Impact. <span className="text-[#0B5EA8]">Not Just Claims.</span>
             </motion.h2>
 
             <div className="mt-8 p-10 border border-gray-200 rounded-3xl shadow-sm">

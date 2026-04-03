@@ -21,7 +21,7 @@ export default function CaseStudyPage() {
   return (
     <>
     <Navbar/>
-     <div className="relative w-full pt-20">
+     <div className="relative w-full pt-20 mt-19">
         <img
           src={"/casestudies/banner.png"}
           alt="image"
@@ -31,15 +31,15 @@ export default function CaseStudyPage() {
 <main className="bg-white">
 
       {/* HERO */}
-      <section className="relative py-12 bg-white mt-25">
+      <section className="relative py-12 bg-white ">
         <div className="max-w-6xl mx-auto px-6 text-center">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Case <span className="text-orange-700">Study</span> 
+            Case <span className="">Study</span> 
           </motion.h1>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">

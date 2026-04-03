@@ -35,8 +35,8 @@ export default function BlogSection() {
             viewport={{once:false}}>
       
                 
-                   <h1 className="text-4xl sm:text-5xl font-bold">
-                        Recent Blog from <span className="text-orange-700">Eric Solutions</span>
+                   <h1 className="text-3xl sm:text-4xl font-bold">
+                        Recent Blog from Eric Solutions
                    </h1>
                    
                 

@@ -25,24 +25,24 @@ export default function CaseStudies() {
             <Sparkles className="w-4 h-4 text-indigo-600" />
             <span className="text-indigo-600 text-sm font-medium">Featured Case Study</span>
           </div> */}
-          <h2 className="text-5xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-5">
-            Case <span className="text-orange-700">Studies</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#0B5EA8] mb-5">
+            Case Studies
           </h2>
-          <p className="text-slate-500 text-2xl max-w-2xl mx-auto">
+          <p className="text-slate-500 text-xl max-w-2xl mx-auto">
             Real-world outcomes powered by Eric AI
           </p>
         </motion.div>
 
         {/* MAIN CARD */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="group relative"
+          className="group relative "
         >
           {/* Premium gradient border on hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8] rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8] rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-300 shadow-xl p-8 cursor-pointer hover:shadow-2xl hover:-translate-y-2"></div>
           
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
             {/* Top gradient bar */}
