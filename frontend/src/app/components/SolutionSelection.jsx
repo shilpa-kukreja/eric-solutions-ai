@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function SolutionsSection() {
   return (
     <section className="bg-[#f5f6f8] py-12">
-      <div className="max-w-7xl mx-auto px-6 space-y-24">
+      <div className="max-w-7xl mx-auto px-6 space-y-15">
 
         {/* ROW 1 (TEXT LEFT - IMAGE RIGHT) */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">

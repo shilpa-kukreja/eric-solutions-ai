@@ -84,8 +84,6 @@ export default function Footer() {
 
           </div>
 
-
-
           {/* CONTACT DETAILS */}
           <div className="space-y-2 text-gray-400 text-[15px]">
 

@@ -31,7 +31,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-[70vh] md:h-[85vh] bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
-      
+
 
       {/* Content */}
       <div className="relative z-20 flex items-center h-full mt-35 sm:mt-20">
@@ -39,53 +39,74 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* VIDEO (First on mobile, second on desktop) */}
             <div className="order-1 md:order-2 flex justify-center pt-6 md:pt-0">
-              {/* Wrapper added */}
+
               <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl">
-                <video
-                  src="/herosection/eric.mp4"
-                  className="w-full object-contain"
+
+                {/* ✅ GIF (Background Layer) */}
+                <img
+                  src="/herosection/chakara.gif"
+                  alt="animation"
                   autoPlay
                   loop
-                  muted
-                  playsInline
+                  className="w-full object-contain"
+                />
+
+                {/* ✅ Overlay Image (Above GIF) */}
+                <img
+                  src="/herosection/ericai.png"
+                  alt="overlay"
+                  className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"
                 />
 
                 {/* 🔴 HOTSPOTS (7 AI Agents) */}
 
                 <div
                   onClick={() => router.push("/agents/data-entry")}
-                  className="absolute top-[13%] left-[28%] w-[90px] h-[80px] cursor-pointer"
+                  className="
+    absolute top-[13%] left-[28%] w-[90px] h-[80px] z-20 cursor-pointer
+    rounded-xl
+    transition-all duration-300 ease-out
+
+    /* Base state */
+    bg-white/0
+
+    /* Hover effect */
+    hover:bg-white/10
+    hover:scale-110
+    hover:-translate-y-1
+    hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)]
+    hover:ring-2 hover:ring-white/40
+  "
                 />
 
                 <div
                   onClick={() => router.push("/agents/db-designer")}
-                  className="absolute top-[33%] left-[10%] w-[80px] h-[90px] cursor-pointer"
+                  className="absolute top-[33%] left-[10%] w-[80px] h-[90px] cursor-pointer z-20"
                 />
 
-
-                 <div
+                <div
                   onClick={() => router.push("/agents/project-manager")}
-                  className="absolute top-[58%] left-[15%] w-[85px] h-[95px] cursor-pointer"
+                  className="absolute top-[58%] left-[15%] w-[85px] h-[95px] cursor-pointer z-20"
                 />
 
                 <div
                   onClick={() => router.push("/agents/document-manager")}
-                  className="absolute top-[70%] left-[38%] w-[90px] h-[78px] cursor-pointer"
+                  className="absolute top-[70%] left-[38%] w-[90px] h-[78px] cursor-pointer z-20"
                 />
 
-                 <div
+                <div
                   onClick={() => router.push("/agents/medical-writer")}
-                  className="absolute top-[58%] left-[65%] w-[85px] h-[100px] cursor-pointer"
+                  className="absolute top-[58%] left-[65%] w-[85px] h-[100px] cursor-pointer z-20"
                 />
 
-                 <div
+                <div
                   onClick={() => router.push("/agents/statistics")}
-                  className="absolute top-[32%] left-[70%] w-[80px] h-[100px] cursor-pointer"
+                  className="absolute top-[32%] left-[70%] w-[80px] h-[100px] cursor-pointer z-20"
                 />
 
                 <div
                   onClick={() => router.push("/agents/cra")}
-                  className="absolute top-[12%] left-[53%] w-[100px] h-[90px] cursor-pointer"
+                  className="absolute top-[12%] left-[53%] w-[100px] h-[90px] cursor-pointer z-20"
                 />
 
               </div>
@@ -96,18 +117,18 @@ export default function Hero() {
               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
                 AI Agents Accelerating
               </h1>
-               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
                 Clinical Trials - Responsibly
               </h1>
 
               <p className="mt-5 text-sm md:text-[15px] text-gray-400">
                 From protocol design to analysis-ready data,
                 <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
-                <br/><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
-                 <br/><span>     trials — with humans firmly
-                in control. </span>
-                
-               
+                <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
+                <br /><span>     trials — with humans firmly
+                  in control. </span>
+
+
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3 mb-6">
