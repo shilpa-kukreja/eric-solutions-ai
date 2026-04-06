@@ -79,7 +79,7 @@ export default function EricAIDBDesigner() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="mt-1 text-lg md:text-4xl text-gray-700"
+                className="mt-1 text-xl md:text-3xl text-gray-700"
               >
                 EDC Design Shouldn't Delay Patient Enrollment
               </motion.p>
