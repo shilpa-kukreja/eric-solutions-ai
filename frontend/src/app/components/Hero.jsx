@@ -31,7 +31,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full  sm:py-10 xl:py-0 2xl:py-0 min-h-[70vh] md:h-[81.5vh] bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+    <section className="relative w-full  sm:mt-30  sm:pb-20  bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
 
 
       {/* Content */}
