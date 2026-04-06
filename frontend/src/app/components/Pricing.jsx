@@ -46,6 +46,8 @@ const features = [
 
 export default function Pricing() {
   return (
+
+    <>
     <section className="py-12 bg-white text-black" id="pricing">
 
       {/* HEADING */}
@@ -154,5 +156,64 @@ export default function Pricing() {
 
       </div>
     </section>
+
+    {/* ================= AI AGENTS SECTION ================= */}
+<section className="py-16 ">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* HEADING */}
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#0B5EA8] mb-4">
+        AI Agents (Pick & Choose)
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        Build your own AI-powered team. Only pay for what you use — flexible, scalable, and designed for real workflows.
+      </p>
+    </div>
+
+    {/* GRID */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      {[
+        { name: "DB Designer", tag: "Included", highlight: true },
+        { name: "Data Entry", tag: "Per patient (one-time)" },
+        { name: "CRA", tag: "Per study" },
+        { name: "Statistics (Advanced)", tag: "Per study" },
+        { name: "Medical Writer", tag: "Per document" },
+        { name: "Document Manager", tag: "Per study" },
+        { name: "Project Manager", tag: "Add-on" },
+      ].map((agent, i) => (
+        <div
+          key={i}
+          className={`group relative rounded-2xl  p-6 bg-white shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-gray-400"
+          }`}
+        >
+          
+          {/* CONTENT */}
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            {agent.name}
+          </h3>
+
+          <p className="text-sm text-gray-500 mb-4">
+            {agent.tag}
+          </p>
+
+          {/* HOVER LINE */}
+          <div className="h-[2px] w-0 bg-[#0B5EA8] group-hover:w-50 transition-all duration-300"></div>
+        </div>
+      ))}
+    </div>
+
+    {/* FOOTNOTE */}
+    <div className="mt-12 text-center">
+      <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+        AI usage is metered only where computational cost exists — ensuring fair and transparent billing.
+      </p>
+    </div>
+
+  </div>
+</section>
+</>
+    
   );
 }

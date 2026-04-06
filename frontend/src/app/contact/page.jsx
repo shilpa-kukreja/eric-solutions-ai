@@ -91,7 +91,7 @@ export default function ContactPage() {
       
       {/* FORM */}
       <div className="bg-white p-10 rounded-xl shadow-lg">
-              <p className="text-sm text-gray-400 mb-2">Sign In</p>
+              {/* <p className="text-sm text-gray-400 mb-2">Sign In</p> */}
 
               <h2 className="text-3xl mb-6">
                 Book a Demo for Free!
@@ -174,7 +174,7 @@ export default function ContactPage() {
                       : "bg-gray-400 cursor-not-allowed"
                   }`}
                 >
-                  {loading ? "Submitting..." : "Sign In"}
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </form>
             </div>

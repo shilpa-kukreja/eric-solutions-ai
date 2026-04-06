@@ -34,52 +34,90 @@ export default function EricAIDBDesigner() {
             />
 
             {/* Optional premium overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
           </div>
         </section>
 
+        <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-center pt-12">
+                  Eric AI <span className="text-[#0B5EA8]">DB Designer</span>
+                </h2>
+              </motion.div>
         {/* ================= HERO CONTENT ================= */}
-        <section className="bg-gray-100 py-12 md:py-12">
-          <div className="max-w-6xl mx-auto px-6 text-center">
 
-            {/* Heading */}
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-black ">
-                Eric AI DB Designer
+        <section className="relative py-1 md:py-12 my-0 sm:my-5">
 
-              </h2>
-            </motion.div>
+          {/* DESKTOP BACKGROUND */}
+          <div className="hidden md:block absolute inset-0 z-0 opacity-1000">
+            <img
+              src="/worldmap/blob.svg"
+              alt="background"
+              className="w-full h-full "
+            />
+          </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              EDC Design Shouldn't Delay Patient Enrollment
-            </motion.p>
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg"
-            >
-              Eric AI DB Designer accelerates study startup by transforming protocols into structured, standards-aligned EDC designs.
+            {/* LEFT SIDE */}
+            <div className="relative text-black order-1 md:order-1">
 
-            </motion.p>
+              {/* MOBILE BACKGROUND (only for left section) */}
+              <div className="absolute inset-0 -z-10 md:hidden">
+                <img
+                  src="/worldmap/blob.svg"
+                  alt="background"
+                  className="w-full h-full object-cover opacity-30"
+                />
+              </div>
 
 
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="mt-1 text-lg md:text-4xl text-gray-700"
+              >
+                EDC Design Shouldn't Delay Patient Enrollment
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="mt-4 text-gray-500 text-lg"
+              >
+                Eric AI DB Designer accelerates study startup by transforming protocols into structured, standards-aligned EDC designs.
+              </motion.p>
+
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="order-2 md:order-2 flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                className="w-full max-w-lg overflow-hidden"
+              >
+                <img
+                  src="/aiagentspages/1.gif"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
 
           </div>
         </section>
-
 
 
         {/* ================= FEATURES ================= */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-gray-100">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
               className="text-center py-8"
@@ -118,7 +156,7 @@ export default function EricAIDBDesigner() {
                   title: "Eliminates heavy programming dependency",
                   desc: "SDTM aligned from day one",
                 },
-                
+
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -135,7 +173,7 @@ export default function EricAIDBDesigner() {
         </section>
 
         {/* ================= CASE STUDY ================= */}
-        <section className="py-12 bg-gray-100 text-black">
+        <section className="py-12  text-black">
           <div className="max-w-5xl mx-auto text-center px-6">
 
             <motion.div
@@ -152,31 +190,31 @@ export default function EricAIDBDesigner() {
             </motion.div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-5 border border-white/10">
-              
+
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
-               
+
                   <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Faster site initiation</p>
                 </div>
                 <div>
-                 
+
                   <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Fewer design iterations</p>
                 </div>
                 <div>
-                 
+
                   <p className="text-lg text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Earlier data visibility
                   </p>
                 </div>
               </div>
 
-              
+
             </div>
           </div>
         </section>
 
         {/* ================= WORKFLOW ================= */}
-        <section className="py-12  bg-white">
+        <section className="py-12  bg-gray-100">
           <div className="max-w-6xl mx-auto px-6">
 
             <motion.div
@@ -222,7 +260,7 @@ export default function EricAIDBDesigner() {
         </section>
 
         {/* ================= PRINCIPLE ================= */}
-        <section className="py-12 bg-gray-100 text-black text-center">
+        <section className="py-12  text-black text-center">
 
           <motion.div
             className="text-center mb-8"

@@ -34,38 +34,76 @@ export default function EricAIStatistics() {
               alt="Eric AI Statistics"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
           </div>
         </section>
 
         {/* ================= HERO CONTENT ================= */}
-        <section className="bg-white py-12">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section className="relative py-12 md:py-12 sm:my-5" >
 
-            <motion.h2
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl sm:text-4xl font-bold text-black"
-            >
-              Eric AI  <span className="">Statistics</span>
-            </motion.h2>
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/worldmap/blob.svg" // 👉 replace with your image
+              alt="background"
+              className="w-full h-full"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 "></div>
+          </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              Insights should guide trials — not trail them.
-            </motion.p>
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mt-4 text-gray-500 max-w-2xl mx-auto"
-            >
-              Eric AI Statistics enables early visibility into trial data.
+            {/* LEFT SIDE (CONTENT) */}
+            <div className="text-black order-1 md:order-1">
 
-            </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Eric AI <span className="text-[#0B5EA8]">Statistics</span>
+                </h2>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="mt-6 text-lg md:text-xl text-gray-700"
+              >
+                Insights should guide trials — not trail them.
+
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="mt-4 text-gray-500 text-lg"
+              >
+                Eric AI Statistics enables early visibility into trial data.
+
+              </motion.p>
+
+            </div>
+
+            {/* RIGHT SIDE (VIDEO) */}
+            <div className="order-2 md:order-2 flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                className="w-full max-w-lg rounded-xl overflow-hidden shadow-lg"
+              >
+                <video
+                  src="/aiagentspages/oil-making.mp4" // 👉 replace with your video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
 
           </div>
         </section>
@@ -144,15 +182,15 @@ export default function EricAIStatistics() {
             <div className="mt-10 bg-white rounded-2xl p-10 border border-gray-200 shadow-sm">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
-                  
+
                   <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Faster Decisions</p>
                 </div>
                 <div>
-           
+
                   <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Better Oversight</p>
                 </div>
                 <div>
-                
+
                   <p className="text-xl text-[#0B5EA8] border border-gray-100 p-4 rouned-md shadow-xl">Reduced Rework</p>
                 </div>
               </div>

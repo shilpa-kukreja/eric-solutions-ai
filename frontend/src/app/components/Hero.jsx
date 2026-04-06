@@ -5,6 +5,7 @@ import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -30,7 +31,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-[70vh] md:h-[85vh] bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+    <section className="relative w-full min-h-[70vh] md:h-[81.5vh] bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
 
 
       {/* Content */}
@@ -39,77 +40,136 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* VIDEO (First on mobile, second on desktop) */}
             <div className="order-1 md:order-2 flex justify-center pt-6 md:pt-0">
-
               <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl">
 
-                {/* ✅ GIF (Background Layer) */}
+                {/* ✅ 1. GIF (Bottom Layer) */}
                 <img
                   src="/herosection/chakara.gif"
                   alt="animation"
-                  autoPlay
-                  loop
-                  className="w-full object-contain"
+                  autoPlay="flase"
+                  className=" w-130 object-contain pr-1"
                 />
 
-                {/* ✅ Overlay Image (Above GIF) */}
+                {/* ✅ 2. NEW IMAGE (Middle Layer) */}
                 <img
-                  src="/herosection/ericai.png"
+                  src="/herosection/chakara/centerpart.png" // 👈 add your image here
+                  alt="middle layer"
+                  className="absolute top-[23.7%] left-[21.5%] inset-0 w-[275px] object-contain z-10 pointer-events-none"
+                />
+
+
+
+
+                {/* db designer */}
+                <motion.img
+                  src="/herosection/chakara/1.png"
                   alt="overlay"
-                  className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"
-                />
-
-                {/* 🔴 HOTSPOTS (7 AI Agents) */}
-
-                <div
-                  onClick={() => router.push("/agents/data-entry")}
-                  className="
-    absolute top-[13%] left-[28%] w-[90px] h-[80px] z-20 cursor-pointer
-    rounded-xl
-    transition-all duration-300 ease-out
-
-    /* Base state */
-    bg-white/0
-
-    /* Hover effect */
-    hover:bg-white/10
-    hover:scale-110
-    hover:-translate-y-1
-    hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)]
-    hover:ring-2 hover:ring-white/40
-  "
-                />
-
-                <div
                   onClick={() => router.push("/agents/db-designer")}
-                  className="absolute top-[33%] left-[10%] w-[80px] h-[90px] cursor-pointer z-20"
+                  className="absolute w-[142px] object-contain z-20 
+                 top-[18.9%] left-[6.4%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: -3, y: -1 }}
                 />
 
-                <div
-                  onClick={() => router.push("/agents/project-manager")}
-                  className="absolute top-[58%] left-[15%] w-[85px] h-[95px] cursor-pointer z-20"
+                {/* data entry */}
+                <motion.img
+                  src="/herosection/chakara/2.png"
+                  alt="overlay"
+                  onClick={() => router.push("/agents/data-entry")}
+                  className="absolute w-[161.5px] object-contain z-20 
+                 top-[6.2%] left-[18.1%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: -1, y: -3 }}
                 />
 
-                <div
-                  onClick={() => router.push("/agents/document-manager")}
-                  className="absolute top-[70%] left-[38%] w-[90px] h-[78px] cursor-pointer z-20"
-                />
 
-                <div
-                  onClick={() => router.push("/agents/medical-writer")}
-                  className="absolute top-[58%] left-[65%] w-[85px] h-[100px] cursor-pointer z-20"
-                />
-
-                <div
-                  onClick={() => router.push("/agents/statistics")}
-                  className="absolute top-[32%] left-[70%] w-[80px] h-[100px] cursor-pointer z-20"
-                />
-
-                <div
+                {/* data monitor */}
+                <motion.img
+                  src="/herosection/chakara/3.png"
+                  alt="overlay"
                   onClick={() => router.push("/agents/cra")}
-                  className="absolute top-[12%] left-[53%] w-[100px] h-[90px] cursor-pointer z-20"
+                  className="absolute w-[161.5px] object-contain z-20 
+                 top-[6.6%] left-[44.4%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: 1, y: -3 }}
+                />
+
+                {/* statistics */}
+                <motion.img
+                  src="/herosection/chakara/4.png"
+                  alt="overlay"
+                  onClick={() => router.push("/agents/statistics")}
+                  className="absolute w-[140.5px] object-contain z-20 
+                 top-[19.3%] left-[59.5%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: 3, y: -1 }}
+                />
+
+                {/* medical writer */}
+                <motion.img
+                  src="/herosection/chakara/5.png"
+                  alt="overlay"
+                  onClick={() => router.push("/agents/medical-writer")}
+                  className="absolute w-[147.5px] object-contain z-20 
+                 top-[49.8%] left-[58.1%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: 3, y: 1 }}
+                />
+
+
+                {/* document manager */}
+                <motion.img
+                  src="/herosection/chakara/6.png"
+                  alt="overlay"
+                  onClick={() => router.push("/agents/document-manager")}
+                  className="absolute w-[285.5px] object-contain z-20 
+                 top-[68.4%] left-[20.4%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: 0, y: 3 }}
+                />
+
+                {/* project manager */}
+                <motion.img
+                  src="/herosection/chakara/7.png"
+                  alt="overlay"
+                  onClick={() => router.push("/agents/project-manager")}
+                  className="absolute w-[148.9px] object-contain z-20 
+                 top-[49.8%] left-[6.5%] cursor-pointer"
+
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+
+                  whileHover={{ x: -3, y: 1 }}
                 />
 
               </div>
+
+
             </div>
 
             {/* TEXT (Second on mobile, first on desktop) */}

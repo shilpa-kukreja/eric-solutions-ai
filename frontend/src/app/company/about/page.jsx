@@ -85,7 +85,7 @@ export default function AboutPage() {
         {/* RIGHT CONTENT */}
         <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-4xl  font-bold text-gray-800 mb-4">
-            About <span className="">Eric Solutions</span>
+            About <span className="text-[#0B5EA8]">Eric AI</span>
           </h2>
 
           <p className="text-gray-600 text-xl mb-3">
