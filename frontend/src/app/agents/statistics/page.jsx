@@ -24,6 +24,8 @@ export default function EricAIStatistics() {
     <>
       <Navbar />
 
+
+
       <main className="bg-white">
 
         {/* ================= HERO IMAGE ================= */}
@@ -34,9 +36,19 @@ export default function EricAIStatistics() {
               alt="Eric AI Statistics"
               className="w-full h-full object-cover"
             />
-            {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
           </div>
         </section>
+
+
+        <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold mt-10 text-center">
+                  Eric AI <span className="text-[#0B5EA8]"> Statistics</span>
+                </h2>
+              </motion.div>
 
         {/* ================= HERO CONTENT ================= */}
         <section className="relative py-12 md:py-12 sm:my-5" >
@@ -58,19 +70,12 @@ export default function EricAIStatistics() {
             {/* LEFT SIDE (CONTENT) */}
             <div className="text-black order-1 md:order-1">
 
-              <motion.div
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Eric AI <span className="text-[#0B5EA8]">Statistics</span>
-                </h2>
-              </motion.div>
+             
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="mt-6 text-lg md:text-xl text-gray-700"
+                className=" text-xl md:text-4xl text-gray-700"
               >
                 Insights should guide trials — not trail them.
 
@@ -92,10 +97,10 @@ export default function EricAIStatistics() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="w-full max-w-lg rounded-xl overflow-hidden shadow-lg"
+                className="w-full max-w-lg rounded-xl overflow-hidden"
               >
-                <video
-                  src="/aiagentspages/oil-making.mp4" // 👉 replace with your video
+                <img
+                  src="/aiagentspages/3.gif" // 👉 replace with your video
                   autoPlay
                   muted
                   loop

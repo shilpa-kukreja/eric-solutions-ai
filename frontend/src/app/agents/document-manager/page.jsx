@@ -43,6 +43,15 @@ export default function EricAIDocumentManager() {
           </div>
         </section>
 
+        <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-center mt-10">
+                  Eric AI <span className="text-[#0B5EA8]">Document Manager</span>
+                </h2>
+              </motion.div>
+
         {/* ================= HERO CONTENT ================= */}
         <section className="relative py-12 md:py-12 sm:my-5" >
 
@@ -63,19 +72,12 @@ export default function EricAIDocumentManager() {
             {/* LEFT SIDE (CONTENT) */}
             <div className="text-black order-1 md:order-1">
 
-              <motion.div
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Eric AI <span className="text-[#0B5EA8]">Document Manager</span>
-                </h2>
-              </motion.div>
+              
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="mt-6 text-lg md:text-xl text-gray-700"
+                className="text-xl md:text-4xl text-gray-700"
               >
                 Inspection Readiness Should Be Continuous
 
@@ -101,10 +103,10 @@ export default function EricAIDocumentManager() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="w-full max-w-lg rounded-xl overflow-hidden shadow-lg"
+                className="w-full max-w-lg rounded-xl overflow-hidden "
               >
-                <video
-                  src="/aiagentspages/oil-making.mp4" // 👉 replace with your video
+                <img
+                  src="/aiagentspages/5.gif" // 👉 replace with your video
                   autoPlay
                   muted
                   loop
