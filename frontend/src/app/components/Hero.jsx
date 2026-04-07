@@ -66,7 +66,7 @@ export default function Hero() {
                   alt="overlay"
                   onClick={() => router.push("/agents/db-designer")}
                   className="absolute w-[142px] object-contain z-20 
-                 top-[18.9%] left-[6.4%] cursor-pointer"
+                 top-[19%] left-[6.5%] cursor-pointer"
 
                   initial={{ opacity: 0, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function Hero() {
                   alt="overlay"
                   onClick={() => router.push("/agents/data-entry")}
                   className="absolute w-[161.5px] object-contain z-20 
-                 top-[6.2%] left-[18.1%] cursor-pointer"
+                 top-[6.3%] left-[18.1%] cursor-pointer"
 
                   initial={{ opacity: 0, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function Hero() {
                   alt="overlay"
                   onClick={() => router.push("/agents/statistics")}
                   className="absolute w-[140.5px] object-contain z-20 
-                 top-[19.3%] left-[59.5%] cursor-pointer"
+                 top-[19.4%] left-[59.4%] cursor-pointer"
 
                   initial={{ opacity: 0, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
