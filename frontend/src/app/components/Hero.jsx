@@ -31,192 +31,380 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full  sm:mt-30  sm:pb-20  bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+    <>
+
+      {/* for desktop view  */}
+      <section className="hidden md:block relative w-full  sm:mt-30  sm:pb-20  bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+        {/* Content */}
+        <div className="relative z-20 flex items-center h-full mt-35 sm:mt-20">
+          <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              {/* VIDEO (First on mobile, second on desktop) */}
+              <div className="order-1 md:order-2 flex justify-center pt-6 md:pt-0">
+                <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl">
+
+                  {/* ✅ 1. GIF (Bottom Layer) */}
+                  <img
+                    src="/herosection/chakara.gif"
+                    alt="animation"
+                    autoPlay="flase"
+                    className=" w-130 object-contain pr-1"
+                  />
+
+                  {/* ✅ 2. NEW IMAGE (Middle Layer) */}
+                  <img
+                    src="/herosection/chakara/centerpart.png" // 👈 add your image here
+                    alt="middle layer"
+                    className="absolute top-[23.7%] left-[21.5%] inset-0 w-[275px] object-contain z-10 pointer-events-none"
+                  />
 
 
-      {/* Content */}
-      <div className="relative z-20 flex items-center h-full mt-35 sm:mt-20">
-        <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            {/* VIDEO (First on mobile, second on desktop) */}
-            <div className="order-1 md:order-2 flex justify-center pt-6 md:pt-0">
-              <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl">
-
-                {/* ✅ 1. GIF (Bottom Layer) */}
-                <img
-                  src="/herosection/chakara.gif"
-                  alt="animation"
-                  autoPlay="flase"
-                  className=" w-130 object-contain pr-1"
-                />
-
-                {/* ✅ 2. NEW IMAGE (Middle Layer) */}
-                <img
-                  src="/herosection/chakara/centerpart.png" // 👈 add your image here
-                  alt="middle layer"
-                  className="absolute top-[23.7%] left-[21.5%] inset-0 w-[275px] object-contain z-10 pointer-events-none"
-                />
 
 
-
-
-                {/* db designer */}
-                <motion.img
-                  src="/herosection/chakara/1.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/db-designer")}
-                  className="absolute w-[142px] object-contain z-20 
+                  {/* db designer */}
+                  <motion.img
+                    src="/herosection/chakara/1.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/db-designer")}
+                    className="absolute w-[142px] object-contain z-20 
                  top-[19%] left-[6.5%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 1 }}
+                    transition={{ duration: 0.2, delay: 0.00 }}
 
-                  whileHover={{ x: -3, y: -1 }}
-                />
 
-                {/* data entry */}
-                <motion.img
-                  src="/herosection/chakara/2.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/data-entry")}
-                  className="absolute w-[161.5px] object-contain z-20 
+                    whileHover={{ x: -3, y: -1 }}
+                  />
+
+                  {/* data entry */}
+                  <motion.img
+                    src="/herosection/chakara/2.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/data-entry")}
+                    className="absolute w-[161.5px] object-contain z-20 
                  top-[6.3%] left-[18.1%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.02 }}
+                    whileHover={{ x: -1, y: -3 }}
+                  />
 
-                  whileHover={{ x: -1, y: -3 }}
-                />
 
+                  {/* data monitor */}
+                  <motion.img
+                    src="/herosection/chakara/3.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/cra")}
+                    className="absolute w-[161.5px] object-contain z-20 
+                  top-[6.6%] left-[44.4%] cursor-pointer"
 
-                {/* data monitor */}
-                <motion.img
-                  src="/herosection/chakara/3.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/cra")}
-                  className="absolute w-[161.5px] object-contain z-20 
-                 top-[6.6%] left-[44.4%] cursor-pointer"
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.04 }}
+                    whileHover={{ x: 1, y: -3 }}
+                  />
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
-
-                  whileHover={{ x: 1, y: -3 }}
-                />
-
-                {/* statistics */}
-                <motion.img
-                  src="/herosection/chakara/4.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/statistics")}
-                  className="absolute w-[140.5px] object-contain z-20 
+                  {/* statistics */}
+                  <motion.img
+                    src="/herosection/chakara/4.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/statistics")}
+                    className="absolute w-[140.5px] object-contain z-20 
                  top-[19.4%] left-[59.4%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.06 }}
+                    whileHover={{ x: 3, y: -1 }}
+                  />
 
-                  whileHover={{ x: 3, y: -1 }}
-                />
-
-                {/* medical writer */}
-                <motion.img
-                  src="/herosection/chakara/5.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/medical-writer")}
-                  className="absolute w-[147.5px] object-contain z-20 
+                  {/* medical writer */}
+                  <motion.img
+                    src="/herosection/chakara/5.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/medical-writer")}
+                    className="absolute w-[147.5px] object-contain z-20 
                  top-[49.8%] left-[58.1%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.08 }}
+                    whileHover={{ x: 3, y: 1 }}
+                  />
 
-                  whileHover={{ x: 3, y: 1 }}
-                />
 
-
-                {/* document manager */}
-                <motion.img
-                  src="/herosection/chakara/6.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/document-manager")}
-                  className="absolute w-[285.5px] object-contain z-20 
+                  {/* document manager */}
+                  <motion.img
+                    src="/herosection/chakara/6.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/document-manager")}
+                    className="absolute w-[285.5px] object-contain z-20 
                  top-[68.4%] left-[20.4%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.10 }}
+                    whileHover={{ x: 0, y: 3 }}
+                  />
 
-                  whileHover={{ x: 0, y: 3 }}
-                />
-
-                {/* project manager */}
-                <motion.img
-                  src="/herosection/chakara/7.png"
-                  alt="overlay"
-                  onClick={() => router.push("/agents/project-manager")}
-                  className="absolute w-[148.9px] object-contain z-20 
+                  {/* project manager */}
+                  <motion.img
+                    src="/herosection/chakara/7.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/project-manager")}
+                    className="absolute w-[148.9px] object-contain z-20 
                  top-[49.8%] left-[6.5%] cursor-pointer"
 
-                  initial={{ opacity: 0, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.12 }}
+                    whileHover={{ x: -3, y: 1 }}
+                  />
 
-                  whileHover={{ x: -3, y: 1 }}
-                />
+                </div>
+
 
               </div>
 
+              {/* TEXT (Second on mobile, first on desktop) */}
+              <div className="order-2 md:order-1 text-white">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                  AI Agents Accelerating
+                </h1>
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                  Clinical Trials - Responsibly
+                </h1>
 
-            </div>
-
-            {/* TEXT (Second on mobile, first on desktop) */}
-            <div className="order-2 md:order-1 text-white">
-              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-                AI Agents Accelerating
-              </h1>
-              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-                Clinical Trials - Responsibly
-              </h1>
-
-              <p className="mt-5 text-sm md:text-[15px] text-gray-400">
-                From protocol design to analysis-ready data,
-                <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
-                <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
-                <br /><span>     trials — with humans firmly
-                  in control. </span>
+                <p className="mt-5 text-sm md:text-[15px] text-gray-400">
+                  From protocol design to analysis-ready data,
+                  <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
+                  <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
+                  <br /><span>     trials — with humans firmly
+                    in control. </span>
 
 
-              </p>
+                </p>
 
-              <div className="mt-7 flex flex-wrap gap-3 mb-6">
-                <button
-                  onClick={() => router.push("/contact")}
-                  className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
-                >
-                  Request Demo
-                </button>
+                <div className="mt-7 flex flex-wrap gap-3 mb-6">
+                  <button
+                    onClick={() => router.push("/contact")}
+                    className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
+                  >
+                    Request Demo
+                  </button>
+                  <button
+                    onClick={() => router.push("#ai-agents")}
+                    className="bg-blue-800 px-6 py-3 rounded-sm font-medium hover:bg-[#1D4ED8] transition"
+                  >
+                    View AI Agents
+                  </button>
 
-                <button
-                  onClick={() => router.push("#ai-agents")}
-                  className="bg-blue-800 px-6 py-3 rounded-sm font-medium hover:bg-[#1D4ED8] transition"
-                >
-                  View AI Agents
-                </button>
-
-                <button
-                  onClick={() => router.push("#pricing")}
-                  className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
-                >
-                  See Pricing
-                </button>
+                  <button
+                    onClick={() => router.push("#pricing")}
+                    className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
+                  >
+                    See Pricing
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* for mobile view  */}
+      <section className="block md:hidden relative w-full  sm:mt-30  sm:pb-20  bg-gradient-to-l from-[#024c9c] via-[#012a63] to-[#02103b] overflow-hidden">
+        {/* Content */}
+        <div className="relative z-20 flex items-center h-full mt-35 sm:mt-20">
+          <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              {/* VIDEO (First on mobile, second on desktop) */}
+              <div className="order-1 md:order-2 flex justify-center pt-6 md:pt-0">
+                <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl">
+
+                  {/* ✅ 1. GIF (Bottom Layer) */}
+                  <img
+                    src="/herosection/chakara.gif"
+                    alt="animation"
+                    autoPlay="flase"
+                    className=" w-130 object-contain pr-1"
+                  />
+
+                  {/* ✅ 2. NEW IMAGE (Middle Layer) */}
+                  <img
+                    src="/herosection/chakara/centerpart.png" // 👈 add your image here
+                    alt="middle layer"
+                    className="absolute top-[23%] left-[23%] inset-0 w-[150px] object-contain z-10 pointer-events-none"
+                  />
+
+
+
+
+                  {/* db designer */}
+                  <motion.img
+                    src="/herosection/chakara/1.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/db-designer")}
+                    className="absolute w-[73.6px] object-contain z-20 
+                 top-[19.9%] left-[7.1%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.00 }}
+
+                    whileHover={{ x: -3, y: -1 }}
+                  />
+
+                  {/* data entry */}
+                  <motion.img
+                    src="/herosection/chakara/2.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/data-entry")}
+                    className="absolute w-[88.6px] object-contain z-20 
+                 top-[6.4%] left-[19.4%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.02 }}
+
+                    whileHover={{ x: -1, y: -3 }}
+                  />
+
+
+                  {/* data monitor */}
+                  <motion.img
+                    src="/herosection/chakara/3.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/cra")}
+                    className="absolute w-[88.4px] object-contain z-20 
+                 top-[6.7%] left-[49%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.04 }}
+
+                    whileHover={{ x: 1, y: -3 }}
+                  />
+
+                  {/* statistics */}
+                  <motion.img
+                    src="/herosection/chakara/4.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/statistics")}
+                    className="absolute w-[73.6px] object-contain z-20 
+                 top-[19.9%] left-[66.1%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.06 }}
+
+                    whileHover={{ x: 3, y: -1 }}
+                  />
+
+                  {/* medical writer */}
+                  <motion.img
+                    src="/herosection/chakara/5.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/medical-writer")}
+                    className="absolute w-[78.4px] object-contain z-20 
+                 top-[49.7%] left-[64.2%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.08 }}
+
+                    whileHover={{ x: 3, y: 1 }}
+                  />
+
+
+                  {/* document manager */}
+                  <motion.img
+                    src="/herosection/chakara/6.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/document-manager")}
+                    className="absolute w-[154.2px] object-contain z-20 
+                 top-[67.8%] left-[22%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.10 }}
+
+                    whileHover={{ x: 0, y: 3 }}
+                  />
+
+                  {/* project manager */}
+                  <motion.img
+                    src="/herosection/chakara/7.png"
+                    alt="overlay"
+                    onClick={() => router.push("/agents/project-manager")}
+                    className="absolute w-[78px] object-contain z-20 
+                 top-[49.7%] left-[7.1%] cursor-pointer"
+
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.12 }}
+
+                    whileHover={{ x: -3, y: 1 }}
+                  />
+
+                </div>
+
+
+              </div>
+
+              {/* TEXT (Second on mobile, first on desktop) */}
+              <div className="order-2 md:order-1 text-white">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                  AI Agents Accelerating
+                </h1>
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                  Clinical Trials - Responsibly
+                </h1>
+
+                <p className="mt-5 text-sm md:text-[15px] text-gray-400">
+                  From protocol design to analysis-ready data,
+                  <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
+                  <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
+                  <br /><span>     trials — with humans firmly
+                    in control. </span>
+
+
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-3 mb-6">
+                  <button
+                    onClick={() => router.push("/contact")}
+                    className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
+                  >
+                    Request Demo
+                  </button>
+
+                  <button
+                    onClick={() => router.push("#ai-agents")}
+                    className="bg-blue-800 px-6 py-3 rounded-sm font-medium hover:bg-[#1D4ED8] transition"
+                  >
+                    View AI Agents
+                  </button>
+
+                  <button
+                    onClick={() => router.push("#pricing")}
+                    className="bg-gray-200 text-black px-6 py-3 rounded-sm font-medium hover:bg-gray-300 transition"
+                  >
+                    See Pricing
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </>
+
+
+
+
   );
 }
