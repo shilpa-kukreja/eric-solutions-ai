@@ -57,10 +57,6 @@ export default function Hero() {
                     alt="middle layer"
                     className="absolute top-[23.7%] left-[21.5%] inset-0 w-[275px] object-contain z-10 pointer-events-none"
                   />
-
-
-
-
                   {/* db designer */}
                   <motion.img
                     src="/herosection/chakara/1.png"
