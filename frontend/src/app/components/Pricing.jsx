@@ -48,7 +48,7 @@ export default function Pricing() {
   return (
 
     <>
-    <section className="py-12 bg-white text-black" id="pricing">
+    <section className="py-12 bg-gray-200 text-black" id="pricing">
 
       {/* HEADING */}
       <motion.div
@@ -158,7 +158,7 @@ export default function Pricing() {
     </section>
 
     {/* ================= AI AGENTS SECTION ================= */}
-<section className="py-16 ">
+<section className="py-16 bg-gray-200 ">
   <div className="max-w-6xl mx-auto px-6">
 
     {/* HEADING */}

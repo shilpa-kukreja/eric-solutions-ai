@@ -13,6 +13,7 @@ import HowEricAIWorks from "./components/HowEricAIWorks";
 import EricAIAgents from "./components/EricAIAgents";
 import TrustGovernance from "./components/TrustGovernance";
 import CaseStudies from "./components/CaseStudies";
+import Excellence from "./components/Excellence";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
    <Navbar/>
    <Hero/>
   <SolutionsSection/>
+  <Excellence/>
 
    {/* <AboutSection/> */}
    {/* <ValuePillars/> */}
