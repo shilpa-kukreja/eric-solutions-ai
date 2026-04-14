@@ -40,8 +40,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <img src="/ericaiwhite.gif" alt="logo" width={150} />
+        <Link href="/" className="flex items-right">
+          <img src="/navbar/logo.gif" alt="logo" width={142} />
         </Link>
 
         {/* DESKTOP MENU */}

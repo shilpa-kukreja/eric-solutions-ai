@@ -80,7 +80,7 @@ export default function Footer() {
         {/* LOGO + CONTACT INFO */}
         <div>
           <div className="pl-12">
-            <img src="/footer/ericaiblack.gif" alt="Logo" width={150} height={200} />
+            <img src="/footer/logo.gif" alt="Logo" width={140} height={200} />
 
           </div>
 

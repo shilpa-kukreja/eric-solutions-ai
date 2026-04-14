@@ -55,11 +55,11 @@ export default function AdminLogin() {
   <div className="absolute inset-0 bg-gradient-to-b to-transparent z-10"></div>
 
   {/* Top Content */}
-  <div className="absolute top-4 left-8 right-8 z-20 text-blue-900">
+  {/* <div className="absolute top-4 left-8 right-8 z-20 text-blue-900">
     <h2 className="text-3xl font-bold mb-2 tracking-wide">
       Welcome to Admin Portal
     </h2>
-  </div>
+  </div> */}
 
 </div>
 
@@ -70,12 +70,12 @@ export default function AdminLogin() {
           <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-blue-200 rounded-full opacity-10"></div>
           
           <div className="relative z-10">
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center">
               <Link href="/" className="text-2xl font-semibold text-gray-800">
                 <Image
-                  src="/logo.gif"
+                  src="/footer/logo.gif"
                   alt="logo"
-                  width={220}
+                  width={150}
                   height={90}
                   priority
                 />
@@ -83,7 +83,7 @@ export default function AdminLogin() {
             </div>
 
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-gray-800 mb-3">Admin Login</h2>
+              <h2 className="text-3xl font-bold text-red-600 mb-3">Admin Login</h2>
               <p className="text-gray-500 text-lg">Enter your credentials to access the admin dashboard</p>
             </div>
 

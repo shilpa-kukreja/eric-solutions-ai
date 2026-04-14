@@ -7,6 +7,7 @@ import adminRoutes from './routers/adminroute.js';
 import newsletterRoutes from './routers/newslettterroute.js';
 import blogRoutes from './routers/blogroute.js';
 import sliderRoutes from "./routers/sliderroute.js";
+import dns from "dns";
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -18,6 +19,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 const app=express();
+dns.setServers(['1.1.1.1'],['8.8.8.8'])
 
 
 app.use(express.json());

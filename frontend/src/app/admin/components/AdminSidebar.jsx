@@ -69,12 +69,12 @@ export default function AdminSidebar() {
       `}
       >
         {/* HEADER */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-3 ml-10">
 
           {!collapsed && (
-            <Image
-              src="/logo.gif"
-              width={140}
+            <img
+              src="/navbar/logo.gif"
+              width={100}
               height={60}
               alt="logo"
             />
@@ -107,7 +107,7 @@ export default function AdminSidebar() {
               {item.icon}
 
               {!collapsed && (
-                <span className="text-sm">{item.name}</span>
+                <span className="text-m">{item.name}</span>
               )}
             </Link>
           ))}
