@@ -23,11 +23,12 @@ dns.setServers(['1.1.1.1'],['8.8.8.8'])
 
 
 app.use(express.json());
-app.use(cors({
-    origin:process.env.FRONTEND_URL,
-    methods:['GET','POST','PUT','DELETE'],
-    credentials:true
-}));
+// app.use(cors({
+//     origin:process.env.FRONTEND_URL,
+//     methods:['GET','POST','PUT','DELETE'],
+//     credentials:true
+// }));
+app.use(cors());
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
