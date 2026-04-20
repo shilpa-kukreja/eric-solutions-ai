@@ -47,26 +47,26 @@ export default function AboutPage() {
       <div>
         <h3 className="font-semibold text-lg">Sachin Bidani</h3>
         <p className="text-sm text-gray-500 mb-3">Founder & CEO</p>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-400 text-sm sm:text-[18px] mb-4">
           “Eric Solutions pioneers seamless, science-driven clinical development solutions.”
         </p>
 
         <div className="flex gap-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
-              <FaFacebook />
+              <FaFacebook size={20}/>
             </span>
           </a>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
-              <FaInstagram />
+              <FaInstagram size={20}/>
             </span>
           </a>
 
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-black hover:scale-110 transition">
-              <FaSquareXTwitter />
+              <FaSquareXTwitter size={20}/>
             </span>
           </a>
         </div>
@@ -84,26 +84,26 @@ export default function AboutPage() {
       <div>
         <h3 className="font-semibold text-lg">Dr. Kenneth Duchin</h3>
         <p className="text-sm text-gray-500 mb-3">Chief Scientific Officer</p>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-400 text-sm sm:text-[18px] mb-4">
           “Eric Solution empowers progress through science and technology innovation.”
         </p>
 
         <div className="flex gap-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
-              <FaFacebook />
+              <FaFacebook size={20}/>
             </span>
           </a>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
-              <FaInstagram />
+              <FaInstagram size={20}/>
             </span>
           </a>
 
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-black hover:scale-110 transition">
-              <FaSquareXTwitter />
+              <FaSquareXTwitter size={20}/>
             </span>
           </a>
         </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <div>
         <h3 className="font-semibold text-lg">Deepak Prabhu</h3>
         <p className="text-sm text-gray-500 mb-3">Sr. Director Project Management and Clinical Operations</p>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-400 text-sm sm:text-[18px] mb-4">
           "We’re excited to collaborate with bright minds driving transformative innovation."
 
         </p>
@@ -131,19 +131,19 @@ export default function AboutPage() {
         <div className="flex gap-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
-              <FaFacebook />
+              <FaFacebook size={20}/>
             </span>
           </a>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
-              <FaInstagram />
+              <FaInstagram size={20}/>
             </span>
           </a>
 
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-black hover:scale-110 transition">
-              <FaSquareXTwitter />
+              <FaSquareXTwitter size={20}/>
             </span>
           </a>
         </div>
@@ -162,26 +162,26 @@ export default function AboutPage() {
       <div>
         <h3 className="font-semibold text-lg">Yessenia Rincon</h3>
         <p className="text-sm text-gray-500 mb-3">Clinical Operations</p>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-400 text-sm sm:text-[18px] mb-4">
           “Partnering with Eric Solutions delivers exceptional, results-driven clinical development experiences.”
         </p>
 
         <div className="flex gap-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
-              <FaFacebook />
+              <FaFacebook size={20}/>
             </span>
           </a>
 
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
-              <FaInstagram />
+              <FaInstagram size={20}/>
             </span>
           </a>
 
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <span className="cursor-pointer text-black hover:scale-110 transition">
-              <FaSquareXTwitter />
+              <FaSquareXTwitter size={20}/>
             </span>
           </a>
         </div>

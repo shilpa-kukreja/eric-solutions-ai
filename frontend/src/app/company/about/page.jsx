@@ -108,7 +108,7 @@ export default function AboutPage() {
          Our <spanc className="text-[#0B5EA8]">Mission</spanc>
         </h2>
 
-        <p className="max-w-2xl mx-auto text-gray-600 text-lg md:text-base">
+        <p className="max-w-6xl mx-auto text-gray-600 text-lg md:text-[20px]">
           We are dedicated to delivering comprehensive, end-to-end services and solutions to support our clients' <span className="text-blue-500">clinical development programs,</span> and ensuring the highest quality and efficiency throughout the process.
         </p>
        </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
     <h4 className="font-semibold mb-2 text-lg">
       🚀 2016 ERIC Started
     </h4>
-    <p className="text-gray-600 text-sm">
+    <p className="text-gray-500 text-sm sm:text-[15px]">
       Technology Company with flagship product of Electronic Remote Informed Consent (ERIC)
     </p>
   </div>
@@ -133,7 +133,7 @@ export default function AboutPage() {
     <h4 className="font-semibold mb-2 text-lg">
       ⚙️ 2021 End-End Services
     </h4>
-    <p className="text-gray-600 text-sm">
+    <p className="text-gray-500 text-sm sm:text-[15px]">
       Build up the capacity to undertake full scope clinical trials including clinical safety.
     </p>
   </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
     <h4 className="font-semibold mb-2 text-lg">
       🌍 2022 Global Expansion
     </h4>
-    <p className="text-gray-600 text-sm">
+    <p className="text-gray-500 text-sm sm:text-[15px]">
       Expanded presence in Australia through Partner to execute Phase I clinical trials.
     </p>
   </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
     <h4 className="font-semibold mb-2 text-lg">
       👥 2023 Team Expansion
     </h4>
-    <p className="text-gray-600 text-sm">
+    <p className="text-gray-500 text-sm sm:text-[15px]">
       Expanded Operations, Clinical Data Management team in USA, India
     </p>
   </div>
