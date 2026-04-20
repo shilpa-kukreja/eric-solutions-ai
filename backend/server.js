@@ -7,6 +7,8 @@ import adminRoutes from './routers/adminroute.js';
 import newsletterRoutes from './routers/newslettterroute.js';
 import blogRoutes from './routers/blogroute.js';
 import sliderRoutes from "./routers/sliderroute.js";
+import blogbannerRoutes from "./routers/blogbannerroute.js";
+import casestudiesRoutes from "./routers/casestudiesroute.js";
 import dns from "dns";
 
 import path from "path";
@@ -38,6 +40,8 @@ app.use('/api/admin',adminRoutes);
 app.use('/api/newsletter',newsletterRoutes);
 app.use('/api/blog',blogRoutes);
 app.use("/api/sliders", sliderRoutes);
+app.use("/api/blogbanner", blogbannerRoutes);
+app.use("/api/casestudiesbanner",casestudiesRoutes);
 
 
 app.get('/',(req,res)=>{

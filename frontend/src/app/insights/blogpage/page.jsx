@@ -10,11 +10,17 @@ import Footer from '../../components/Footer';
 export default function BlogsPage() {
 
   const [blogs, setBlogs] = useState([]);
+  const [banners, setBanners] = useState([]);
+
 
   const API = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/list`; // change if needed
 
   useEffect(() => {
     fetchBlogs();
+  }, []);
+
+   useEffect(() => {
+    fetchBanners();
   }, []);
 
   const fetchBlogs = async () => {
@@ -26,16 +32,26 @@ export default function BlogsPage() {
     }
   };
 
+  const fetchBanners = async () => {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogbanner/active`
+    );
+    setBanners(res.data);
+  };
+
+
   return (
     <>
       <Navbar />
 
       <div className="relative w-full pt-20 mt-19">
+        {banners.map((banner, i) => (
         <img
-          src={"/blog/banner.png"}
-          alt="image"
-          className="w-full h-full object-cover"
+          key={i}
+          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${banner.image.url}`}
+          className="w-full h-full object-cover mb-4 "
         />
+      ))}
       </div>
       <section className="py-12 px-6  bg-white ">
 

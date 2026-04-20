@@ -24,6 +24,8 @@ export default function EtmfTechnology() {
 
    const [openIndex, setOpenIndex] = useState(0);
     const [activeTab, setActiveTab] = useState("iwrs");
+
+    
  const features = [
     {
       title: "Free up Your Internal TMF Resources",

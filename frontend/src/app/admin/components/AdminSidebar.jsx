@@ -29,6 +29,9 @@ export default function AdminSidebar() {
     { name: "Blogs", path: "/admin/blog", icon: <NotebookTabs size={20} /> },
     { name: "Blog List", path: "/admin/bloglist", icon: <Logs size={20} /> },
     { name: "Sliders", path: "/admin/sliders", icon: <Images size={20} /> },
+    { name: "Blog Banner", path: "/admin/blog-banner", icon: <Images size={20} /> },
+    { name: "Case Studies Banner", path: "/admin/casestudies-banner", icon: <Images size={20} /> },
+
   ];
 
   return (

@@ -1,15 +1,40 @@
 import multer from "multer";
+import fs from "fs";
 import path from "path";
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    let folder = "uploads";
+
+    // 👉 Decide folder based on route
+    
+    if (req.baseUrl.includes("blog")) {
+      folder = "uploads/blog";
+    }
+    if (req.baseUrl.includes("slider")) {
+    folder = "uploads/slider";
+    }
+     if (req.baseUrl.includes("blogbanner")) {
+    folder = "uploads/blogbanner";
+    }
+     if (req.baseUrl.includes("casestudies")) {
+    folder = "uploads/casestudies";
+    }
+     
+    
+  
+
+    // Create folder if not exists
+    if (!fs.existsSync(folder)) {
+      fs.mkdirSync(folder, { recursive: true });
+    }
+
+    cb(null, folder);
   },
 
   filename: (req, file, cb) => {
     const uniqueName =
       Date.now() + "-" + file.originalname.replace(/\s+/g, "-");
-
     cb(null, uniqueName);
   },
 });
