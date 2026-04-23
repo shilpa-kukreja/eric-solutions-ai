@@ -28,6 +28,8 @@ export default function AdminSidebar() {
     { name: "Subscribers", path: "/admin/subscribers", icon: <UserCheck size={20} /> },
     { name: "Blogs", path: "/admin/blog", icon: <NotebookTabs size={20} /> },
     { name: "Blog List", path: "/admin/bloglist", icon: <Logs size={20} /> },
+    { name: "Articles", path: "/admin/article", icon: <NotebookTabs size={20} /> },
+    { name: "Article List", path: "/admin/articlelist", icon: <Logs size={20} /> },
     // { name: "Sliders", path: "/admin/sliders", icon: <Images size={20} /> },
     { name: "Blog Banner", path: "/admin/blog-banner", icon: <Images size={20} /> },
     { name: "Case Studies Banner", path: "/admin/casestudies-banner", icon: <Images size={20} /> },

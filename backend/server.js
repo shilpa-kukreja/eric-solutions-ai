@@ -6,6 +6,7 @@ import contactRoutes from './routers/contactroute.js';
 import adminRoutes from './routers/adminroute.js';
 import newsletterRoutes from './routers/newslettterroute.js';
 import blogRoutes from './routers/blogroute.js';
+import articleRoutes from './routers/articleroute.js'
 import sliderRoutes from "./routers/sliderroute.js";
 import blogbannerRoutes from "./routers/blogbannerroute.js";
 import casestudiesRoutes from "./routers/casestudiesroute.js";
@@ -48,6 +49,7 @@ app.use("/api/casestudiesbanner",casestudiesRoutes);
 app.use("/api/timeline",timelineRoutes);
 app.use("/api/footer",footerRoutes);
 app.use("/api/team",teamRoutes);
+app.use("/api/article",articleRoutes);
 
 app.get('/',(req,res)=>{
     res.send('this is eric solutions server');

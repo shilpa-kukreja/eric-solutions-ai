@@ -7,26 +7,26 @@ import { motion } from "framer-motion";
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-export default function BlogsPage() {
+export default function ArticlesPage() {
 
-  const [blogs, setBlogs] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [banners, setBanners] = useState([]);
 
 
-  const API = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/list`; // change if needed
+  const API = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/article/list`; // change if needed
 
   useEffect(() => {
-    fetchBlogs();
+    fetchArticles();
   }, []);
 
    useEffect(() => {
     fetchBanners();
   }, []);
 
-  const fetchBlogs = async () => {
+  const fetchArticles = async () => {
     try {
       const res = await axios.get(API);
-      setBlogs(res.data.blogs);
+      setArticles(res.data.articles);
     } catch (error) {
       console.log(error);
     }
@@ -61,7 +61,7 @@ export default function BlogsPage() {
           <div className="text-center mb-16">
 
             <h1 className="text-3xl md:text-4xl font-bold text-black">
-              Latest <span className="">Blogs</span>
+              Latest <span className="">Articles</span>
             </h1>
 
             <p className="text-gray-600 mt-4 max-w-xl mx-auto">
@@ -70,13 +70,13 @@ export default function BlogsPage() {
 
           </div>
 
-          {/* Blog Grid */}
+          {/* Articles Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-            {blogs.map((blog, index) => (
+            {articles.map((article, index) => (
 
               <motion.div
-                key={blog._id}
+                key={article._id}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -84,35 +84,35 @@ export default function BlogsPage() {
                 className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
               >
 
-                {/* Blog Image */}
+                {/* Article Image */}
                 <div className="w-full  bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg border border-gray-200">
 
                   <img
-                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg.url}`}
-                    alt={blog.blogName}
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${article.articleImg.url}`}
+                    alt={article.articleName}
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500"
                   />
 
                 </div>
 
-                {/* Blog Content */}
+                {/* Article Content */}
                 <div className="p-6">
 
                   <p className="text-sm text-gray-500 mb-2">
-                    {new Date(blog.blogDate).toLocaleDateString()}
+                    {new Date(article.articleDate).toLocaleDateString()}
                   </p>
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-1">
-                    {blog.blogName}
+                    {article.articleName}
                   </h3>
 
                   <p className="text-gray-600 text-sm line-clamp-3 mb-5" dangerouslySetInnerHTML={{
-                    __html: blog.blogDetail,
+                    __html: article.articleDetail,
                   }}>
                   </p>
 
                   <Link
-                    href={`/blog/${blog.slug}`}
+                    href={`/article/${article.slug}`}
                     className="text-white font-medium hover:underline bg-blue-900 hover:bg-[#0f2777] rounded-md p-3 "
                   >
                     Read More →
