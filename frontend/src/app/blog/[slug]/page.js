@@ -1,7 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 
 async function getBlog(slug) {
   const res = await axios.get(
@@ -30,7 +29,7 @@ export default async function BlogDetail({ params }) {
 
   return (
     <>
-    <Navbar />
+
     <div className="max-w-7xl mx-auto px-6 py-16 mt-10">
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-15">
@@ -120,7 +119,6 @@ export default async function BlogDetail({ params }) {
       </div>
 
     </div>
-    <Footer/>
     </>
     
   );

@@ -10,7 +10,7 @@ const companyLinks = [
 
 const insightsLinks = [
   { name: "Blog", slug: "blogpage" },
-  { name: "Case Studies", slug: "case-studies" },
+  // { name: "Case Studies", slug: "case-studies" },
 ]
 
 const agentsLinks = [

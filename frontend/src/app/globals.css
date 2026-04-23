@@ -21,3 +21,29 @@
     transform: translateX(100%);
   }
 }
+
+/* About Section Styling */
+.about-hero {
+  margin-top: 120px; /* fix mt-30 issue */
+  padding: 60px 20px;
+}
+
+/* Right content adjustment */
+.about-hero .right-content {
+  position: relative;
+}
+
+/* Background map */
+.about-hero .map-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+}
+
+/* Marker position */
+.about-hero .map-marker {
+  position: absolute;
+  top: 156%;
+  left: 15.5%;
+  cursor: pointer;
+}

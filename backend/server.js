@@ -9,6 +9,9 @@ import blogRoutes from './routers/blogroute.js';
 import sliderRoutes from "./routers/sliderroute.js";
 import blogbannerRoutes from "./routers/blogbannerroute.js";
 import casestudiesRoutes from "./routers/casestudiesroute.js";
+import timelineRoutes from "./routers/timelineroute.js";
+import footerRoutes from "./routers/footerroute.js";
+import teamRoutes from "./routers/teamroute.js";
 import dns from "dns";
 
 import path from "path";
@@ -42,7 +45,9 @@ app.use('/api/blog',blogRoutes);
 app.use("/api/sliders", sliderRoutes);
 app.use("/api/blogbanner", blogbannerRoutes);
 app.use("/api/casestudiesbanner",casestudiesRoutes);
-
+app.use("/api/timeline",timelineRoutes);
+app.use("/api/footer",footerRoutes);
+app.use("/api/team",teamRoutes);
 
 app.get('/',(req,res)=>{
     res.send('this is eric solutions server');

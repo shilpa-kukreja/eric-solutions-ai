@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -9,27 +9,40 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 import axios from "axios";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
-
   const [openSection, setOpenSection] = useState(null);
+  const [data, setData] = useState(null);
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  useEffect(() => {
+    fetchContact();
+  }, []);
+
+  const fetchContact = async () => {
+    try {
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/footer`,
+      );
+      setData(res.data.data);
+    } catch {
+      console.error("Failed to fetch contact");
+    }
+  };
+  if (!data) return null;
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
   };
 
-  const [formData, setFormData] = useState({
-    email: ""
-  });
-
-  const [loading, setLoading] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -41,7 +54,7 @@ export default function Footer() {
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/newsletter/subscribe`,
-        formData
+        formData,
       );
 
       if (res.data.success) {
@@ -54,7 +67,6 @@ export default function Footer() {
       }
 
       setLoading(false);
-
     } catch (error) {
       toast.error(error.response?.data?.message || "Subscription failed");
       setLoading(false);
@@ -63,7 +75,6 @@ export default function Footer() {
 
   return (
     <footer className="relative border border-gray-200 py-12">
-
       <div className="absolute inset-0 flex opacity-1000  items-center justify-center pointer-events-none z-0">
         <img
           src="/worldmap/blob.svg"
@@ -72,49 +83,40 @@ export default function Footer() {
         />
       </div>
 
-
       {/* MAIN GRID */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-4 gap-10 items-start">
-
-
         {/* LOGO + CONTACT INFO */}
         <div>
           <div className="pl-12">
             <img src="/footer/logo.gif" alt="Logo" width={140} height={200} />
-
           </div>
 
           {/* CONTACT DETAILS */}
           <div className="space-y-2 text-gray-400 text-[15px]">
-
             <div className="flex items-start gap-2">
               <FaMapMarkerAlt className="mt-1 text-black" />
-              <p>621 E Tropical Way Plantation, FLorida 33317</p> {/* Change to your actual address */}
+              <p>{data.address}</p>
             </div>
 
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="text-black" />
-              <p>(+1) 786-636-5556</p> {/* Change phone */}
+              <p>{data.phone}</p>
             </div>
 
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-black" />
-              <p> Info@ericsolutions.com</p> {/* Change email */}
+              <p>{data.email}</p>
             </div>
-
           </div>
         </div>
 
         {/* QUICK LINKS */}
         <div className="sm:ml-25">
-
           <button
             onClick={() => toggleSection("quick")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
-            <h3 className="text-[20px] font-bold mb-4">
-              Company
-            </h3>
+            <h3 className="text-[20px] font-bold mb-4">Company</h3>
 
             <span className="md:hidden">
               {openSection === "quick" ? <FiMinus /> : <FiPlus />}
@@ -132,43 +134,49 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/company/about" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
+              <Link
+                href="/company/about"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link href="/insights/blogpage" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
+              <Link
+                href="/insights/blogpage"
+                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
+              >
                 Blogs
               </Link>
             </li>
 
             <li>
-              <Link href="/insights/case-studies" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
+              <Link
+                href="/insights/case-studies"
+                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
+              >
                 Case Studies
               </Link>
             </li>
 
             <li>
-              <Link href="/contact" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
+              <Link
+                href="/contact"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
                 Contact
               </Link>
             </li>
-
-
           </ul>
-
         </div>
 
         <div className=" sm:ml-8">
-
           <button
             onClick={() => toggleSection("quick")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
-            <h3 className="text-[20px] font-bold mb-4">
-              Legal
-            </h3>
+            <h3 className="text-[20px] font-bold mb-4">Legal</h3>
 
             <span className="md:hidden">
               {openSection === "quick" ? <FiMinus /> : <FiPlus />}
@@ -186,39 +194,42 @@ export default function Footer() {
             </li> */}
 
             <li>
-              <Link href="/privacy-policy" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
+              <Link
+                href="/privacy-policy"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
                 Privacy Policy
               </Link>
             </li>
 
             <li>
-              <Link href="/terms-conditions" className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]">
+              <Link
+                href="/terms-conditions"
+                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
+              >
                 Terms & Conditions
               </Link>
             </li>
 
             <li>
-              <Link href="/cookie-policy" className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]">
+              <Link
+                href="/cookie-policy"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
                 Cookie Policy
               </Link>
             </li>
           </ul>
-
         </div>
-
-
 
         {/* NEWSLETTER */}
         <div>
-          <h3 className="text-[20px] font-bold mb-4">
-            Subscribe Newsletter
-          </h3>
+          <h3 className="text-[20px] font-bold mb-4">Subscribe Newsletter</h3>
 
           <form
             onSubmit={handleSubmit}
             className="flex items-center bg-gray-200 rounded-md p-2 shadow-md"
           >
-
             <input
               type="email"
               name="email"
@@ -236,12 +247,10 @@ export default function Footer() {
             >
               {loading ? "Submitting..." : "Subscribe"}
             </button>
-
           </form>
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-5 mt-4 text-2xl">
-
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
               <FaFacebook />
             </span>
@@ -257,18 +266,14 @@ export default function Footer() {
             <span className="cursor-pointer text-black hover:scale-110 transition">
               <FaSquareXTwitter />
             </span>
-
           </div>
-
         </div>
-
       </div>
 
       {/* COPYRIGHT */}
       <div className=" relative z-10 border-t border-gray-200 pt-6 text-center text-gray-400 text-sm">
         © {new Date().getFullYear()} Eric Solutions. All Rights Reserved.
       </div>
-
     </footer>
   );
 }
