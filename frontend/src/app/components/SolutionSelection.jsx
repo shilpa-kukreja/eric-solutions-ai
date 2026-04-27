@@ -38,7 +38,7 @@ export default function SolutionsSection() {
             viewport={{ once: false }}
             className="relative"
           >
-            <div className="absolute -bottom-4 -right-4 -top-4 w-[230px] h-[315px] sm:w-[350px] sm:h-[450px] bg-orange-400 z-0 "></div>
+            <div className="absolute -bottom-4 -right-4 -top-4 w-[230px] h-[265px] sm:w-[350px] sm:h-[450px] bg-orange-400 z-0 "></div>
 
             <Image
               src="/solution/solutions.jpg" // replace with your image
@@ -61,7 +61,7 @@ export default function SolutionsSection() {
             viewport={{ once: false }}
             className="relative"
           >
-            <div className="absolute -bottom-4 -left-4 -top-4 w-[230px] h-[300px] sm:w-[350px] sm:h-[430px] bg-[#0a0736] z-0 "></div>
+            <div className="absolute -bottom-4 -left-4 -top-4 w-[230px] h-[257px] sm:w-[350px] sm:h-[430px] bg-[#0a0736] z-0 "></div>
 
             <Image
               src="/solution/support.jpg" // replace with your image
