@@ -152,12 +152,12 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link
+              {/* <Link
                 href="/insights/case-studies"
                 className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
               >
                 Case Studies
-              </Link>
+              </Link> */}
             </li>
 
             <li>
