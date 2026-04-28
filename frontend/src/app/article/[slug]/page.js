@@ -42,7 +42,7 @@ export default async function ArticleDetail({ params }) {
           
 
           <div className="bg-white rounded-xl shadow p-6">
-            <Link href="/" className="text-blue-900 text-lg flex items-center gap-2 mb-6 font-medium ">
+            <Link href="/insights/articlepage" className="text-blue-900 text-lg flex items-center gap-2 mb-6 font-medium ">
             ← Back to Articles
           </Link>
 

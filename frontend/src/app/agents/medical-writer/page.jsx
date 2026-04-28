@@ -74,7 +74,7 @@ export default function EricAIMedicalWriter() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="mt-6 text-xl md:text-4xl text-gray-700"
+                className=" text-xl md:text-4xl text-gray-700"
               >
                 Accelerate Drafting Without Compromising Science
 

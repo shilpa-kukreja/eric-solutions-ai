@@ -40,7 +40,7 @@ export default function AboutPage() {
           Meet The <span className="text-[#0B5EA8]"> Brains</span>
         </h2>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Behind The <span className="text-[#0B5EA8]"> Eric Solutions</span>
+          Behind The <span className="text-[#0B5EA8]"> Eric AI</span>
         </h2>
       </section>
 

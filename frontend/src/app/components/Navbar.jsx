@@ -64,7 +64,7 @@ export default function Navbar() {
               </svg>
             </span>
 
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-48 bg-white text-gray-700 rounded-xl shadow-2xl opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 transition-all duration-300">
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-55 bg-white text-gray-700 rounded-xl shadow-2xl opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 transition-all duration-300">
               {agentsLinks.map((item) => (
                 <Link
                   key={item.slug}
