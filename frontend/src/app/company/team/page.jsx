@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram,FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Newsletter from "../../components/Newsletter";
 
@@ -120,6 +120,18 @@ export default function AboutPage() {
                         >
                           <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
                             <FaInstagram size={19} />
+                          </span>
+                        </a>
+                      )}
+
+                        {member.socialLinks?.linkedin && (
+                        <a
+                          href={member.socialLinks.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="cursor-pointer text-blue-600 hover:scale-110 transition">
+                            <FaLinkedin size={19} />
                           </span>
                         </a>
                       )}

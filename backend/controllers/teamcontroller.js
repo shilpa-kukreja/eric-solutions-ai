@@ -11,6 +11,7 @@ export const createTeamMember = async (req, res) => {
       facebook,
       instagram,
       twitter,
+      linkedin,
       order,
     } = req.body;
 
@@ -31,6 +32,7 @@ export const createTeamMember = async (req, res) => {
         facebook,
         instagram,
         twitter,
+        linkedin,
       },
     });
 
@@ -97,6 +99,7 @@ export const updateTeamMember = async (req, res) => {
       facebook: req.body.facebook || member.socialLinks.facebook,
       instagram: req.body.instagram || member.socialLinks.instagram,
       twitter: req.body.twitter || member.socialLinks.twitter,
+      linkedin: req.body.linkedin || member.socialLinks.linkedin,
     };
 
     if (req.file) {

@@ -16,6 +16,7 @@ export default function AddTeam() {
     facebook: "",
     instagram: "",
     twitter: "",
+    linkedin:"",
     order: "",
   });
 
@@ -160,7 +161,7 @@ export default function AddTeam() {
               Social Links
             </label>
 
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-4 gap-4">
               <input
                 type="text"
                 name="facebook"
@@ -182,6 +183,14 @@ export default function AddTeam() {
                 name="twitter"
                 onChange={handleChange}
                 placeholder="Twitter URL"
+                className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
+               <input
+                type="text"
+                name="linkedin"
+                onChange={handleChange}
+                placeholder="Linkedin URL"
                 className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-500"
               />
             </div>

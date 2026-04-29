@@ -46,6 +46,8 @@ export default function EditTeam() {
   data.append("facebook", form.socialLinks?.facebook || "");
   data.append("instagram", form.socialLinks?.instagram || "");
   data.append("twitter", form.socialLinks?.twitter || "");
+  data.append("linkedin", form.socialLinks?.linkedin || "");
+
 
   if (image) data.append("image", image);
 
@@ -180,7 +182,7 @@ export default function EditTeam() {
               Social Links
             </label>
 
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-4 gap-4">
               <input
                 type="text"
                 value={form.socialLinks?.facebook || ""}
@@ -226,6 +228,22 @@ export default function EditTeam() {
                   })
                 }
                 placeholder="Twitter URL"
+                className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
+              <input
+                type="text"
+                value={form.socialLinks?.linkedin || ""}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    socialLinks: {
+                      ...form.socialLinks,
+                      linkedin: e.target.value,
+                    },
+                  })
+                }
+                placeholder="Linkedin URL"
                 className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-500"
               />
             </div>
