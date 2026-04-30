@@ -135,7 +135,7 @@ export default function Hero() {
                     alt="overlay"
                     onClick={() => router.push("/agents/document-manager")}
                     className="absolute w-[302.5px] object-contain z-20 
-                 top-[67.4%] left-[18.7%] cursor-pointer"
+                 top-[67.2%] left-[18.7%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
