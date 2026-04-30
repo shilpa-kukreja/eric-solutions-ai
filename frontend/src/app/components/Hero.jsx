@@ -53,7 +53,7 @@ export default function Hero() {
                   <img
                     src="/herosection/chakara/centerpart.png" // 👈 add your image here
                     alt="middle layer"
-                    className="absolute top-[22.6%] left-[20%] inset-0 w-[285px] object-contain z-10 pointer-events-none"
+                    className="absolute top-[22.6%] left-[20.2%] inset-0 w-[285px] object-contain z-10 pointer-events-none"
                   />
                   {/* db designer */}
                   <motion.img
@@ -135,7 +135,7 @@ export default function Hero() {
                     alt="overlay"
                     onClick={() => router.push("/agents/document-manager")}
                     className="absolute w-[302.5px] object-contain z-20 
-                 top-[67.3%] left-[18.7%] cursor-pointer"
+                 top-[67.4%] left-[18.7%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
