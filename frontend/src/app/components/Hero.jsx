@@ -53,22 +53,22 @@ export default function Hero() {
                   <img
                     src="/herosection/chakara/centerpart.png" // 👈 add your image here
                     alt="middle layer"
-                    className="absolute top-[23.7%] left-[21.5%] inset-0 w-[275px] object-contain z-10 pointer-events-none"
+                    className="absolute top-[22.6%] left-[20%] inset-0 w-[285px] object-contain z-10 pointer-events-none"
                   />
                   {/* db designer */}
                   <motion.img
                     src="/herosection/chakara/1.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/db-designer")}
-                    className="absolute w-[142px] object-contain z-20 
-                 top-[18.9%] left-[6.5%] cursor-pointer"
+                    className="absolute w-[146px] object-contain z-20 
+                 top-[18.8%] left-[5.4%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 1 }}
                     transition={{ duration: 0.2, delay: 0.00 }}
 
 
-                    whileHover={{ x: -3, y: -1 }}
+                    whileHover={{ x: -3, y: 0 }}
                   />
 
                   {/* data entry */}
@@ -76,8 +76,8 @@ export default function Hero() {
                     src="/herosection/chakara/2.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/data-entry")}
-                    className="absolute w-[161.5px] object-contain z-20 
-                 top-[6.3%] left-[18.3%] cursor-pointer"
+                    className="absolute w-[170.5px] object-contain z-20 
+                 top-[4.8%] left-[16.4%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -91,8 +91,8 @@ export default function Hero() {
                     src="/herosection/chakara/3.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/cra")}
-                    className="absolute w-[161.5px] object-contain z-20 
-                  top-[6.6%] left-[44.6%] cursor-pointer"
+                    className="absolute w-[171px] object-contain z-20 
+                  top-[4.8%] left-[43.9%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -105,8 +105,8 @@ export default function Hero() {
                     src="/herosection/chakara/4.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/statistics")}
-                    className="absolute w-[140.5px] object-contain z-20 
-                 top-[19.4%] left-[59.4%] cursor-pointer"
+                    className="absolute w-[146px] object-contain z-20 
+                 top-[18.5%] left-[59.4%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -119,8 +119,8 @@ export default function Hero() {
                     src="/herosection/chakara/5.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/medical-writer")}
-                    className="absolute w-[147.5px] object-contain z-20 
-                 top-[49.8%] left-[58.1%] cursor-pointer"
+                    className="absolute w-[148px] object-contain z-20 
+                 top-[49%] left-[58.5%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -134,8 +134,8 @@ export default function Hero() {
                     src="/herosection/chakara/6.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/document-manager")}
-                    className="absolute w-[285.5px] object-contain z-20 
-                 top-[68.4%] left-[20.4%] cursor-pointer"
+                    className="absolute w-[302.5px] object-contain z-20 
+                 top-[67.3%] left-[18.7%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -148,8 +148,8 @@ export default function Hero() {
                     src="/herosection/chakara/7.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/project-manager")}
-                    className="absolute w-[148.9px] object-contain z-20 
-                 top-[49.8%] left-[6.5%] cursor-pointer"
+                    className="absolute w-[148px] object-contain z-20 
+                 top-[49.2%] left-[5.6%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -241,8 +241,8 @@ export default function Hero() {
                     src="/herosection/chakara/1.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/db-designer")}
-                    className="absolute w-[73.6px] object-contain z-20 
-                 top-[19.9%] left-[7.1%] cursor-pointer"
+                    className="absolute w-[78px] object-contain z-20 
+                 top-[19%] left-[6.6%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -256,8 +256,8 @@ export default function Hero() {
                     src="/herosection/chakara/2.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/data-entry")}
-                    className="absolute w-[88.6px] object-contain z-20 
-                 top-[6.4%] left-[19.4%] cursor-pointer"
+                    className="absolute w-[89.6px] object-contain z-20 
+                 top-[5.2%] left-[18.8%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -272,8 +272,8 @@ export default function Hero() {
                     src="/herosection/chakara/3.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/cra")}
-                    className="absolute w-[88.4px] object-contain z-20 
-                 top-[6.7%] left-[49%] cursor-pointer"
+                    className="absolute w-[89.5px] object-contain z-20 
+                 top-[5.2%] left-[48.4%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -287,8 +287,8 @@ export default function Hero() {
                     src="/herosection/chakara/4.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/statistics")}
-                    className="absolute w-[73.6px] object-contain z-20 
-                 top-[19.9%] left-[66.1%] cursor-pointer"
+                    className="absolute w-[78px] object-contain z-20 
+                 top-[18.4%] left-[65%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -302,8 +302,8 @@ export default function Hero() {
                     src="/herosection/chakara/5.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/medical-writer")}
-                    className="absolute w-[78.4px] object-contain z-20 
-                 top-[49.7%] left-[64.2%] cursor-pointer"
+                    className="absolute w-[79.5px] object-contain z-20 
+                 top-[49.2%] left-[64%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -318,8 +318,8 @@ export default function Hero() {
                     src="/herosection/chakara/6.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/document-manager")}
-                    className="absolute w-[154.2px] object-contain z-20 
-                 top-[67.8%] left-[22%] cursor-pointer"
+                    className="absolute w-[158.5px] object-contain z-20 
+                 top-[67.7%] left-[21.4%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -333,8 +333,8 @@ export default function Hero() {
                     src="/herosection/chakara/7.png"
                     alt="overlay"
                     onClick={() => router.push("/agents/project-manager")}
-                    className="absolute w-[78px] object-contain z-20 
-                 top-[49.7%] left-[7.1%] cursor-pointer"
+                    className="absolute w-[79.5px] object-contain z-20 
+                 top-[49.2%] left-[6.7%] cursor-pointer"
 
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}

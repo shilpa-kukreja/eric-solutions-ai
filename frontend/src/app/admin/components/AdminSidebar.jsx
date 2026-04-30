@@ -14,6 +14,9 @@ import {
   Images,
   ChevronLeft,
   Menu,
+  Hourglass,
+  HatGlasses,
+  Contact
 } from "lucide-react";
 
 export default function AdminSidebar() {
@@ -25,39 +28,53 @@ export default function AdminSidebar() {
   const menu = [
     { name: "Dashboard", path: "/admin/dashboard", icon: <House size={20} /> },
     { name: "Contacts", path: "/admin/contacts", icon: <Users size={20} /> },
-    { name: "Subscribers", path: "/admin/subscribers", icon: <UserCheck size={20} /> },
+    {
+      name: "Subscribers",
+      path: "/admin/subscribers",
+      icon: <UserCheck size={20} />,
+    },
     { name: "Blogs", path: "/admin/blog", icon: <NotebookTabs size={20} /> },
     { name: "Blog List", path: "/admin/bloglist", icon: <Logs size={20} /> },
-    { name: "Articles", path: "/admin/article", icon: <NotebookTabs size={20} /> },
-    { name: "Article List", path: "/admin/articlelist", icon: <Logs size={20} /> },
+    {
+      name: "Articles",
+      path: "/admin/article",
+      icon: <NotebookTabs size={20} />,
+    },
+    {
+      name: "Article List",
+      path: "/admin/articlelist",
+      icon: <Logs size={20} />,
+    },
     // { name: "Sliders", path: "/admin/sliders", icon: <Images size={20} /> },
-    { name: "Blog Banner", path: "/admin/blog-banner", icon: <Images size={20} /> },
-    { name: "Case Studies Banner", path: "/admin/casestudies-banner", icon: <Images size={20} /> },
+    // { name: "Blog Banner", path: "/admin/blog-banner", icon: <Images size={20} /> },
+    // { name: "Case Studies Banner", path: "/admin/casestudies-banner", icon: <Images size={20} /> },
     // { name: "TimeLine Add", path: "/admin/timeline/add", icon: <Images size={20} /> },
-    { name: "Timeline", path: "/admin/timeline/list", icon: <Images size={20} /> },
-    { name: "Footer Contact", path: "/admin/footer-contact", icon: <Images size={20} /> },
-        { name: "Team", path: "/admin/team/list", icon: <Images size={20} /> },
-
-
-
-
+    {
+      name: "Timeline",
+      path: "/admin/timeline/list",
+      icon: <Hourglass size={20} />,
+    },
+    { name: "Team", path: "/admin/team/list", icon: <HatGlasses size={20} /> },
+    {
+      name: "Footer Contact",
+      path: "/admin/footer-contact",
+      icon: <Contact size={20} />,
+    },
   ];
 
   return (
     <>
       {/* MOBILE TOP BAR */}
-{/* MOBILE TOP BAR */}
-<div className="md:hidden flex items-center h-14 bg-gray-900 text-white px-4">
-
-  {/* Hamburger */}
-  <button
-    onClick={() => setMobileOpen(true)}
-    className="flex items-center justify-center"
-  >
-    <Menu size={26} />
-  </button>
-
-</div>
+      {/* MOBILE TOP BAR */}
+      <div className="md:hidden flex items-center h-14 bg-gray-900 text-white px-4">
+        {/* Hamburger */}
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="flex items-center justify-center"
+        >
+          <Menu size={26} />
+        </button>
+      </div>
 
       {/* MOBILE OVERLAY */}
       {mobileOpen && (
@@ -82,14 +99,8 @@ export default function AdminSidebar() {
       >
         {/* HEADER */}
         <div className="flex items-center justify-between mb-3 ml-10">
-
           {!collapsed && (
-            <img
-              src="/navbar/logo.gif"
-              width={100}
-              height={60}
-              alt="logo"
-            />
+            <img src="/navbar/logo.gif" width={100} height={60} alt="logo" />
           )}
 
           {/* COLLAPSE BUTTON */}
@@ -111,16 +122,12 @@ export default function AdminSidebar() {
               href={item.path}
               onClick={() => setMobileOpen(false)}
               className={`flex items-center gap-3 px-3 py-3 rounded-lg transition ${
-                pathname === item.path
-                  ? "bg-[#a13045]"
-                  : "hover:bg-gray-800"
+                pathname === item.path ? "bg-[#a13045]" : "hover:bg-gray-800"
               }`}
             >
               {item.icon}
 
-              {!collapsed && (
-                <span className="text-m">{item.name}</span>
-              )}
+              {!collapsed && <span className="text-m">{item.name}</span>}
             </Link>
           ))}
         </nav>
