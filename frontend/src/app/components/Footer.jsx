@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
@@ -26,7 +26,7 @@ export default function Footer() {
   const fetchContact = async () => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/footer`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/footer/`,
       );
       setData(res.data.data);
     } catch {
@@ -87,8 +87,8 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-4 gap-10 items-start">
         {/* LOGO + CONTACT INFO */}
         <div>
-          <div className="pl-12">
-            <img src="/footer/logo.gif" alt="Logo" width={140} height={200} />
+          <div className="">
+            <img src="/footer/logo.gif" alt="Logo" width={210} height={200} />
           </div>
 
           {/* CONTACT DETAILS */}
@@ -144,7 +144,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/insights/blogpage"
+                href="/insights/blog"
                 className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
               >
                 Blogs
@@ -226,46 +226,61 @@ export default function Footer() {
         <div>
           <h3 className="text-[20px] font-bold mb-4">Subscribe Newsletter</h3>
 
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center bg-gray-200 rounded-md p-2 shadow-md"
-          >
-            <input
-              type="email"
-              name="email"
-              value={statusMessage || formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className="flex-1 bg-transparent outline-none px-1 py-2 text-gray-700 "
-              disabled={statusMessage !== ""}
-            />
+        <form
+  onSubmit={handleSubmit}
+  className="
+    flex flex-col gap-2
+    md:flex-col
+    lg:flex-row
+    bg-gray-200 rounded-md p-2 shadow-md
+  "
+>
+  <input
+    type="email"
+    name="email"
+    value={statusMessage || formData.email}
+    onChange={handleChange}
+    placeholder="Enter your email"
+    className="flex-1 min-w-0 bg-transparent outline-none px-3 py-2 text-gray-700"
+    disabled={statusMessage !== ""}
+  />
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-blue-900 hover:bg-[#0f2777] text-white px-1 py-2 rounded-md transition"
-            >
-              {loading ? "Submitting..." : "Subscribe"}
-            </button>
-          </form>
-
+  <button
+    type="submit"
+    disabled={loading}
+    className="
+      w-full md:w-full lg:w-auto
+      whitespace-nowrap
+      bg-blue-900 hover:bg-[#0f2777]
+      text-white px-4 py-2 rounded-md transition
+    "
+  >
+    {loading ? "Submitting..." : "Subscribe"}
+  </button>
+</form>
           {/* SOCIAL ICONS */}
           <div className="flex gap-5 mt-4 text-2xl">
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
               <FaFacebook />
             </span>
 
-            <span className="cursor-pointer text-[#FF0000] hover:scale-110 transition">
+            {/* <span className="cursor-pointer text-[#FF0000] hover:scale-110 transition">
               <FaYoutube />
-            </span>
+            </span> */}
 
             <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
               <FaInstagram />
             </span>
 
+            <span className="cursor-pointer text-blue-600 hover:scale-110 transition">
+              <FaLinkedin />
+            </span>
+
             <span className="cursor-pointer text-black hover:scale-110 transition">
               <FaSquareXTwitter />
             </span>
+
+            
           </div>
         </div>
       </div>
