@@ -33,35 +33,35 @@ export default function EditTeam() {
     setPreview(resolvedUrl);
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const data = new FormData();
+    const data = new FormData();
 
-  data.append("name", form.name);
-  data.append("designation", form.designation);
-  data.append("quote", form.quote);
-  data.append("order", form.order || 0);
+    data.append("name", form.name);
+    data.append("designation", form.designation);
+    data.append("quote", form.quote);
+    data.append("order", form.order || 0);
 
-  data.append("facebook", form.socialLinks?.facebook || "");
-  data.append("instagram", form.socialLinks?.instagram || "");
-  data.append("twitter", form.socialLinks?.twitter || "");
-  data.append("linkedin", form.socialLinks?.linkedin || "");
+    data.append("email", form.socialLinks?.email || "");
+    data.append("facebook", form.socialLinks?.facebook || "");
+    data.append("instagram", form.socialLinks?.instagram || "");
+    data.append("twitter", form.socialLinks?.twitter || "");
+    data.append("linkedin", form.socialLinks?.linkedin || "");
 
+    if (image) data.append("image", image);
 
-  if (image) data.append("image", image);
-
-  try {
-    await axios.put(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/team/update/${id}`,
-      data
-    );
-    toast.success("Updated");
-    router.push("/admin/team/list");
-  } catch {
-    toast.error("Error updating");
-  }
-};
+    try {
+      await axios.put(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/team/update/${id}`,
+        data,
+      );
+      toast.success("Updated");
+      router.push("/admin/team/list");
+    } catch {
+      toast.error("Error updating");
+    }
+  };
 
   return (
     <div className="p-6 md:p-10 bg-gray-50 min-h-screen">
@@ -182,7 +182,23 @@ export default function EditTeam() {
               Social Links
             </label>
 
-            <div className="grid md:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-5 gap-4">
+              <input
+                type="text"
+                value={form.socialLinks?.email || ""}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    socialLinks: {
+                      ...form.socialLinks,
+                      email: e.target.value,
+                    },
+                  })
+                }
+                placeholder="Email URL"
+                className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
               <input
                 type="text"
                 value={form.socialLinks?.facebook || ""}

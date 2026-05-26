@@ -100,7 +100,7 @@ export default function AboutPage() {
               </div>
 
               {/* MARKER */}
-              <div className="absolute top-[335%] left-[15.5%] group cursor-pointer z-10">
+              <div className="absolute top-[110%] left-[15.5%] group cursor-pointer z-10">
                 <div className="w-4 h-4 rounded-full relative">
                   <span className="absolute inset-0 rounded-full bg-pink-400 animate-ping"></span>
                 </div>
@@ -112,16 +112,16 @@ export default function AboutPage() {
 
               {/* ACTUAL CONTENT */}
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-[-140px]">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-[-120px]">
                   About <span className="text-[#0B5EA8]">Eric AI</span>
                 </h2>
 
-                <p className="text-gray-600 text-xl mb-3">
-                  Custom Solutions for Thought Leadership and Research
-                  Development
+                <p className="text-gray-600 text-md ">
+                  Founded in 2016, headquartered in Plantation, Florida, with operations in India and partners in Argentina, Hungary, Romania, and Australia. A full-service CRO and regulatory affairs organisation running ICH-GCP trials Phase I–IV — focused on emerging biotech and device sponsors who need senior attention and fixed-fee clarity.
+
                 </p>
 
-                <p className="text-gray-500 text-xl mb-6">
+                <p className="text-gray-500 text-lg mb-6">
                   www.ericsolutions.com
                 </p>
               </div>

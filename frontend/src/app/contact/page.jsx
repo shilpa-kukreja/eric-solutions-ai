@@ -79,10 +79,10 @@ export default function ContactPage() {
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-           Connect With <span className="text-[#0B5EA8]">Us</span>
+           Tell us about your  <span className="text-[#0B5EA8]">study</span>
         </h2>
         <p className="text-gray-700 text-md">
-            We’re always happy to hear from you.
+Share the protocol, phase, indication, and timeline, and we will respond with a fixed-fee proposal and a team that has run trials like yours.
         </p>
       </motion.div>
 

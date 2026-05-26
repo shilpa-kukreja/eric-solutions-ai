@@ -8,6 +8,7 @@ export const createTeamMember = async (req, res) => {
       name,
       designation,
       quote,
+      email,
       facebook,
       instagram,
       twitter,
@@ -29,6 +30,7 @@ export const createTeamMember = async (req, res) => {
         : undefined,
 
       socialLinks: {
+        email,
         facebook,
         instagram,
         twitter,
@@ -52,7 +54,10 @@ export const createTeamMember = async (req, res) => {
 // GET ALL
 export const getAllTeamMembers = async (req, res) => {
   try {
-    const members = await Team.find({ status: true }).sort({ order: 1, createdAt: -1 })
+    const members = await Team.find({ status: true }).sort({
+      order: 1,
+      createdAt: -1,
+    });
 
     res.json({
       success: true,
@@ -96,6 +101,7 @@ export const updateTeamMember = async (req, res) => {
     member.quote = req.body.quote || member.quote;
 
     member.socialLinks = {
+      email: req.body.email || member.socialLinks.email,
       facebook: req.body.facebook || member.socialLinks.facebook,
       instagram: req.body.instagram || member.socialLinks.instagram,
       twitter: req.body.twitter || member.socialLinks.twitter,
