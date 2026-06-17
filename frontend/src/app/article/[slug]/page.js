@@ -57,7 +57,11 @@ export default async function ArticleDetail({ params }) {
             </h1>
 
             <div className="flex items-center text-sm text-gray-500 gap-4 mb-6">
-              <span>📅 Published on {new Date(article.articleDate).toDateString()}</span>
+              <span> 📅 Published on {new Date(article.articleDate).toLocaleDateString("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+}).replace(/ /g, "-")}</span>
               <span>✍️ By Admin</span>
             </div>
 

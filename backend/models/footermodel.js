@@ -14,6 +14,22 @@ const footerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    facebook: {
+      type: String,
+      default: "",
+    },
+      instagram: {
+      type: String,
+      default: "",
+    },
+     linkedin: {
+      type: String,
+      default: "",
+    },
+    twitter: {
+      type: String,
+      default: "",
+    },
   },
   { timestamps: true }
 );

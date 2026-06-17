@@ -20,7 +20,7 @@ const ListArticles = () => {
   const fetchArticles = async () => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/article/list`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/article/list`,
       );
 
       setArticles(res.data.articles);
@@ -47,7 +47,7 @@ const ListArticles = () => {
   };
 
   const filteredArticles = articles.filter((article) =>
-    article.articleName.toLowerCase().includes(searchTerm.toLowerCase())
+    article.articleName.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
@@ -56,7 +56,7 @@ const ListArticles = () => {
 
   const paginatedArticles = filteredArticles.slice(
     startIdx,
-    startIdx + itemsPerPage
+    startIdx + itemsPerPage,
   );
 
   useEffect(() => {
@@ -65,21 +65,17 @@ const ListArticles = () => {
 
   return (
     <div className="p-4 md:p-8 bg-gray-50 min-h-screen">
-
       {/* Header */}
 
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
-
         <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
           Articles List
         </h2>
-
       </div>
 
       {/* Search */}
 
       <div className="mb-6 relative w-full md:max-w-md">
-
         <FaSearch className="absolute left-3 top-3 text-gray-400" />
 
         <input
@@ -92,19 +88,14 @@ const ListArticles = () => {
           }}
           className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
         />
-
       </div>
 
       {/* ================= DESKTOP TABLE ================= */}
 
       <div className="hidden md:block bg-white rounded-xl shadow overflow-hidden">
-
         <div className="overflow-x-auto">
-
           <table className="w-full text-left">
-
             <thead className="bg-gray-200 border-b text-gray-600 text-sm uppercase tracking-wide">
-
               <tr>
                 <th className="p-4"></th>
                 <th className="p-4">Image</th>
@@ -112,49 +103,39 @@ const ListArticles = () => {
                 <th className="p-4">Date</th>
                 <th className="p-4 text-center">Actions</th>
               </tr>
-
             </thead>
 
             <tbody className="divide-y">
-
               {paginatedArticles.length > 0 ? (
-
                 paginatedArticles.map((article, index) => (
-
                   <tr key={article._id} className="hover:bg-gray-50 transition">
-
                     <td className="p-4 text-gray-600">
                       {startIdx + index + 1}
                     </td>
 
                     <td className="p-4">
-
                       <img
                         src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${article.articleImg.url}`}
                         alt={article.articleName}
                         className="w-16 h-16 object-cover rounded-lg border"
                       />
-
                     </td>
 
                     <td className="p-4 font-medium text-gray-800 max-w-sm truncate">
                       {article.articleName}
                     </td>
 
-                    <td className="p-4 text-green-600 font-semibold">
-
-                      {new Date(article.articleDate).toLocaleDateString("en-GB", {
-                        day: "2-digit",
-                        month: "short",
-                        year: "numeric",
-                      })}
-
-                    </td>
+                   <td className="p-4 text-green-600 font-semibold">
+{new Date(article.articleDate)
+  .toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  })
+  .replace(/ /g, "-")}</td>
 
                     <td className="p-4 text-center">
-
                       <div className="flex justify-center gap-3">
-
                         <button
                           onClick={() =>
                             router.push(`/admin/article/${article._id}`)
@@ -172,48 +153,31 @@ const ListArticles = () => {
                           <FaTrash size={12} />
                           Delete
                         </button>
-
                       </div>
-
                     </td>
-
                   </tr>
-
                 ))
-
               ) : (
-
                 <tr>
-
                   <td colSpan="5" className="text-center py-10 text-gray-500">
                     No articles found
                   </td>
-
                 </tr>
-
               )}
-
             </tbody>
-
           </table>
-
         </div>
-
       </div>
 
       {/* ================= MOBILE CARDS ================= */}
 
       <div className="grid md:hidden gap-4">
-
         {paginatedArticles.length > 0 ? (
-
           paginatedArticles.map((article) => (
-
             <div
               key={article._id}
               className="bg-white rounded-xl shadow p-4 flex gap-4 items-center"
             >
-
               <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${article.articleImg.url}`}
                 alt={article.articleName}
@@ -221,7 +185,6 @@ const ListArticles = () => {
               />
 
               <div className="flex-1">
-
                 <h3 className="font-semibold text-gray-800 text-sm line-clamp-2">
                   {article.articleName}
                 </h3>
@@ -231,11 +194,8 @@ const ListArticles = () => {
                 </p>
 
                 <div className="flex gap-2 mt-3">
-
                   <button
-                    onClick={() =>
-                      router.push(`/addarticle/${article._id}`)
-                    }
+                    onClick={() => router.push(`/addarticle/${article._id}`)}
                     className="flex items-center gap-1 px-3 py-1 bg-blue-500 text-white text-xs rounded-md"
                   >
                     <FaEdit size={10} />
@@ -249,29 +209,20 @@ const ListArticles = () => {
                     <FaTrash size={10} />
                     Delete
                   </button>
-
                 </div>
-
               </div>
-
             </div>
-
           ))
-
         ) : (
-
           <div className="text-center py-10 text-gray-500">
             No articles found
           </div>
-
         )}
-
       </div>
 
       {/* Pagination */}
 
       <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
-
         <button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage((prev) => prev - 1)}
@@ -299,9 +250,7 @@ const ListArticles = () => {
         >
           Next
         </button>
-
       </div>
-
     </div>
   );
 };

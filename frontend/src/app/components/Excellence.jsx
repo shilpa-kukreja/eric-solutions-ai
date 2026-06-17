@@ -25,9 +25,9 @@ export default function WhyChooseUs() {
     },
     {
       icon: <FaCheck />,
-      value: 100,
+      value:  70,
       suffix: "%",
-      label: "Approval",
+      label: "Repeat Business",
     },
     {
       icon: <FaUserFriends />,

@@ -55,7 +55,13 @@ export default async function BlogDetail({ params }) {
 
               <div className="flex items-center text-sm text-gray-500 gap-4 mb-6">
                 <span>
-                  📅 Published on {new Date(blog.blogDate).toDateString()}
+                  {new Date(blog.blogDate)
+                    .toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                    })
+                    .replace(/ /g, "-")}{" "}
                 </span>
                 <span>✍️ By Admin</span>
               </div>

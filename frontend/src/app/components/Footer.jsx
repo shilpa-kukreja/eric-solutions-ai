@@ -226,61 +226,83 @@ export default function Footer() {
         <div>
           <h3 className="text-[20px] font-bold mb-4">Subscribe Newsletter</h3>
 
-        <form
-  onSubmit={handleSubmit}
-  className="
+          <form
+            onSubmit={handleSubmit}
+            className="
     flex flex-col gap-2
     md:flex-col
     lg:flex-row
     bg-gray-200 rounded-md p-2 shadow-md
   "
->
-  <input
-    type="email"
-    name="email"
-    value={statusMessage || formData.email}
-    onChange={handleChange}
-    placeholder="Enter your email"
-    className="flex-1 min-w-0 bg-transparent outline-none px-3 py-2 text-gray-700"
-    disabled={statusMessage !== ""}
-  />
+          >
+            <input
+              type="email"
+              name="email"
+              value={statusMessage || formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className="flex-1 min-w-0 bg-transparent outline-none px-3 py-2 text-gray-700"
+              disabled={statusMessage !== ""}
+            />
 
-  <button
-    type="submit"
-    disabled={loading}
-    className="
+            <button
+              type="submit"
+              disabled={loading}
+              className="
       w-full md:w-full lg:w-auto
       whitespace-nowrap
       bg-blue-900 hover:bg-[#0f2777]
       text-white px-4 py-2 rounded-md transition
     "
-  >
-    {loading ? "Submitting..." : "Subscribe"}
-  </button>
-</form>
+            >
+              {loading ? "Submitting..." : "Subscribe"}
+            </button>
+          </form>
           {/* SOCIAL ICONS */}
           <div className="flex gap-5 mt-4 text-2xl">
-            <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
-              <FaFacebook />
-            </span>
+            {data.facebook && (
+              <a
+                href={data.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1877F2] hover:scale-110 transition"
+              >
+                <FaFacebook />
+              </a>
+            )}
 
-            {/* <span className="cursor-pointer text-[#FF0000] hover:scale-110 transition">
-              <FaYoutube />
-            </span> */}
+            {data.instagram && (
+              <a
+                href={data.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E4405F] hover:scale-110 transition"
+              >
+                <FaInstagram />
+              </a>
+            )}
 
-            <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
-              <FaInstagram />
-            </span>
+            {data.linkedin && (
+              <a
+                href={data.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:scale-110 transition"
+              >
+                <FaLinkedin />
+              </a>
+            )}
 
-            <span className="cursor-pointer text-blue-600 hover:scale-110 transition">
-              <FaLinkedin />
-            </span>
-
-            <span className="cursor-pointer text-black hover:scale-110 transition">
-              <FaSquareXTwitter />
-            </span>
-
-            
+            {data.twitter && (
+              <a
+                href={data.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:scale-110 transition"
+              >
+                <FaSquareXTwitter />
+              </a>
+            )}
           </div>
         </div>
       </div>

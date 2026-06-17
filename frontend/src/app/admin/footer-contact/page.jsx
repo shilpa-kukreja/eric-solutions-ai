@@ -9,7 +9,12 @@ export default function ContactAdmin() {
     address: "",
     phone: "",
     email: "",
+    facebook: "",
+    instagram: "",
+    linkedin: "",
+    twitter: "",
   });
+
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
@@ -54,7 +59,7 @@ export default function ContactAdmin() {
   };
 
   return (
-    <div className=" py-50 bg-gray-50 flex justify-center items-center p-6">
+    <div className=" py-10 bg-gray-50 flex justify-center items-center p-6">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl">
         <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
 
@@ -82,6 +87,42 @@ export default function ContactAdmin() {
             name="email"
             placeholder="Email"
             value={form.email}
+            onChange={handleChange}
+            className="w-full border p-3 rounded-xl"
+          />
+
+          <input
+            type="text"
+            name="facebook"
+            placeholder="Facebook URL"
+            value={form.facebook}
+            onChange={handleChange}
+            className="w-full border p-3 rounded-xl"
+          />
+
+          <input
+            type="text"
+            name="instagram"
+            placeholder="Instagram URL"
+            value={form.instagram}
+            onChange={handleChange}
+            className="w-full border p-3 rounded-xl"
+          />
+
+          <input
+            type="text"
+            name="linkedin"
+            placeholder="LinkedIn URL"
+            value={form.linkedin}
+            onChange={handleChange}
+            className="w-full border p-3 rounded-xl"
+          />
+
+          <input
+            type="text"
+            name="twitter"
+            placeholder="Twitter / X URL"
+            value={form.twitter}
             onChange={handleChange}
             className="w-full border p-3 rounded-xl"
           />

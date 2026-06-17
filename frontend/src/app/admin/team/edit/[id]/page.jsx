@@ -64,7 +64,7 @@ export default function EditTeam() {
   };
 
   return (
-    <div className="p-6 md:p-10 bg-gray-50 min-h-screen">
+    <div className="p-6 md:p-5 bg-gray-50 min-h-screen">
       <div className="mx-auto bg-white shadow-lg rounded-xl p-8 max-w-4xl">
         <h1 className="text-2xl md:text-3xl font-bold mb-8">
           Edit Team Member
