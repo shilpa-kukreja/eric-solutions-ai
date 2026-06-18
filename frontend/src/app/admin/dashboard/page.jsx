@@ -3,7 +3,16 @@
 import Link from "next/link";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Users, UserCheck, NotebookTabs, Search, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Users,
+  UserCheck,
+  NotebookTabs,
+  Search,
+  ChevronLeft,
+  ChevronRight,
+  Activity,
+  Eye,
+} from "lucide-react";
 
 export default function AdminDashboard() {
   // All contacts (full list)
@@ -15,6 +24,13 @@ export default function AdminDashboard() {
   const [contactCount, setContactCount] = useState(0);
   const [subscriberCount, setSubscriberCount] = useState(0);
   const [blogCount, setBlogCount] = useState(0);
+
+  // Analytics stats
+  const [analytics, setAnalytics] = useState({
+    activeUsers: 0,
+    sessions: 0,
+    pageViews: 0,
+  });
 
   // Table controls
   const [searchTerm, setSearchTerm] = useState("");
@@ -69,24 +85,28 @@ export default function AdminDashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const [contactRes, blogRes] = await Promise.all([
+      const [contactRes, blogRes, subscriberRes, analyticsRes] = await Promise.all([
         axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/get`),
         axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/list`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/newsletter/get`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/analytics/dashboard`),
       ]);
 
-      const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/newsletter/get`
-      );
-
       const contactData = contactRes.data.contacts || [];
-      const subscriberData = response.data || [];
+      const subscriberData = subscriberRes.data || [];
       const blogData = blogRes.data.blogs || [];
+      const analyticsData = analyticsRes.data;
 
-      setAllContacts(contactData); // store full list
-      setFilteredContacts(contactData); // initial
+      setAllContacts(contactData);
+      setFilteredContacts(contactData);
       setContactCount(contactData.length);
       setSubscriberCount(subscriberData.newsletters?.length || 0);
       setBlogCount(blogData.length);
+      setAnalytics({
+        activeUsers: analyticsData.activeUsers || 0,
+        sessions: analyticsData.sessions || 0,
+        pageViews: analyticsData.pageViews || 0,
+      });
     } catch (error) {
       console.error("Dashboard API Error:", error);
     }
@@ -157,6 +177,46 @@ export default function AdminDashboard() {
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* ===== NEW: Analytics Cards ===== */}
+      <div className="mb-10">
+        <h3 className="text-lg font-semibold mb-4">Analytics Overview</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-md">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm opacity-90">Active Users</p>
+                <h3 className="text-3xl font-bold mt-1">{analytics.activeUsers}</h3>
+              </div>
+              <div className="bg-white/20 p-3 rounded-lg">
+                <Users size={28} />
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white p-6 rounded-xl shadow-md">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm opacity-90">Sessions</p>
+                <h3 className="text-3xl font-bold mt-1">{analytics.sessions}</h3>
+              </div>
+              <div className="bg-white/20 p-3 rounded-lg">
+                <Activity size={28} />
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-xl shadow-md">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm opacity-90">Page Views</p>
+                <h3 className="text-3xl font-bold mt-1">{analytics.pageViews}</h3>
+              </div>
+              <div className="bg-white/20 p-3 rounded-lg">
+                <Eye size={28} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Latest Contacts Table – enhanced with search, sort, pagination */}

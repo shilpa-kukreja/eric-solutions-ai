@@ -17,6 +17,10 @@ import footerRoutes from "./routers/footerroute.js";
 import teamRoutes from "./routers/teamroute.js";
 import dns from "dns";
 
+
+import analyticsRoute from "./routers/analyticsroute.js";
+
+
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -53,6 +57,8 @@ app.use("/api/timeline",timelineRoutes);
 app.use("/api/footer",footerRoutes);
 app.use("/api/team",teamRoutes);
 app.use("/api/article",articleRoutes);
+
+app.use("/api/analytics", analyticsRoute);
 
 app.get('/',(req,res)=>{
     res.send('this is eric solutions server');
