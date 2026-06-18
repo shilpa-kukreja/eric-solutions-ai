@@ -112,13 +112,13 @@ export default function AdminContactsPage() {
   };
 
   const formatDate = (date) =>
-    new Date(date)
-      .toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      })
-      .replace(/ /g, "-");
+  new Date(date)
+    .toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+    .replace(/ /g, "-");
 
   const exportToExcel = () => {
     const exportData = filteredContacts.map((contact) => ({
@@ -290,12 +290,12 @@ export default function AdminContactsPage() {
             <div className="flex justify-between items-start">
               <h3 className="font-semibold">{contact.name}</h3>
 
-              <button
+              {/* <button
                 onClick={() => setDeleteConfirm(contact._id)}
                 className="text-red-600"
               >
                 <Trash2 size={18} />
-              </button>
+              </button> */}
             </div>
 
             <div className="flex items-center gap-2 text-sm text-gray-600 mt-2">
@@ -339,14 +339,14 @@ export default function AdminContactsPage() {
             <tr>
               <th className="p-4 text-left">Name</th>
               <th className="p-4 text-left">Contact</th>
-              <th className="p-4 text-left">Mobile Number</th>
+              <th className="p-4 text-left">Phone</th>
               <th
                 className="p-4 text-left cursor-pointer"
                 onClick={() => handleSort("createdAt")}
               >
                 Date
               </th>
-              <th className="p-4 text-left">Actions</th>
+              {/* <th className="p-4 text-left">Actions</th> */}
             </tr>
           </thead>
 
@@ -368,22 +368,23 @@ export default function AdminContactsPage() {
                     </div>
                   )} */}
                 </td>
-                <td className="p-4">{contact.phone}</td>
 
                 {/* <td className="p-4 max-w-xs truncate">{contact.message}</td> */}
+                                <td className="p-4">{contact.phone}</td>
 
-                <td className="p-4">
-                  {new Date(contact.createdAt)
-                    .toLocaleDateString("en-GB", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
-                    })
-                    .replace(/ /g, "-")}
-                </td>
 
-                <td className="p-4 flex gap-2">
-                  {/* <button
+               <td className="p-4">
+  {new Date(contact.createdAt)
+    .toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+    .replace(/ /g, "-")}
+</td> 
+
+                {/* <td className="p-4 flex gap-2">
+                  <button
                     onClick={() => {
                       setSelectedMessage(contact.message);
                       setShowMessageModal(true);
@@ -391,15 +392,15 @@ export default function AdminContactsPage() {
                     className="text-blue-600"
                   >
                     <Eye size={18} />
-                  </button> */}
+                  </button>
 
                   <button
                     onClick={() => setDeleteConfirm(contact._id)}
-                    className="text-red-600 ml-5"
+                    className="text-red-600"
                   >
                     <Trash2 size={18} />
                   </button>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>
@@ -468,12 +469,12 @@ export default function AdminContactsPage() {
                 Cancel
               </button>
 
-              <button
+              {/* <button
                 onClick={() => handleDelete(deleteConfirm)}
                 className="px-4 py-2 bg-red-600 text-white rounded"
               >
                 Delete
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

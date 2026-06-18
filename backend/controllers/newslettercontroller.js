@@ -1,4 +1,5 @@
 import Newsletter from "../models/newslettermodel.js";
+import { createHubspotContact } from "../utils/hubspot.js";
 
 export const createNewsletter = async (req, res) => {
   try {
@@ -24,6 +25,14 @@ export const createNewsletter = async (req, res) => {
     }
 
     const newsletter = await Newsletter.create({ email });
+    
+    // send data to the hubspot
+
+    await createHubspotContact({
+      name: "Newsletter Subscriber",
+      email,
+      source: "Newsletter",
+    });
 
     console.log("server", newsletter);
 
@@ -31,7 +40,6 @@ export const createNewsletter = async (req, res) => {
       success: true,
       message: "Subscribed Successfully",
     });
-
   } catch (error) {
     return res.status(500).json({
       success: false,
@@ -40,39 +48,33 @@ export const createNewsletter = async (req, res) => {
   }
 };
 
-
-export const getNewsletter = async (req,res)=>{
-    try {
-        const newsletters = await Newsletter.find();
-        res.status(200).json({
-            success:true,
-            newsletters
-        })
-    } catch (error) {
-        res.status(500).json({
-            success:false,
-            message:'Internal server error'
-        })
-        
-    }
-}
-
-export const deleteNewsletter = async (req,res)=>{
+export const getNewsletter = async (req, res) => {
   try {
+    const newsletters = await Newsletter.find();
+    res.status(200).json({
+      success: true,
+      newsletters,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
 
+export const deleteNewsletter = async (req, res) => {
+  try {
     await Newsletter.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
-      success:true,
-      message:"Subscriber deleted"
+      success: true,
+      message: "Subscriber deleted",
     });
-
   } catch (error) {
-
     res.status(500).json({
-      success:false,
-      message:"Internal server error"
+      success: false,
+      message: "Internal server error",
     });
-
   }
-}
+};

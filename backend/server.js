@@ -4,6 +4,8 @@ import connectDB from'./config/db.js';
 import cors from 'cors';
 import contactRoutes from './routers/contactroute.js';
 import adminRoutes from './routers/adminroute.js';
+import subadminRoutes from "./routers/subadminroute.js";
+
 import newsletterRoutes from './routers/newslettterroute.js';
 import blogRoutes from './routers/blogroute.js';
 import articleRoutes from './routers/articleroute.js'
@@ -41,6 +43,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use('/api/contact',contactRoutes);
 app.use('/api/admin',adminRoutes);
+app.use("/api/subadmin", subadminRoutes);
 app.use('/api/newsletter',newsletterRoutes);
 app.use('/api/blog',blogRoutes);
 app.use("/api/sliders", sliderRoutes);
