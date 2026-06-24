@@ -57,11 +57,19 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import path from "path";
 
+const credentials = JSON.parse(
+  process.env.GOOGLE_SERVICE_ACCOUNT_JSON
+);
+
+const analyticsDataClient = new BetaAnalyticsDataClient({
+  credentials,
+});
+
 export const getAnalyticsDashboard = async (req, res) => {
   try {
-    const analyticsDataClient = new BetaAnalyticsDataClient({
-      keyFilename: path.join(process.cwd(), "service-account.json"),
-    });
+    // const analyticsDataClient = new BetaAnalyticsDataClient({
+    //   keyFilename: path.join(process.cwd(), "service-account.json"),
+    // });
 
     // (Optional) Log all available metrics – kept for reference
     const [metadata] = await analyticsDataClient.getMetadata({
@@ -139,9 +147,9 @@ export const getAnalyticsDashboard = async (req, res) => {
 
 export const getAnalyticsByCountry = async (req, res) => {
   try {
-    const analyticsDataClient = new BetaAnalyticsDataClient({
-      keyFilename: path.join(process.cwd(), "service-account.json"),
-    });
+    // const analyticsDataClient = new BetaAnalyticsDataClient({
+    //   keyFilename: path.join(process.cwd(), "service-account.json"),
+    // });
 
     const [response] = await analyticsDataClient.runReport({
       property: `properties/${process.env.GA_PROPERTY_ID}`,
@@ -217,9 +225,9 @@ export const getAnalyticsByCountry = async (req, res) => {
 
 export const getRealtimeActiveUsers = async (req, res) => {
   try {
-    const analyticsDataClient = new BetaAnalyticsDataClient({
-      keyFilename: path.join(process.cwd(), "service-account.json"),
-    });
+    // const analyticsDataClient = new BetaAnalyticsDataClient({
+    //   keyFilename: path.join(process.cwd(), "service-account.json"),
+    // });
 
     // --- 1. Real‑time report for last 30 minutes ---
     const [response30] = await analyticsDataClient.runRealtimeReport({
