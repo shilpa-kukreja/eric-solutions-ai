@@ -28,8 +28,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "Eric AI",
+  title: "eRIC AI",
   description: "Clinical and data solutions platform",
+  
+   icons: {
+    icon: "/browser/eric.png",
+  },
 };
 
 export default function RootLayout({ children }) {
