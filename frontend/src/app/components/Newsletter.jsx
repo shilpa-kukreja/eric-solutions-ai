@@ -39,7 +39,7 @@ export default function NewsletterSection() {
       
   {/* Description */}
         <p className="text-gray-200 mb-8 text-lg md:text-xl max-w-xl mx-auto text-gray-800">
-          Eric AI is built to deliver it.
+          eRIC AI is built to deliver it.
 
         </p>
 

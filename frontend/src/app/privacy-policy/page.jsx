@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
   return (
     <>
     <Navbar/>
-    <div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-20">
+    <div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-40">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
 
         {/* Heading */}
@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
         <div className="space-y-5 text-gray-700 leading-relaxed text-[15px]">
 
           <p>
-            This Privacy Policy describes how <strong>Eric Solutions</strong> ("we," "us," or "our")
+            This Privacy Policy describes how <strong>eRIC SOLUTIONS</strong> ("we," "us," or "our")
             collects, uses, and discloses your personal information when you use our services.
           </p>
 
@@ -101,7 +101,7 @@ const PrivacyPolicy = () => {
           <p>
             If you have any questions, contact us at:
             <br />
-            📧 Info@ericsolutions.com
+            📧 info@ericsolutions.com
             <br />
             📞 (+1) 786-636-5556
           </p>

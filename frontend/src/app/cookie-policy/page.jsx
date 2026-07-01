@@ -3,15 +3,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Cookie Policy | Eric Solutions",
-  description: "Cookie Policy of Eric Solutions",
+  title: "Cookie Policy | eRIC SOLUTIONS",
+  description: "Cookie Policy of eRIC SOLUTIONS",
 };
 
 const CookiePolicy = () => {
   return (
     <>
     <Navbar/>
-     <div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-20">
+     <div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-40">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
 
         {/* Heading */}
@@ -27,7 +27,7 @@ const CookiePolicy = () => {
         <div className="space-y-5 text-gray-700 leading-relaxed text-[15px]">
 
           <p>
-            This Cookie Policy explains how <strong>Eric Solutions</strong> ("we", "us", and "our")
+            This Cookie Policy explains how <strong>eRIC SOLUTIONS</strong> ("we", "us", and "our")
             uses cookies and similar technologies when you visit our website.
           </p>
 
@@ -113,7 +113,7 @@ const CookiePolicy = () => {
             Contact Us
           </h2>
           <p>
-            📧 Info@ericsolutions.com <br />
+            📧 info@ericsolutions.com <br />
             📞 (+1) 786-636-5556 <br />
             📍 621 E Tropical Way Plantation, FLorida 33317
           </p>

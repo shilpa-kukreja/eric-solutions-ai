@@ -33,7 +33,7 @@ export default function BlogSection() {
         viewport={{ once: false }}
       >
         <h1 className="text-3xl sm:text-4xl font-bold">
-          Recent Blog from Eric Solutions
+          Recent Blog from eRIC AI
         </h1>
       </motion.div>
 

@@ -72,11 +72,11 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-100 text-gray-800">
+      <div className="bg-gray-100 text-gray-800 ">
         <section className="about-hero w-full bg-white relative overflow-hidden p-12">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             {/* LEFT IMAGE */}
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start mt-15">
               <Image
                 src="/aboutsection/image.png"
                 alt="About"
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </div>
 
             {/* RIGHT CONTENT */}
-            <div className="relative text-center md:text-left mt-[-120px]">
+            <div className="relative text-center md:text-left mt-[-40px] ">
               {/* MAP (BACKGROUND ONLY RIGHT SIDE) */}
               <div className="absolute inset-0 opacity-200 pointer-events-none">
                 <Image
@@ -106,14 +106,14 @@ export default function AboutPage() {
                 </div>
 
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
-                  Eric AI Headquarters
+                  eRIC AI Headquarters
                 </div>
               </div>
 
               {/* ACTUAL CONTENT */}
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-[-120px]">
-                  About <span className="text-[#0B5EA8]">Eric AI</span>
+                  About <span className="text-[#0B5EA8]">eRIC AI</span>
                 </h2>
 
                 <p className="text-gray-600 text-md ">
@@ -241,7 +241,7 @@ export default function AboutPage() {
                 viewport={{ once: false }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
-                  How Eric AI <span className="text-[#0B5EA8]">Works</span>
+                  How eRIC AI <span className="text-[#0B5EA8]">Works</span>
                 </h2>
               </motion.div>
               <p className="text-gray-600 text-lg">

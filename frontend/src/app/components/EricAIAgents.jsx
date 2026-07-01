@@ -6,43 +6,43 @@ import { useRouter } from "next/navigation";
 
 const agents = [
   {
-    name: "Eric AI DB Designer",
+    name: "eRIC AI DB Designer",
     desc: "Rapid protocol-to-CRF design with edit checks and SDTM-ready structures.",
     img: "/aiagents/db.png",
     link: "/agents/db-designer",
   },
   {
-    name: "Eric AI Data Entry",
+    name: "eRIC AI Data Entry",
     desc: "AI-assisted ingestion of scanned source documents with PHI de-identification.",
     img: "/aiagents/entry.png",
     link: "/agents/data-entry",
   },
   {
-    name: "Eric AI CRA",
+    name: "eRIC AI CRA",
     desc: "Remote, risk-based monitoring using de-identified source data.",
     img: "/aiagents/cra.jpeg",
     link: "/agents/cra",
   },
   {
-    name: "Eric AI Statistics",
+    name: "eRIC AI Statistics",
     desc: "Real-time analytics and analysis-ready datasets.",
     img: "/aiagents/statistics.jpeg",
     link: "/agents/statistics",
   },
   {
-    name: "Eric AI Medical Writer",
+    name: "eRIC AI Medical Writer",
     desc: "AI-assisted drafting of clinical documents with human review.",
     img: "/aiagents/medical.png",
     link: "/agents/medical-writer",
   },
   {
-    name: "Eric AI Document Manager",
+    name: "eRIC AI Document Manager",
     desc: "Continuous eTMF completeness and inspection readiness.",
     img: "/aiagents/document.png",
     link: "/agents/document-manager",
   },
   {
-    name: "Eric AI Project Manager",
+    name: "eRIC AI Project Manager",
     desc: "Predictive insights into timelines, risks, and execution.",
     img: "/aiagents/project.png",
     link: "/agents/project-manager",
@@ -65,7 +65,7 @@ export default function EricAIAgents() {
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B5EA8]">
-              Eric AI Agents
+              eRIC AI Agents
             </h2>
           </motion.div>
 
@@ -92,11 +92,11 @@ export default function EricAIAgents() {
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-[#0B5EA8] transition">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-[#0B5EA8] transition line-clamp-1">
                     {agent.name}
                   </h3>
 
-                  <p className="text-m text-gray-600 flex-1">
+                  <p className="text-m text-gray-600 flex-1 line-clamp-2">
                     {agent.desc}
                   </p>
 

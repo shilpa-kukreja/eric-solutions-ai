@@ -11,7 +11,10 @@ import axios from "axios";
 import Link from "next/link";
 
 export default function Footer() {
-  const [openSection, setOpenSection] = useState(null);
+  const [openSections, setOpenSections] = useState({
+    company: false,
+    legal: false,
+  });
   const [data, setData] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
@@ -36,7 +39,10 @@ export default function Footer() {
   if (!data) return null;
 
   const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
   };
 
   const handleChange = (e) => {
@@ -83,12 +89,12 @@ export default function Footer() {
         />
       </div>
 
-      {/* MAIN GRID */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-4 gap-10 items-start">
+      {/* MAIN GRID - adjusted gap for mobile */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-4 gap-y-6 gap-x-10 md:gap-10 items-start">
         {/* LOGO + CONTACT INFO */}
         <div>
-          <div className="">
-            <img src="/footer/logo.gif" alt="Logo" width={210} height={200} />
+          <div className="sm:pl-10">
+            <img src="/footer/logo.gif" alt="Logo" width={120}  />
           </div>
 
           {/* CONTACT DETAILS */}
@@ -110,29 +116,22 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* QUICK LINKS */}
+        {/* QUICK LINKS - COMPANY */}
         <div className="sm:ml-25">
           <button
-            onClick={() => toggleSection("quick")}
+            onClick={() => toggleSection("company")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
             <h3 className="text-[20px] font-bold mb-4">Company</h3>
-
             <span className="md:hidden">
-              {openSection === "quick" ? <FiMinus /> : <FiPlus />}
+              {openSections.company ? <FiMinus /> : <FiPlus />}
             </span>
           </button>
 
           <ul
             className={`space-y-1 text-gray-400 text-sm text-left
-            ${openSection === "quick" ? "block" : "hidden"} md:block`}
+            ${openSections.company ? "block" : "hidden"} md:block`}
           >
-            {/* <li>
-              <Link href="/" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
-                Home
-              </Link>
-            </li> */}
-
             <li>
               <Link
                 href="/company/about"
@@ -145,19 +144,10 @@ export default function Footer() {
             <li>
               <Link
                 href="/insights/blog"
-                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
               >
                 Blogs
               </Link>
-            </li>
-
-            <li>
-              {/* <Link
-                href="/insights/case-studies"
-                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
-              >
-                Case Studies
-              </Link> */}
             </li>
 
             <li>
@@ -171,28 +161,22 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className=" sm:ml-8">
+        {/* LEGAL */}
+        <div className="sm:ml-8">
           <button
-            onClick={() => toggleSection("quick")}
+            onClick={() => toggleSection("legal")}
             className="flex items-center justify-between w-full md:flex md:flex-col md:items-start"
           >
             <h3 className="text-[20px] font-bold mb-4">Legal</h3>
-
             <span className="md:hidden">
-              {openSection === "quick" ? <FiMinus /> : <FiPlus />}
+              {openSections.legal ? <FiMinus /> : <FiPlus />}
             </span>
           </button>
 
           <ul
             className={`space-y-1 text-gray-400 text-sm text-left
-            ${openSection === "quick" ? "block" : "hidden"} md:block`}
+            ${openSections.legal ? "block" : "hidden"} md:block`}
           >
-            {/* <li>
-              <Link href="/" className="inline-block hover:text-orange-500 hover:scale-105 transition-all duration-200">
-                Home
-              </Link>
-            </li> */}
-
             <li>
               <Link
                 href="/privacy-policy"
@@ -205,7 +189,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/terms-conditions"
-                className="inline-block hover:text-blue-500  transition-all duration-200 text-[18px]"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
               >
                 Terms & Conditions
               </Link>
@@ -229,11 +213,11 @@ export default function Footer() {
           <form
             onSubmit={handleSubmit}
             className="
-    flex flex-col gap-2
-    md:flex-col
-    lg:flex-row
-    bg-gray-200 rounded-md p-2 shadow-md
-  "
+              flex flex-col gap-2
+              md:flex-col
+              lg:flex-row
+              bg-gray-200 rounded-md p-2 shadow-md
+            "
           >
             <input
               type="email"
@@ -249,67 +233,40 @@ export default function Footer() {
               type="submit"
               disabled={loading}
               className="
-      w-full md:w-full lg:w-auto
-      whitespace-nowrap
-      bg-blue-900 hover:bg-[#0f2777]
-      text-white px-4 py-2 rounded-md transition
-    "
+                w-full md:w-full lg:w-auto
+                whitespace-nowrap
+                bg-blue-900 hover:bg-[#0f2777]
+                text-white px-4 py-2 rounded-md transition
+              "
             >
               {loading ? "Submitting..." : "Subscribe"}
             </button>
           </form>
+
           {/* SOCIAL ICONS */}
           <div className="flex gap-5 mt-4 text-2xl">
-            {data.facebook && (
-              <a
-                href={data.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1877F2] hover:scale-110 transition"
-              >
-                <FaFacebook />
-              </a>
-            )}
+            <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
+              <FaFacebook />
+            </span>
 
-            {data.instagram && (
-              <a
-                href={data.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#E4405F] hover:scale-110 transition"
-              >
-                <FaInstagram />
-              </a>
-            )}
+            <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
+              <FaInstagram />
+            </span>
 
-            {data.linkedin && (
-              <a
-                href={data.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:scale-110 transition"
-              >
-                <FaLinkedin />
-              </a>
-            )}
+            <span className="cursor-pointer text-blue-600 hover:scale-110 transition">
+              <FaLinkedin />
+            </span>
 
-            {data.twitter && (
-              <a
-                href={data.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:scale-110 transition"
-              >
-                <FaSquareXTwitter />
-              </a>
-            )}
+            <span className="cursor-pointer text-black hover:scale-110 transition">
+              <FaSquareXTwitter />
+            </span>
           </div>
         </div>
       </div>
 
       {/* COPYRIGHT */}
-      <div className=" relative z-10 border-t border-gray-200 pt-6 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} Eric Solutions. All Rights Reserved.
+      <div className="relative z-10 border-t border-gray-200 pt-6 text-center text-gray-400 text-sm">
+        © {new Date().getFullYear()} eRIC AI. All Rights Reserved.
       </div>
     </footer>
   );

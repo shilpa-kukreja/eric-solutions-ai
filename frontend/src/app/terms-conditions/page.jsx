@@ -3,15 +3,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Terms & Conditions | Eric Solutions",
-  description: "Terms and Conditions of Eric Solutions",
+  title: "Terms & Conditions | eRIC SOLUTIONS",
+  description: "Terms and Conditions of eRIC SOLUTIONS",
 };
 
 const Terms = () => {
   return (
     <>
     <Navbar/>
-<div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-20">
+<div className="bg-[#FEF0E1] min-h-screen py-10 px-4 mt-40">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
 
         {/* Heading */}
@@ -27,7 +27,7 @@ const Terms = () => {
         <div className="space-y-5 text-gray-700 leading-relaxed text-[15px]">
 
           <p>
-            This website is operated by <strong>Eric Solutions</strong>. By accessing or using our
+            This website is operated by <strong>eRIC SOLUTIONS</strong>. By accessing or using our
             website, you agree to be bound by these Terms & Conditions.
           </p>
 
@@ -121,14 +121,14 @@ const Terms = () => {
           </h2>
           <p>
             We do not guarantee uninterrupted service. Use of our services is at your own risk.
-            Eric Solutions is not liable for any damages arising from usage.
+            eRIC SOLUTIONS is not liable for any damages arising from usage.
           </p>
 
           <h2 className="text-xl font-semibold text-blue-900 mt-6">
             Indemnification
           </h2>
           <p>
-            You agree to indemnify and hold Eric Solutions harmless from any claims arising from
+            You agree to indemnify and hold eRIC SOLUTIONS harmless from any claims arising from
             your violation of these terms.
           </p>
 
@@ -151,7 +151,7 @@ const Terms = () => {
             Contact
           </h2>
           <p>
-            📧 Info@ericsolutions.com <br />
+            📧 info@ericsolutions.com <br />
             📞 (+1) 786-636-5556 <br />
             📍 621 E Tropical Way Plantation, FLorida 33317
 

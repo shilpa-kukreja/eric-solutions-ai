@@ -43,11 +43,11 @@
 //         >
 //           {/* Premium gradient border on hover */}
 //           <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8] rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-300 shadow-xl p-8 cursor-pointer hover:shadow-2xl hover:-translate-y-2"></div>
-          
+
 //           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
 //             {/* Top gradient bar */}
 //             <div className="h-1.5 bg-gradient-to-r from-[#0B5EA8] via-[#0B5EA8] to-[#0B5EA8]"></div>
-            
+
 //             <div className="p-8 md:p-12">
 //               {/* Header */}
 //               <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
@@ -65,7 +65,7 @@
 //                     <span>60 Subjects</span>
 //                   </div>
 //                 </div>
-               
+
 //               </div>
 
 //               {/* Metrics Grid */}
@@ -208,11 +208,10 @@ export default function CaseStudies() {
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
                     Breast-cancer study start-up, accelerated
-
                   </h3>
                   <div className="flex items-center gap-3 text-slate-500">
                     <span className="flex items-center gap-1">
-                      <span className="font-medium">Breast-cancer study  </span>
+                      <span className="font-medium">Breast-cancer study </span>
                     </span>
                     <span className="w-1 h-1 rounded-full bg-slate-300"></span>
                     <span>USA</span>
@@ -230,32 +229,32 @@ export default function CaseStudies() {
                 <div className="bg-gradient-to-br from-[#0B5EA8] to-[#0B5EA8] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden group/metric">
                   <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/metric:opacity-100 transition-opacity"></div>
                   <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-4">
+                    {/* <div className="flex items-center gap-2 mb-4">
                       <Clock className="w-5 h-5 text-indigo-200" />
                       <p className="text-sm font-medium text-indigo-200 uppercase tracking-wider">
                         19 days DB design
                       </p>
-                    </div>
+                    </div> */}
                     {/* <p className="text-6xl md:text-7xl font-bold mb-2">
                       19<span className="text-3xl"> Days</span>
                     </p> */}
                     <p className="text-indigo-white text-xl font-bold">
-19 days — database design complete (USA, 4 sites, 60 subjects).
+                      19 days — database design complete (USA, 4 sites, 60
+                      subjects).
                     </p>
                   </div>
                 </div>
 
                 {/* First Site Initiation */}
                 <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-indigo-200 transition-colors">
-                  <div className="flex items-center gap-2 mb-3">
+                  {/* <div className="flex items-center gap-2 mb-3">
                     <Layers className="w-5 h-5 text-[#0B5EA8]" />
                     <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-                      5 wks to first site
-
+                      5 wks to first site initiated
                     </p>
-                  </div>
+                  </div> */}
                   <p className="text-2xl font-bold text-slate-800 mb-2">
-Within 5 weeks of signing — first site initiated.
+                    Within 5 weeks of signing — first site initiated.
                   </p>
                   {/* <div className="flex items-center gap-2 text-sm text-emerald-600">
                     <CheckCircle2 className="w-4 h-4" />
@@ -283,17 +282,14 @@ Within 5 weeks of signing — first site initiated.
               <div className="relative bg-gradient-to-r from-gray-50 via-gray-50 to-gray-50 rounded-2xl p-8 overflow-hidden border border-indigo-100">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-full blur-2xl opacity-50"></div>
                 <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-3">
+                  {/* <div className="flex items-center gap-2 mb-3">
                     <Sparkles className="w-5 h-5 text-[#0B5EA8]" />
                     <p className="text-xs font-semibold uppercase tracking-wider text-[#0B5EA8]">
                       faster startup
-
                     </p>
-                  </div>
+                  </div> */}
                   <p className="text-xl md:text-2xl font-bold text-slate-800 leading-relaxed">
                     27% faster than the industry average.
-
-
                   </p>
                   {/* <div className="mt-4 flex items-center gap-2 text-sm text-[#0B5EA8]">
                     <ArrowUpRight className="w-4 h-4" />

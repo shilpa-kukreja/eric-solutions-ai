@@ -173,7 +173,7 @@ export default function Hero() {
 
                 <p className="mt-5 text-sm md:text-[15px] text-gray-400">
                   From protocol design to analysis-ready data,
-                  <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
+                  <span className="font-bold text-white"> eRIC AI</span>{" "} applies Artificial
                   <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
                   <br /><span>     trials — with humans firmly
                     in control. </span>
@@ -359,7 +359,7 @@ export default function Hero() {
 
                 <p className="mt-5 text-sm md:text-[15px] text-gray-400">
                   From protocol design to analysis-ready data,
-                  <span className="font-bold text-white"> Eric AI</span>{" "} applies Artificial
+                  <span className="font-bold text-white"> eRIC AI</span>{" "} applies Artificial
                   <br /><span>  Intelligence deliberately to remove operational bottlenecks in clinical </span>
                   <br /><span>     trials — with humans firmly
                     in control. </span>

@@ -181,11 +181,9 @@ Share the protocol, phase, indication, and timeline, and we will respond with a 
 
             {/* IMAGE */}
             <div className="flex justify-center">
-              <Image
+              <img
                 src="/contact/image.png"
                 alt="doctor"
-                width={400}
-                height={400}
                 className="w-full max-w-md rounded-2xl"
               />
             </div>
