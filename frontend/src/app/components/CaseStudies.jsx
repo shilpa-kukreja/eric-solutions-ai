@@ -209,17 +209,7 @@ export default function CaseStudies() {
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
                     Breast-cancer study start-up, accelerated
                   </h3>
-                  <div className="flex items-center gap-3 text-slate-500">
-                    <span className="flex items-center gap-1">
-                      <span className="font-medium">Breast-cancer study </span>
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span>USA</span>
-                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span>4 Sites</span>
-                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span>60 Subjects</span>
-                  </div>
+                
                 </div>
               </div>
 

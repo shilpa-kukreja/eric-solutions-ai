@@ -299,7 +299,7 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="relative mb-8"
             >
-              <div className="absolute -bottom-3 -right-3 -top-3 w-[190px] h-[260px] bg-orange-400 z-0"></div>
+              <div className="absolute -bottom-3 -right-3 -top-3 w-[190px] h-[263px] bg-orange-400 z-0"></div>
 
               <Image
                 src="/solution/solutions.jpg"
