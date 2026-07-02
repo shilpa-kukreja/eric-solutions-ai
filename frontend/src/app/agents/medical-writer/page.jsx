@@ -32,7 +32,7 @@ export default function EricAIMedicalWriter() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/medicalwriter.png"
+              src="/aiagentspages/medicalwriter.jpg"
               alt="Eric AI Medical Writer"
               className="w-full h-full object-cover"
             />

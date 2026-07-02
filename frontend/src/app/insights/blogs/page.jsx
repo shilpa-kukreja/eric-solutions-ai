@@ -44,14 +44,12 @@ export default function BlogsPage() {
       <Navbar />
 
       <div className="relative w-full pt-20 mt-19">
-        {banners.map((banner, i) => (
-          <img
-            key={i}
-            src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${banner.image.url}`}
-            className="w-full h-full object-cover mb-4"
-            alt="banner"
-          />
-        ))}
+         <img
+          src={"/insights/blogbanner.jpg"}
+          alt="image"
+          className="w-full h-full object-cover"
+        />
+      
       </div>
 
       <section className="py-12 px-6 bg-white">

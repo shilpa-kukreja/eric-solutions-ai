@@ -182,7 +182,7 @@ Share the protocol, phase, indication, and timeline, and we will respond with a 
             {/* IMAGE */}
             <div className="flex justify-center">
               <img
-                src="/contact/image.png"
+                src="/contact/image.jpg"
                 alt="doctor"
                 className="w-full max-w-md rounded-2xl"
               />

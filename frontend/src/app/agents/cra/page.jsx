@@ -30,7 +30,7 @@ export default function EricAICRA() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/cra.png"
+              src="/aiagentspages/cra.jpg"
               alt="Eric AI CRA"
               className="w-full h-full object-cover"
             />

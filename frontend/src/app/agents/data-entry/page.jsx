@@ -29,7 +29,7 @@ export default function EricAIDataEntry() {
                 <section className="w-full mt-39">
                     <div className="relative w-full">
                         <img
-                            src="/aiagentspages/dataentry.png"
+                            src="/aiagentspages/dataentry.jpg"
                             alt="Eric AI Data Entry"
                             className="w-full h-full object-cover"
                         />

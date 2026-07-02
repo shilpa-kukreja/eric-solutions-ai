@@ -35,7 +35,7 @@ export default function EricAIDocumentManager() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/documentmanager.png"
+              src="/aiagentspages/documentmanager.jpg"
               alt="Eric AI Document Manager"
               className="w-full h-full object-cover"
             />

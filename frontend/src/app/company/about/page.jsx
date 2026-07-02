@@ -82,7 +82,7 @@ export default function AboutPage() {
             {/* LEFT IMAGE */}
             <div className="flex justify-start mt-10">
                 <Image
-                    src="/about/image.png"
+                    src="/about/image.jpg"
                     alt="About"
                     width={450}
                     height={450}
@@ -140,7 +140,7 @@ export default function AboutPage() {
             {/* LEFT IMAGE */}
             <div className="flex justify-start ">
                 <Image
-                    src="/about/image.png"
+                    src="/about/image.jpg"
                     alt="About"
                     width={450}
                     height={450}
@@ -198,7 +198,7 @@ export default function AboutPage() {
             {/* IMAGE — full width on mobile */}
             <div className="w-full flex justify-center mb-4">
                 <Image
-                    src="/about/image.png"
+                    src="/about/image.jpg"
                     alt="About"
                     width={280}
                     height={280}

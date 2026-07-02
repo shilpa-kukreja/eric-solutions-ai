@@ -94,7 +94,7 @@ export default function Footer() {
         {/* LOGO + CONTACT INFO */}
         <div>
           <div className="sm:pl-10">
-            <img src="/footer/logo.gif" alt="Logo" width={120}  />
+            <img src="/footer/logo.gif" alt="Logo" width={120} />
           </div>
 
           {/* CONTACT DETAILS */}
@@ -141,15 +141,24 @@ export default function Footer() {
               </Link>
             </li>
 
+             <li>
+              <Link
+                href="/insights/articles"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
+                Articles
+              </Link>
+            </li>
+
             <li>
               <Link
-                href="/insights/blog"
+                href="/insights/blogs"
                 className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
               >
                 Blogs
               </Link>
             </li>
-
+           
             <li>
               <Link
                 href="/contact"

@@ -29,7 +29,7 @@ export default function EricAIProjectManager() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/projectmanager.png"
+              src="/aiagentspages/projectmanager.jpg"
               alt="Eric AI Project Manager"
               className="w-full h-full object-cover"
             />

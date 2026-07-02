@@ -33,7 +33,7 @@ export default function AboutPage() {
       <div className="bg-gray-100 text-gray-800">
         <Navbar />
 
-        <section className="py-12 md:py-16 text-center px-6 mt-30 bg-white">
+        <section className="py-12 md:py-6 text-center px-6 mt-40 bg-white">
           <span className="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold ">
             Our Team Leader
           </span>

@@ -28,7 +28,7 @@ export default function EricAIDBDesigner() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/dbdesigner.png"
+              src="/aiagentspages/dbdesigner.jpg"
               alt="Eric AI DB Designer"
               className="w-full h-full object-cover"
             />

@@ -32,7 +32,7 @@ export default function EricAIStatistics() {
         <section className="w-full mt-39">
           <div className="relative w-full">
             <img
-              src="/aiagentspages/statistics.png"
+              src="/aiagentspages/statistics.jpg"
               alt="Eric AI Statistics"
               className="w-full h-full object-cover"
             />
