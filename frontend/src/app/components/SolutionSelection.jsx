@@ -136,10 +136,10 @@ export default function SolutionsSection() {
               viewport={{ once: false }}
               className="relative"
             >
-              <div className="absolute -bottom-4 -right-4 -top-4 w-[350px] h-[450px] bg-orange-400 z-0"></div>
+              {/* <div className="absolute -bottom-4 -right-4 -top-4 w-[350px] h-[450px] bg-orange-400 z-0"></div> */}
 
               <Image
-                src="/solution/solutions.jpg"
+                src="/solution/solutions.png"
                 alt="solutions"
                 width={600}
                 height={400}
@@ -158,10 +158,10 @@ export default function SolutionsSection() {
               viewport={{ once: false }}
               className="relative"
             >
-              <div className="absolute -bottom-4 -left-4 -top-4 w-[350px] h-[430px] bg-[#0a0736] z-0"></div>
+              {/* <div className="absolute -bottom-4 -left-4 -top-4 w-[350px] h-[430px] bg-[#0a0736] z-0"></div> */}
 
               <Image
-                src="/solution/support.jpg"
+                src="/solution/support.png"
                 alt="support"
                 width={600}
                 height={400}
@@ -207,10 +207,10 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="relative mb-10"
             >
-              <div className="absolute -bottom-4 -right-4 -top-4 w-[300px] h-[385px] bg-orange-400 z-0"></div>
+              {/* <div className="absolute -bottom-4 -right-4 -top-4 w-[300px] h-[385px] bg-orange-400 z-0"></div> */}
 
               <Image
-                src="/solution/solutions.jpg"
+                src="/solution/solutions.png"
                 alt="solutions"
                 width={500}
                 height={350}
@@ -251,10 +251,10 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="relative mb-10"
             >
-              <div className="absolute -bottom-4 -left-4 -top-4 w-[280px] h-[370px] bg-[#0a0736] z-0"></div>
+              {/* <div className="absolute -bottom-4 -left-4 -top-4 w-[280px] h-[370px] bg-[#0a0736] z-0"></div> */}
 
               <Image
-                src="/solution/support.jpg"
+                src="/solution/support.png"
                 alt="support"
                 width={500}
                 height={350}
@@ -299,10 +299,10 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="relative mb-8"
             >
-              <div className="absolute -bottom-3 -right-3 -top-3 w-[190px] h-[263px] bg-orange-400 z-0"></div>
+              {/* <div className="absolute -bottom-3 -right-3 -top-3 w-[190px] h-[263px] bg-orange-400 z-0"></div> */}
 
               <Image
-                src="/solution/solutions.jpg"
+                src="/solution/solutions.png"
                 alt="solutions"
                 width={400}
                 height={280}
@@ -343,10 +343,10 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="relative mb-8"
             >
-              <div className="absolute -bottom-3 -left-3 -top-3 w-[190px] h-[250px] bg-[#0a0736] z-0"></div>
+              {/* <div className="absolute -bottom-3 -left-3 -top-3 w-[190px] h-[250px] bg-[#0a0736] z-0"></div> */}
 
               <Image
-                src="/solution/support.jpg"
+                src="/solution/support.png"
                 alt="support"
                 width={400}
                 height={280}
