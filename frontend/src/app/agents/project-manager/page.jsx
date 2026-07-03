@@ -30,7 +30,7 @@ export default function EricAIProjectManager() {
           <div className="relative w-full">
             <img
               src="/aiagentspages/projectmanager.jpg"
-              alt="Eric AI Project Manager"
+              alt="eRIC AI Project Manager"
               className="w-full h-full object-cover"
             />
             {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
@@ -42,7 +42,7 @@ export default function EricAIProjectManager() {
                 whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-center mt-10" >
-                  Eric AI <span className="text-[#0B5EA8]">Project Manager</span>
+                  eRIC AI <span className="text-[#0B5EA8]">Project Manager</span>
                 </h2>
               </motion.div>
 
@@ -85,7 +85,7 @@ export default function EricAIProjectManager() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="mt-4 text-gray-500 text-lg"
               >
-                Eric AI Project Manager provides proactive execution insight.
+                eRIC AI Project Manager provides proactive execution insight.
 
 
               </motion.p>

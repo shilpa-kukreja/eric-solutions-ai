@@ -33,7 +33,7 @@ export default function EricAIMedicalWriter() {
           <div className="relative w-full">
             <img
               src="/aiagentspages/medicalwriter.jpg"
-              alt="Eric AI Medical Writer"
+              alt="eRIC AI Medical Writer"
               className="w-full h-full object-cover"
             />
             {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
@@ -45,7 +45,7 @@ export default function EricAIMedicalWriter() {
                 whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold mt-10 text-center">
-                  Eric AI <span className="text-[#0B5EA8]">Medical Writer</span>
+                  eRIC AI <span className="text-[#0B5EA8]">Medical Writer</span>
                 </h2>
               </motion.div>
 
@@ -86,7 +86,7 @@ export default function EricAIMedicalWriter() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className=" text-gray-500 text-lg"
               >
-                Eric AI Medical Writer assists medical writers by reducing manual assembly.
+                eRIC AI Medical Writer assists medical writers by reducing manual assembly.
 
 
               </motion.p>

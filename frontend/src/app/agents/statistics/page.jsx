@@ -46,7 +46,7 @@ export default function EricAIStatistics() {
                 whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold mt-10 text-center">
-                  Eric AI <span className="text-[#0B5EA8]"> Statistics</span>
+                  eRIC AI <span className="text-[#0B5EA8]"> Statistics</span>
                 </h2>
               </motion.div>
 
@@ -86,7 +86,7 @@ export default function EricAIStatistics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="mt-4 text-gray-500 text-lg"
               >
-                Eric AI Statistics enables early visibility into trial data.
+               eRIC AI Statistics enables early visibility into trial data.
 
               </motion.p>
 

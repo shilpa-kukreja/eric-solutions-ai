@@ -141,6 +141,27 @@ export default function Footer() {
               </Link>
             </li>
 
+
+             <li>
+              <Link
+                href="/company/team"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
+                Team
+              </Link>
+            </li>
+
+            
+            <li>
+              <Link
+                href="/insights/blogs"
+                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
+              >
+                Blogs
+              </Link>
+            </li>
+
+
              <li>
               <Link
                 href="/insights/articles"
@@ -150,14 +171,6 @@ export default function Footer() {
               </Link>
             </li>
 
-            <li>
-              <Link
-                href="/insights/blogs"
-                className="inline-block hover:text-blue-500 transition-all duration-200 text-[18px]"
-              >
-                Blogs
-              </Link>
-            </li>
            
             <li>
               <Link

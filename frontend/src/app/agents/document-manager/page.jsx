@@ -36,7 +36,7 @@ export default function EricAIDocumentManager() {
           <div className="relative w-full">
             <img
               src="/aiagentspages/documentmanager.jpg"
-              alt="Eric AI Document Manager"
+              alt="eRIC AI Document Manager"
               className="w-full h-full object-cover"
             />
             {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div> */}
@@ -48,7 +48,7 @@ export default function EricAIDocumentManager() {
                 whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-center mt-10">
-                  Eric AI <span className="text-[#0B5EA8]">Document Manager</span>
+                  eRIC AI <span className="text-[#0B5EA8]">Document Manager</span>
                 </h2>
               </motion.div>
 
@@ -90,7 +90,7 @@ export default function EricAIDocumentManager() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="mt-4 text-gray-500 text-lg"
               >
-                Eric AI Document Manager supports inspection-ready TMFs throughout the study.
+                eRIC AI Document Manager supports inspection-ready TMFs throughout the study.
 
 
 

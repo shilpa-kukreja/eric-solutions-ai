@@ -44,7 +44,7 @@ export default function EricAIDBDesigner() {
                 
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-center pt-12">
-                  Eric AI <span className="text-[#0B5EA8]">DB Designer</span>
+                  eRIC AI <span className="text-[#0B5EA8]">DB Designer</span>
                 </h2>
               </motion.div>
         {/* ================= HERO CONTENT ================= */}
@@ -89,7 +89,7 @@ export default function EricAIDBDesigner() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="mt-4 text-gray-500 text-lg"
               >
-                Eric AI DB Designer accelerates study startup by transforming protocols into structured, standards-aligned EDC designs.
+                eRIC AI DB Designer accelerates study startup by transforming protocols into structured, standards-aligned EDC designs.
               </motion.p>
 
             </div>

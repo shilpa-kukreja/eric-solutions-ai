@@ -42,7 +42,7 @@ export default function EricAIDataEntry() {
                                 whileInView={{ opacity: 1, y: 0 }}
                             >
                                 <h2 className="text-3xl md:text-4xl font-bold text-center mt-10">
-                                    Eric AI <span className="text-[#0B5EA8]">Data Entry</span>
+                               eRIC AI <span className="text-[#0B5EA8]">Data Entry</span>
                                 </h2>
                             </motion.div>
 
@@ -83,7 +83,7 @@ export default function EricAIDataEntry() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 className="mt-4 text-gray-500 text-lg"
                             >
-                                Eric AI Data Entry replaces manual transcription with AI-assisted data ingestion.
+                                eRIC AI Data Entry replaces manual transcription with AI-assisted data ingestion.
 
                             </motion.p>
 

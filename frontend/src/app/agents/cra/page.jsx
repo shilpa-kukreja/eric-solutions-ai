@@ -43,7 +43,7 @@ export default function EricAICRA() {
                 whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-center mt-10">
-                  Eric AI <span className="text-[#0B5EA8]"> CRA</span>
+                  eRIC AI <span className="text-[#0B5EA8]"> CRA</span>
                 </h2>
               </motion.div>
 
@@ -81,7 +81,7 @@ export default function EricAICRA() {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="mt-4 text-gray-500 text-lg"
               >
-                Eric AI CRA enables smarter oversight through data-driven monitoring.
+                eRIC AI CRA enables smarter oversight through data-driven monitoring.
 
 
               </motion.p>
